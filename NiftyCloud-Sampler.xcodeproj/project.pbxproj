@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */; };
+		3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF41D0CD51900F6EBBA /* ViewController.swift */; };
+		3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF61D0CD51900F6EBBA /* Main.storyboard */; };
+		3990BCFA1D0CD51900F6EBBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF91D0CD51900F6EBBA /* Assets.xcassets */; };
+		3990BCFD1D0CD51900F6EBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */; };
+		3990BD081D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */; };
+		3990BD131D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3990BD041D0CD51900F6EBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3990BCE71D0CD51900F6EBBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3990BCEE1D0CD51900F6EBBA;
+			remoteInfo = "NiftyCloud-Sampler";
+		};
+		3990BD0F1D0CD51900F6EBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3990BCE71D0CD51900F6EBBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3990BCEE1D0CD51900F6EBBA;
+			remoteInfo = "NiftyCloud-Sampler";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3990BCF41D0CD51900F6EBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3990BCF71D0CD51900F6EBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3990BCF91D0CD51900F6EBBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3990BCFC1D0CD51900F6EBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3990BCFE1D0CD51900F6EBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3990BD031D0CD51900F6EBBA /* NiftyCloud-SamplerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NiftyCloud-SamplerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiftyCloud_SamplerTests.swift; sourceTree = "<group>"; };
+		3990BD091D0CD51900F6EBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3990BD0E1D0CD51900F6EBBA /* NiftyCloud-SamplerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NiftyCloud-SamplerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiftyCloud_SamplerUITests.swift; sourceTree = "<group>"; };
+		3990BD141D0CD51900F6EBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3990BCEC1D0CD51900F6EBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3990BD001D0CD51900F6EBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3990BD0B1D0CD51900F6EBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3990BCE61D0CD51900F6EBBA = {
+			isa = PBXGroup;
+			children = (
+				3990BCF11D0CD51900F6EBBA /* NiftyCloud-Sampler */,
+				3990BD061D0CD51900F6EBBA /* NiftyCloud-SamplerTests */,
+				3990BD111D0CD51900F6EBBA /* NiftyCloud-SamplerUITests */,
+				3990BCF01D0CD51900F6EBBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3990BCF01D0CD51900F6EBBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */,
+				3990BD031D0CD51900F6EBBA /* NiftyCloud-SamplerTests.xctest */,
+				3990BD0E1D0CD51900F6EBBA /* NiftyCloud-SamplerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3990BCF11D0CD51900F6EBBA /* NiftyCloud-Sampler */ = {
+			isa = PBXGroup;
+			children = (
+				3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */,
+				3990BCF41D0CD51900F6EBBA /* ViewController.swift */,
+				3990BCF61D0CD51900F6EBBA /* Main.storyboard */,
+				3990BCF91D0CD51900F6EBBA /* Assets.xcassets */,
+				3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */,
+				3990BCFE1D0CD51900F6EBBA /* Info.plist */,
+			);
+			path = "NiftyCloud-Sampler";
+			sourceTree = "<group>";
+		};
+		3990BD061D0CD51900F6EBBA /* NiftyCloud-SamplerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */,
+				3990BD091D0CD51900F6EBBA /* Info.plist */,
+			);
+			path = "NiftyCloud-SamplerTests";
+			sourceTree = "<group>";
+		};
+		3990BD111D0CD51900F6EBBA /* NiftyCloud-SamplerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */,
+				3990BD141D0CD51900F6EBBA /* Info.plist */,
+			);
+			path = "NiftyCloud-SamplerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3990BCEE1D0CD51900F6EBBA /* NiftyCloud-Sampler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3990BD171D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-Sampler" */;
+			buildPhases = (
+				3990BCEB1D0CD51900F6EBBA /* Sources */,
+				3990BCEC1D0CD51900F6EBBA /* Frameworks */,
+				3990BCED1D0CD51900F6EBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NiftyCloud-Sampler";
+			productName = "NiftyCloud-Sampler";
+			productReference = 3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3990BD021D0CD51900F6EBBA /* NiftyCloud-SamplerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3990BD1A1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerTests" */;
+			buildPhases = (
+				3990BCFF1D0CD51900F6EBBA /* Sources */,
+				3990BD001D0CD51900F6EBBA /* Frameworks */,
+				3990BD011D0CD51900F6EBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3990BD051D0CD51900F6EBBA /* PBXTargetDependency */,
+			);
+			name = "NiftyCloud-SamplerTests";
+			productName = "NiftyCloud-SamplerTests";
+			productReference = 3990BD031D0CD51900F6EBBA /* NiftyCloud-SamplerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3990BD0D1D0CD51900F6EBBA /* NiftyCloud-SamplerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3990BD1D1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerUITests" */;
+			buildPhases = (
+				3990BD0A1D0CD51900F6EBBA /* Sources */,
+				3990BD0B1D0CD51900F6EBBA /* Frameworks */,
+				3990BD0C1D0CD51900F6EBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3990BD101D0CD51900F6EBBA /* PBXTargetDependency */,
+			);
+			name = "NiftyCloud-SamplerUITests";
+			productName = "NiftyCloud-SamplerUITests";
+			productReference = 3990BD0E1D0CD51900F6EBBA /* NiftyCloud-SamplerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3990BCE71D0CD51900F6EBBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ShinokiRyosei;
+				TargetAttributes = {
+					3990BCEE1D0CD51900F6EBBA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					3990BD021D0CD51900F6EBBA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3990BCEE1D0CD51900F6EBBA;
+					};
+					3990BD0D1D0CD51900F6EBBA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 3990BCEE1D0CD51900F6EBBA;
+					};
+				};
+			};
+			buildConfigurationList = 3990BCEA1D0CD51900F6EBBA /* Build configuration list for PBXProject "NiftyCloud-Sampler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3990BCE61D0CD51900F6EBBA;
+			productRefGroup = 3990BCF01D0CD51900F6EBBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3990BCEE1D0CD51900F6EBBA /* NiftyCloud-Sampler */,
+				3990BD021D0CD51900F6EBBA /* NiftyCloud-SamplerTests */,
+				3990BD0D1D0CD51900F6EBBA /* NiftyCloud-SamplerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3990BCED1D0CD51900F6EBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3990BCFD1D0CD51900F6EBBA /* LaunchScreen.storyboard in Resources */,
+				3990BCFA1D0CD51900F6EBBA /* Assets.xcassets in Resources */,
+				3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3990BD011D0CD51900F6EBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3990BD0C1D0CD51900F6EBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3990BCEB1D0CD51900F6EBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */,
+				3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3990BCFF1D0CD51900F6EBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3990BD081D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3990BD0A1D0CD51900F6EBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3990BD131D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3990BD051D0CD51900F6EBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3990BCEE1D0CD51900F6EBBA /* NiftyCloud-Sampler */;
+			targetProxy = 3990BD041D0CD51900F6EBBA /* PBXContainerItemProxy */;
+		};
+		3990BD101D0CD51900F6EBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3990BCEE1D0CD51900F6EBBA /* NiftyCloud-Sampler */;
+			targetProxy = 3990BD0F1D0CD51900F6EBBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3990BCF61D0CD51900F6EBBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3990BCF71D0CD51900F6EBBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3990BCFC1D0CD51900F6EBBA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3990BD151D0CD51900F6EBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3990BD161D0CD51900F6EBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3990BD181D0CD51900F6EBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NiftyCloud-Sampler/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tv.shinoki.NiftyCloud-Sampler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3990BD191D0CD51900F6EBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NiftyCloud-Sampler/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tv.shinoki.NiftyCloud-Sampler";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3990BD1B1D0CD51900F6EBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "NiftyCloud-SamplerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tv.shinoki.NiftyCloud-SamplerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NiftyCloud-Sampler.app/NiftyCloud-Sampler";
+			};
+			name = Debug;
+		};
+		3990BD1C1D0CD51900F6EBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "NiftyCloud-SamplerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tv.shinoki.NiftyCloud-SamplerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NiftyCloud-Sampler.app/NiftyCloud-Sampler";
+			};
+			name = Release;
+		};
+		3990BD1E1D0CD51900F6EBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NiftyCloud-SamplerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tv.shinoki.NiftyCloud-SamplerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "NiftyCloud-Sampler";
+			};
+			name = Debug;
+		};
+		3990BD1F1D0CD51900F6EBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NiftyCloud-SamplerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tv.shinoki.NiftyCloud-SamplerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "NiftyCloud-Sampler";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3990BCEA1D0CD51900F6EBBA /* Build configuration list for PBXProject "NiftyCloud-Sampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3990BD151D0CD51900F6EBBA /* Debug */,
+				3990BD161D0CD51900F6EBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3990BD171D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-Sampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3990BD181D0CD51900F6EBBA /* Debug */,
+				3990BD191D0CD51900F6EBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3990BD1A1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3990BD1B1D0CD51900F6EBBA /* Debug */,
+				3990BD1C1D0CD51900F6EBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3990BD1D1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3990BD1E1D0CD51900F6EBBA /* Debug */,
+				3990BD1F1D0CD51900F6EBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3990BCE71D0CD51900F6EBBA /* Project object */;
+}
