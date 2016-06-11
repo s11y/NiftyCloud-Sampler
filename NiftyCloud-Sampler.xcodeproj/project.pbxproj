@@ -14,6 +14,9 @@
 		3990BCFD1D0CD51900F6EBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */; };
 		3990BD081D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */; };
 		3990BD131D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */; };
+		3F387CF958003164D718ED11 /* Pods_NiftyCloud_SamplerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */; };
+		6148A4120C557989BEF49E8B /* Pods_NiftyCloud_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */; };
+		A5A601CEEA8192EF4067A867 /* Pods_NiftyCloud_SamplerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1417E81DC3DA8217C8D1D2F5 /* Pods-NiftyCloud-SamplerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-SamplerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CEDB2C78858578985D5359A /* Pods-NiftyCloud-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3990BCF41D0CD51900F6EBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		3990BD0E1D0CD51900F6EBBA /* NiftyCloud-SamplerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NiftyCloud-SamplerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiftyCloud_SamplerUITests.swift; sourceTree = "<group>"; };
 		3990BD141D0CD51900F6EBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_SamplerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_SamplerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7AB6ED9B5F95C7A173F05E9 /* Pods-NiftyCloud-SamplerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-SamplerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-SamplerUITests/Pods-NiftyCloud-SamplerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DBA1FB9F390614875E157731 /* Pods-NiftyCloud-Sampler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-Sampler.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler.release.xcconfig"; sourceTree = "<group>"; };
+		EAEB12B020712CE075A0AD8D /* Pods-NiftyCloud-SamplerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-SamplerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests.release.xcconfig"; sourceTree = "<group>"; };
+		F0C419B0147C5252FC79ED63 /* Pods-NiftyCloud-SamplerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-SamplerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-SamplerUITests/Pods-NiftyCloud-SamplerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6148A4120C557989BEF49E8B /* Pods_NiftyCloud_Sampler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F387CF958003164D718ED11 /* Pods_NiftyCloud_SamplerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A601CEEA8192EF4067A867 /* Pods_NiftyCloud_SamplerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				3990BD061D0CD51900F6EBBA /* NiftyCloud-SamplerTests */,
 				3990BD111D0CD51900F6EBBA /* NiftyCloud-SamplerUITests */,
 				3990BCF01D0CD51900F6EBBA /* Products */,
+				A1E19FFEAB395F26A16A1CC1 /* Pods */,
+				8D798141380CC7DFA6A0176C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = "NiftyCloud-SamplerUITests";
 			sourceTree = "<group>";
 		};
+		8D798141380CC7DFA6A0176C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */,
+				A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */,
+				90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1E19FFEAB395F26A16A1CC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CEDB2C78858578985D5359A /* Pods-NiftyCloud-Sampler.debug.xcconfig */,
+				DBA1FB9F390614875E157731 /* Pods-NiftyCloud-Sampler.release.xcconfig */,
+				1417E81DC3DA8217C8D1D2F5 /* Pods-NiftyCloud-SamplerTests.debug.xcconfig */,
+				EAEB12B020712CE075A0AD8D /* Pods-NiftyCloud-SamplerTests.release.xcconfig */,
+				F0C419B0147C5252FC79ED63 /* Pods-NiftyCloud-SamplerUITests.debug.xcconfig */,
+				B7AB6ED9B5F95C7A173F05E9 /* Pods-NiftyCloud-SamplerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3990BD171D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-Sampler" */;
 			buildPhases = (
+				DA892960B2B56172777A4A11 /* 📦 Check Pods Manifest.lock */,
 				3990BCEB1D0CD51900F6EBBA /* Sources */,
 				3990BCEC1D0CD51900F6EBBA /* Frameworks */,
 				3990BCED1D0CD51900F6EBBA /* Resources */,
+				31F5861CB82CC65B4B46181F /* 📦 Embed Pods Frameworks */,
+				43A03132CE5F0C94956B76F6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3990BD1A1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerTests" */;
 			buildPhases = (
+				9C50EADFD0DDC86BF8B21268 /* 📦 Check Pods Manifest.lock */,
 				3990BCFF1D0CD51900F6EBBA /* Sources */,
 				3990BD001D0CD51900F6EBBA /* Frameworks */,
 				3990BD011D0CD51900F6EBBA /* Resources */,
+				13C859767BD68E56FC9D2538 /* 📦 Embed Pods Frameworks */,
+				A9A1C03B3AD8B4A4C6025334 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3990BD1D1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerUITests" */;
 			buildPhases = (
+				54E35ACC243B4E2AF3488475 /* 📦 Check Pods Manifest.lock */,
 				3990BD0A1D0CD51900F6EBBA /* Sources */,
 				3990BD0B1D0CD51900F6EBBA /* Frameworks */,
 				3990BD0C1D0CD51900F6EBBA /* Resources */,
+				350EC7EB5850845690804E46 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +298,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13C859767BD68E56FC9D2538 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31F5861CB82CC65B4B46181F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		350EC7EB5850845690804E46 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-SamplerUITests/Pods-NiftyCloud-SamplerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43A03132CE5F0C94956B76F6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54E35ACC243B4E2AF3488475 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C50EADFD0DDC86BF8B21268 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9A1C03B3AD8B4A4C6025334 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA892960B2B56172777A4A11 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3990BCEB1D0CD51900F6EBBA /* Sources */ = {
@@ -397,6 +568,7 @@
 		};
 		3990BD181D0CD51900F6EBBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CEDB2C78858578985D5359A /* Pods-NiftyCloud-Sampler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NiftyCloud-Sampler/Info.plist";
@@ -408,6 +580,7 @@
 		};
 		3990BD191D0CD51900F6EBBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBA1FB9F390614875E157731 /* Pods-NiftyCloud-Sampler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NiftyCloud-Sampler/Info.plist";
@@ -419,6 +592,7 @@
 		};
 		3990BD1B1D0CD51900F6EBBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1417E81DC3DA8217C8D1D2F5 /* Pods-NiftyCloud-SamplerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "NiftyCloud-SamplerTests/Info.plist";
@@ -431,6 +605,7 @@
 		};
 		3990BD1C1D0CD51900F6EBBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAEB12B020712CE075A0AD8D /* Pods-NiftyCloud-SamplerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "NiftyCloud-SamplerTests/Info.plist";
@@ -443,6 +618,7 @@
 		};
 		3990BD1E1D0CD51900F6EBBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0C419B0147C5252FC79ED63 /* Pods-NiftyCloud-SamplerUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "NiftyCloud-SamplerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -454,6 +630,7 @@
 		};
 		3990BD1F1D0CD51900F6EBBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7AB6ED9B5F95C7A173F05E9 /* Pods-NiftyCloud-SamplerUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "NiftyCloud-SamplerUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -482,6 +659,7 @@
 				3990BD191D0CD51900F6EBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3990BD1A1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +668,7 @@
 				3990BD1C1D0CD51900F6EBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3990BD1D1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +677,7 @@
 				3990BD1F1D0CD51900F6EBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
