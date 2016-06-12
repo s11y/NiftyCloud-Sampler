@@ -14,6 +14,7 @@
 		3990BCFD1D0CD51900F6EBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */; };
 		3990BD081D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */; };
 		3990BD131D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */; };
+		3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */; };
 		3F387CF958003164D718ED11 /* Pods_NiftyCloud_SamplerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */; };
 		6148A4120C557989BEF49E8B /* Pods_NiftyCloud_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */; };
 		A5A601CEEA8192EF4067A867 /* Pods_NiftyCloud_SamplerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */; };
@@ -52,6 +53,7 @@
 		3990BD0E1D0CD51900F6EBBA /* NiftyCloud-SamplerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NiftyCloud-SamplerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiftyCloud_SamplerUITests.swift; sourceTree = "<group>"; };
 		3990BD141D0CD51900F6EBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_SamplerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_SamplerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 				3990BCF91D0CD51900F6EBBA /* Assets.xcassets */,
 				3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */,
 				3990BCFE1D0CD51900F6EBBA /* Info.plist */,
+				3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */,
 			);
 			path = "NiftyCloud-Sampler";
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			files = (
 				3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */,
 				3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */,
+				3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
