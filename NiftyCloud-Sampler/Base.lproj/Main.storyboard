@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,13 +17,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aD2-Wm-nm5">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aD2-Wm-nm5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5gy-Ym-0hT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aD2-Wm-nm5" secondAttribute="trailing" constant="-20" id="SOM-3k-vpz"/>
+                            <constraint firstItem="aD2-Wm-nm5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="mml-89-ppA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aD2-Wm-nm5" secondAttribute="bottom" id="oeC-0i-nYz"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aya-L0-asl"/>
+                    <navigationItem key="navigationItem" id="aya-L0-asl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bu4-wj-4KV">
+                            <connections>
+                                <action selector="didSelectAdd" destination="BYZ-38-t0r" id="3Ed-G5-oI8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="aD2-Wm-nm5" id="fwa-nA-tS9"/>
+                        <segue destination="pOU-eI-fVr" kind="show" identifier="toAddView" id="vG1-8o-kH6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057" y="321"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="EzR-A2-WgH">
+            <objects>
+                <viewController id="pOU-eI-fVr" customClass="AddViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8WX-ea-fvk"/>
+                        <viewControllerLayoutGuide type="bottom" id="xqM-Ui-uF0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JL7-jX-ugx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPD-47-Hcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="1062"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vdx-rq-KjX">
