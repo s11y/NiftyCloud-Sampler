@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		39075E341D162EDC00CEBD44 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39075E331D162EDC00CEBD44 /* Books.swift */; };
 		39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F201D1773A7000BA688 /* AddAutherViewController.swift */; };
+		39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F221D1778E6000BA688 /* AutherListViewController.swift */; };
 		3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */; };
 		3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF41D0CD51900F6EBBA /* ViewController.swift */; };
 		3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF61D0CD51900F6EBBA /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		1CEDB2C78858578985D5359A /* Pods-NiftyCloud-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
 		39075E331D162EDC00CEBD44 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		39550F201D1773A7000BA688 /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAutherViewController.swift; sourceTree = "<group>"; };
+		39550F221D1778E6000BA688 /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherListViewController.swift; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3990BCF41D0CD51900F6EBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				3990BCF41D0CD51900F6EBBA /* ViewController.swift */,
 				39F4B9F71D164B37003E2D04 /* AddViewController.swift */,
 				39550F201D1773A7000BA688 /* AddAutherViewController.swift */,
+				39550F221D1778E6000BA688 /* AutherListViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */,
 				39B267BB1D16901C00AB274B /* Authers.swift in Sources */,
 				39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */,
 				3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */,
