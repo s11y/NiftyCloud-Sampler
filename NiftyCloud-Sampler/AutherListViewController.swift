@@ -30,6 +30,14 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didSelectAdd() {
+        self.transition()
+    }
+    
+    func transition() {
+        self.performSegueWithIdentifier("", sender: nil)
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return authers.count
     }
