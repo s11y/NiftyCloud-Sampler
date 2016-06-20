@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39075E341D162EDC00CEBD44 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39075E331D162EDC00CEBD44 /* Books.swift */; };
+		39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F201D1773A7000BA688 /* AddAutherViewController.swift */; };
 		3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */; };
 		3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF41D0CD51900F6EBBA /* ViewController.swift */; };
 		3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF61D0CD51900F6EBBA /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 		3990BD081D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */; };
 		3990BD131D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */; };
 		3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */; };
+		39B267BB1D16901C00AB274B /* Authers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B267BA1D16901C00AB274B /* Authers.swift */; };
 		39F4B9F51D164A1E003E2D04 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4B9F31D164A1E003E2D04 /* BookCell.swift */; };
 		39F4B9F61D164A1E003E2D04 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39F4B9F41D164A1E003E2D04 /* BookCell.xib */; };
 		39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4B9F71D164B37003E2D04 /* AddViewController.swift */; };
@@ -45,6 +47,7 @@
 		1417E81DC3DA8217C8D1D2F5 /* Pods-NiftyCloud-SamplerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-SamplerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CEDB2C78858578985D5359A /* Pods-NiftyCloud-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
 		39075E331D162EDC00CEBD44 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		39550F201D1773A7000BA688 /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAutherViewController.swift; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3990BCF41D0CD51900F6EBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiftyCloud_SamplerUITests.swift; sourceTree = "<group>"; };
 		3990BD141D0CD51900F6EBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
+		39B267BA1D16901C00AB274B /* Authers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authers.swift; sourceTree = "<group>"; };
 		39F4B9F31D164A1E003E2D04 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		39F4B9F41D164A1E003E2D04 /* BookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		39F4B9F71D164B37003E2D04 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +135,7 @@
 				3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */,
 				3990BCFE1D0CD51900F6EBBA /* Info.plist */,
 				3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */,
-				39075E331D162EDC00CEBD44 /* Books.swift */,
+				39B267BC1D16915800AB274B /* Models */,
 				39F4B9F91D16504D003E2D04 /* BookCell */,
 			);
 			path = "NiftyCloud-Sampler";
@@ -155,6 +159,15 @@
 			path = "NiftyCloud-SamplerUITests";
 			sourceTree = "<group>";
 		};
+		39B267BC1D16915800AB274B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39075E331D162EDC00CEBD44 /* Books.swift */,
+				39B267BA1D16901C00AB274B /* Authers.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		39F4B9F91D16504D003E2D04 /* BookCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 			children = (
 				3990BCF41D0CD51900F6EBBA /* ViewController.swift */,
 				39F4B9F71D164B37003E2D04 /* AddViewController.swift */,
+				39550F201D1773A7000BA688 /* AddAutherViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -459,6 +473,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B267BB1D16901C00AB274B /* Authers.swift in Sources */,
+				39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */,
 				3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */,
 				3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */,
 				39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */,

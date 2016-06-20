@@ -11,10 +11,10 @@ import NCMB
 
 class Books: NCMBObject, NCMBSubclassing {
     @NSManaged var title: String!
-    @NSManaged var auther: String!
+    @NSManaged var auther: Authers!
     @NSManaged var publishedDate: NSDate!
     
-    init(title: String, publishedDate: NSDate, auther: String) {
+    init(title: String, publishedDate: NSDate, auther: Authers) {
         super.init()
         self.title = title
         self.auther = auther
@@ -31,6 +31,15 @@ class Books: NCMBObject, NCMBSubclassing {
     
     static func ncmbClassName() -> String! {
         return "Books"
+    }
+    
+    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers) {
+        let book = Books(title: title, publishedDate: date, auther: auther)
+        book.saveEventually { (error) in
+            if error != nil {
+                print("\(error.localizedDescription)")
+            }
+        }
     }
     
     static func loadAll() -> [Books] {
