@@ -10,6 +10,8 @@
 		39075E341D162EDC00CEBD44 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39075E331D162EDC00CEBD44 /* Books.swift */; };
 		39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F201D1773A7000BA688 /* AddAutherViewController.swift */; };
 		39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F221D1778E6000BA688 /* AutherListViewController.swift */; };
+		39550F261D177995000BA688 /* AutherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F241D177995000BA688 /* AutherCell.swift */; };
+		39550F271D177995000BA688 /* AutherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39550F251D177995000BA688 /* AutherCell.xib */; };
 		3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */; };
 		3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF41D0CD51900F6EBBA /* ViewController.swift */; };
 		3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF61D0CD51900F6EBBA /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		39075E331D162EDC00CEBD44 /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		39550F201D1773A7000BA688 /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAutherViewController.swift; sourceTree = "<group>"; };
 		39550F221D1778E6000BA688 /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherListViewController.swift; sourceTree = "<group>"; };
+		39550F241D177995000BA688 /* AutherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherCell.swift; sourceTree = "<group>"; };
+		39550F251D177995000BA688 /* AutherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutherCell.xib; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3990BCF41D0CD51900F6EBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39550F281D17799B000BA688 /* AutherCell */ = {
+			isa = PBXGroup;
+			children = (
+				39550F241D177995000BA688 /* AutherCell.swift */,
+				39550F251D177995000BA688 /* AutherCell.xib */,
+			);
+			name = AutherCell;
+			sourceTree = "<group>";
+		};
+		39550F291D1779A3000BA688 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				39F4B9F91D16504D003E2D04 /* BookCell */,
+				39550F281D17799B000BA688 /* AutherCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		3990BCE61D0CD51900F6EBBA = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +160,7 @@
 				3990BCFE1D0CD51900F6EBBA /* Info.plist */,
 				3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */,
 				39B267BC1D16915800AB274B /* Models */,
-				39F4B9F91D16504D003E2D04 /* BookCell */,
+				39550F291D1779A3000BA688 /* Cells */,
 			);
 			path = "NiftyCloud-Sampler";
 			sourceTree = "<group>";
@@ -325,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39550F271D177995000BA688 /* AutherCell.xib in Resources */,
 				39F4B9F61D164A1E003E2D04 /* BookCell.xib in Resources */,
 				3990BCFD1D0CD51900F6EBBA /* LaunchScreen.storyboard in Resources */,
 				3990BCFA1D0CD51900F6EBBA /* Assets.xcassets in Resources */,
@@ -480,6 +503,7 @@
 				39B267BB1D16901C00AB274B /* Authers.swift in Sources */,
 				39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */,
 				3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */,
+				39550F261D177995000BA688 /* AutherCell.swift in Sources */,
 				3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */,
 				39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */,
 				3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */,
