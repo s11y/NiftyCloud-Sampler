@@ -9,16 +9,34 @@
 import UIKit
 import NCMB
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet var emailTextField: UITextField!
+    
+    @IBOutlet var usernameTextField: UITextField!
+    
+    @IBOutlet var passwordTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        emailTextField.delegate = self
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func signup() {
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
