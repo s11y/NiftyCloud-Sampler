@@ -131,6 +131,15 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		3984A9BA1D196F1300735A58 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3984A9B61D196EA800735A58 /* SignUpViewController.swift */,
+				3984A9B81D196EAF00735A58 /* LoginViewController.swift */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
 		3990BCE61D0CD51900F6EBBA = {
 			isa = PBXGroup;
 			children = (
@@ -212,8 +221,7 @@
 				39F4B9F71D164B37003E2D04 /* AddViewController.swift */,
 				39550F201D1773A7000BA688 /* AddAutherViewController.swift */,
 				39550F221D1778E6000BA688 /* AutherListViewController.swift */,
-				3984A9B61D196EA800735A58 /* SignUpViewController.swift */,
-				3984A9B81D196EAF00735A58 /* LoginViewController.swift */,
+				3984A9BA1D196F1300735A58 /* Auth */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
