@@ -16,6 +16,8 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var autherTextField: UITextField!
     
     @IBOutlet var datePicker: UIDatePicker!
+    
+    var authers: [Authers] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         guard let title = titleTextField.text else { return }
         guard let date: NSDate = datePicker.date else { return }
         guard let auther = autherTextField.text else { return }
-        let book = Books(title: title, publishedDate: date, auther: auther)
+        let book = Books(title: title, publishedDate: date, auther: authers[0])
         book.saveEventually { (error) in
             if error != nil {
                 // 失敗

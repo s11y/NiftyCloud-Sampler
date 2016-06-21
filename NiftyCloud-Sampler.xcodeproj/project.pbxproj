@@ -12,6 +12,8 @@
 		39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F221D1778E6000BA688 /* AutherListViewController.swift */; };
 		39550F261D177995000BA688 /* AutherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F241D177995000BA688 /* AutherCell.swift */; };
 		39550F271D177995000BA688 /* AutherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39550F251D177995000BA688 /* AutherCell.xib */; };
+		3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B61D196EA800735A58 /* SignUpViewController.swift */; };
+		3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B81D196EAF00735A58 /* LoginViewController.swift */; };
 		3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */; };
 		3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF41D0CD51900F6EBBA /* ViewController.swift */; };
 		3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF61D0CD51900F6EBBA /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		39550F221D1778E6000BA688 /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherListViewController.swift; sourceTree = "<group>"; };
 		39550F241D177995000BA688 /* AutherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherCell.swift; sourceTree = "<group>"; };
 		39550F251D177995000BA688 /* AutherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutherCell.xib; sourceTree = "<group>"; };
+		3984A9B61D196EA800735A58 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3984A9B81D196EAF00735A58 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3990BCF41D0CD51900F6EBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 				39F4B9F71D164B37003E2D04 /* AddViewController.swift */,
 				39550F201D1773A7000BA688 /* AddAutherViewController.swift */,
 				39550F221D1778E6000BA688 /* AutherListViewController.swift */,
+				3984A9B61D196EA800735A58 /* SignUpViewController.swift */,
+				3984A9B81D196EAF00735A58 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -499,6 +505,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */,
+				3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */,
 				39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */,
 				39B267BB1D16901C00AB274B /* Authers.swift in Sources */,
 				39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */,
