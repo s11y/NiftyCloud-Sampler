@@ -13,12 +13,14 @@ class Books: NCMBObject, NCMBSubclassing {
     @NSManaged var title: String!
     @NSManaged var auther: Authers!
     @NSManaged var publishedDate: NSDate!
+    @NSManaged var isPublic: NSNumber!
     
-    init(title: String, publishedDate: NSDate, auther: Authers) {
+    init(title: String, publishedDate: NSDate, auther: Authers, isPublic: NSNumber) {
         super.init()
         self.title = title
         self.auther = auther
         self.publishedDate = publishedDate
+        self.isPublic = isPublic
     }
     
     override init() {
@@ -33,8 +35,8 @@ class Books: NCMBObject, NCMBSubclassing {
         return "Books"
     }
     
-    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers) {
-        let book = Books(title: title, publishedDate: date, auther: auther)
+    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers, isPublic: NSNumber) {
+        let book = Books(title: title, publishedDate: date, auther: auther, isPublic: isPublic)
         book.saveEventually { (error) in
             if error != nil {
                 print("\(error.localizedDescription)")

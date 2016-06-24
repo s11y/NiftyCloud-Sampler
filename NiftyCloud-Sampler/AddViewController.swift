@@ -9,7 +9,7 @@
 import UIKit
 import NCMB
 
-class AddViewController: UIViewController, UITextFieldDelegate {
+class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var titleTextField: UITextField!
     
@@ -17,7 +17,11 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var datePicker: UIDatePicker!
     
+    @IBOutlet var segmentControl: UISegmentedControl!
+    
     var authers: [Authers] = []
+    
+    var auther: Authers!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +39,8 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     func create() {
         guard let title = titleTextField.text else { return }
         guard let date: NSDate = datePicker.date else { return }
-        guard let auther = autherTextField.text else { return }
-        let book = Books(title: title, publishedDate: date, auther: authers[0])
+//        guard let auther = autherTextField.text else { return }
+        let book: Books = Books(title: title, publishedDate: date, auther: authers[0], isPublic: 0)
         book.saveEventually { (error) in
             if error != nil {
                 // 失敗
@@ -47,6 +51,24 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func setPickerView() {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource  = self
+        autherTextField.inputView = pickerView
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return authers.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.auther = self.authers[row]
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
