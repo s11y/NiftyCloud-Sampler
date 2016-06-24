@@ -15,19 +15,28 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     @IBOutlet var autherTextField: UITextField!
     
-    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var dateTextField: UITextField!
     
     @IBOutlet var segmentControl: UISegmentedControl!
     
     var authers: [Authers] = []
     
     var auther: Authers!
+    
+    var datePicker: UIDatePicker!
+    
+    var publishedDate: NSDate!
+    
+    var isPublic: NSNumber!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleTextField.delegate = self
         autherTextField.delegate = self
+        segmentControl.addTarget(self, action: #selector(self.decideIsPublic(_:)), forControlEvents: .TouchUpInside)
+        self.setDatePicker()
+        self.setPickerView()
         // Do any additional setup after loading the view.
     }
 
@@ -36,11 +45,16 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didSelectAdd() {
+        self.create()
+    }
+    
     func create() {
         guard let title = titleTextField.text else { return }
-        guard let date: NSDate = datePicker.date else { return }
-//        guard let auther = autherTextField.text else { return }
-        let book: Books = Books(title: title, publishedDate: date, auther: authers[0], isPublic: 0)
+        guard let date = publishedDate else { return }
+        guard let whichPublic = self.isPublic else { return }
+        guard let auther = self.auther else { return }
+        let book: Books = Books(title: title, publishedDate: date, auther: auther, isPublic: whichPublic)
         book.saveEventually { (error) in
             if error != nil {
                 // 失敗
@@ -49,6 +63,24 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
                 self.navigationController?.popViewControllerAnimated(true)
             }
         }
+    }
+    
+    func decideIsPublic(row: Int) {
+        self.isPublic = NSNumber(integer: row)
+    }
+    
+    func setDatePicker() {
+        datePicker = UIDatePicker()
+        datePicker.datePickerMode = .Date
+        datePicker.addTarget(self, action: #selector(self.convertDateToDate), forControlEvents: .ValueChanged)
+        dateTextField.inputView = datePicker
+    }
+    
+    func convertDateToDate() {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        dateTextField.text = dateFormatter.stringFromDate(datePicker.date)
+        self.publishedDate = datePicker.date
     }
     
     func setPickerView() {
@@ -64,6 +96,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.auther = self.authers[row]
+        self.autherTextField.text = "\(self.auther.familyName) + \(self.auther.firstName)"
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
