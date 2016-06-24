@@ -72,7 +72,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     func setDatePicker() {
         datePicker = UIDatePicker()
         datePicker.datePickerMode = .Date
-        datePicker.addTarget(self, action: #selector(self.convertDateToDate), forControlEvents: .TouchUpInside)
+        datePicker.addTarget(self, action: #selector(self.convertDateToDate), forControlEvents: .ValueChanged)
         dateTextField.inputView = datePicker
     }
     

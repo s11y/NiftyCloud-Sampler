@@ -59,30 +59,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMM-su-Qpy">
-                                <rect key="frame" x="20" y="130" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMM-su-Qpy">
+                                <rect key="frame" x="20" y="106" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="published date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efc-hr-EDc">
-                                <rect key="frame" x="20" y="269" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="auther" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYV-4w-2Ez">
+                                <rect key="frame" x="20" y="164" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FMi-KB-Z1C">
-                                <rect key="frame" x="20" y="329" width="121" height="29"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="published date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efc-hr-EDc">
+                                <rect key="frame" x="20" y="219" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FMi-KB-Z1C">
+                                <rect key="frame" x="20" y="270" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="slH-m6-PuV"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Public"/>
                                     <segment title="Private"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="auther" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYV-4w-2Ez">
-                                <rect key="frame" x="20" y="198" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1t-07-ljc">
+                                <rect key="frame" x="253" y="319" width="95" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="IPD-y7-NK6"/>
+                                    <constraint firstAttribute="width" constant="95" id="xh6-YR-kqH"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="didSelectAdd" destination="pOU-eI-fVr" eventType="touchUpInside" id="EyP-ZX-q61"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="lMM-su-Qpy" secondAttribute="leading" id="55d-RG-JtT"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="CYV-4w-2Ez" secondAttribute="leading" id="6qj-Kg-fEf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lMM-su-Qpy" secondAttribute="trailing" id="L6F-Z2-yWt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="efc-hr-EDc" secondAttribute="leading" id="NAC-9q-WAx"/>
+                            <constraint firstItem="CYV-4w-2Ez" firstAttribute="top" secondItem="lMM-su-Qpy" secondAttribute="bottom" constant="28" id="Oi5-eJ-ZBq"/>
+                            <constraint firstItem="efc-hr-EDc" firstAttribute="top" secondItem="CYV-4w-2Ez" secondAttribute="bottom" constant="25" id="Qii-QP-JHW"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FMi-KB-Z1C" secondAttribute="leading" id="Qlp-jZ-aNz"/>
+                            <constraint firstItem="U1t-07-ljc" firstAttribute="top" secondItem="FMi-KB-Z1C" secondAttribute="bottom" constant="21" id="Ttc-aj-nF2"/>
+                            <constraint firstItem="U1t-07-ljc" firstAttribute="centerX" secondItem="JL7-jX-ugx" secondAttribute="centerX" id="ZMg-Ln-Cef"/>
+                            <constraint firstItem="FMi-KB-Z1C" firstAttribute="top" secondItem="efc-hr-EDc" secondAttribute="bottom" constant="21" id="bpJ-ps-5br"/>
+                            <constraint firstItem="lMM-su-Qpy" firstAttribute="top" secondItem="8WX-ea-fvk" secondAttribute="bottom" constant="42" id="qAT-3b-Y8I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="efc-hr-EDc" secondAttribute="trailing" id="uxQ-Bx-gzj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CYV-4w-2Ez" secondAttribute="trailing" id="yzL-J7-oLF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="autherTextField" destination="CYV-4w-2Ez" id="FVm-oQ-U4h"/>

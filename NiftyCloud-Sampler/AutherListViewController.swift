@@ -34,6 +34,15 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
         self.transition()
     }
     
+    func read() {
+        let query = NCMBQuery(className: Authers.ncmbClassName())
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if error != nil {
+                print("\(error.localizedDescription)")
+            }
+        }
+    }
+    
     func transition() {
         self.performSegueWithIdentifier("", sender: nil)
     }
