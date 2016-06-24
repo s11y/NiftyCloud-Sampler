@@ -14,13 +14,15 @@ class Books: NCMBObject, NCMBSubclassing {
     @NSManaged var auther: Authers!
     @NSManaged var publishedDate: NSDate!
     @NSManaged var isPublic: NSNumber!
+    @NSManaged var user: NCMBUser!
     
-    init(title: String, publishedDate: NSDate, auther: Authers, isPublic: NSNumber) {
+    init(title: String, publishedDate: NSDate, auther: Authers, isPublic: NSNumber, user: NCMBUser) {
         super.init()
         self.title = title
         self.auther = auther
         self.publishedDate = publishedDate
         self.isPublic = isPublic
+        self.user = user
     }
     
     override init() {
@@ -35,8 +37,8 @@ class Books: NCMBObject, NCMBSubclassing {
         return "Books"
     }
     
-    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers, isPublic: NSNumber) -> Books {
-        let book = Books(title: title, publishedDate: date, auther: auther, isPublic: isPublic)
+    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers, isPublic: NSNumber, user: NCMBUser) -> Books {
+        let book = Books(title: title, publishedDate: date, auther: auther, isPublic: isPublic, user: user)
         return book
     }
     

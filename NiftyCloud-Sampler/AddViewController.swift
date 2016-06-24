@@ -54,7 +54,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         guard let date = publishedDate else { return }
         guard let whichPublic = self.isPublic else { return }
         guard let auther = self.auther else { return }
-        let book = Books.create(titleOfBook: title, publishedDate: date, autherOfBook: auther, isPublic: whichPublic)
+        let book = Books.create(titleOfBook: title, publishedDate: date, autherOfBook: auther, isPublic: whichPublic, user: NCMBUser.currentUser())
         book.saveWithEvent()
     }
     
