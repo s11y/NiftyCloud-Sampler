@@ -35,9 +35,13 @@ class Books: NCMBObject, NCMBSubclassing {
         return "Books"
     }
     
-    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers, isPublic: NSNumber) {
+    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers, isPublic: NSNumber) -> Books {
         let book = Books(title: title, publishedDate: date, auther: auther, isPublic: isPublic)
-        book.saveEventually { (error) in
+        return book
+    }
+    
+    func saveWithEvent() {
+        self.saveEventually { (error) in
             if error != nil {
                 print("\(error.localizedDescription)")
             }
@@ -58,4 +62,6 @@ class Books: NCMBObject, NCMBSubclassing {
         }
         return books
     }
+    
+
 }

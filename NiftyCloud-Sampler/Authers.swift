@@ -48,6 +48,20 @@ class Authers: NCMBObject, NCMBSubclassing {
         return authers
     }
     
+    static func create(first text: String, family str: String) -> Authers {
+        let auther = Authers(firstName: text, familyName: str)
+        return auther
+        
+    }
+    
+    func saveWithEvent() {
+        self.saveEventually { (error) in
+            if error != nil {
+                print("\(error.localizedDescription)")
+            }
+        }
+    }
+    
     static func ncmbClassName() -> String! {
         return "Authers"
     }

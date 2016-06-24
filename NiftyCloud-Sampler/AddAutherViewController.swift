@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddAutherViewController: UIViewController, UITextFieldDelegate {
+class AddAutherViewController: UIViewController {
     
     @IBOutlet var firstTextField: UITextField!
     
@@ -18,8 +18,8 @@ class AddAutherViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        familyTextField.delegate = self
-        firstTextField.delegate = self
+        familyTextField.delegate = TextFieldDelegate()
+        firstTextField.delegate = TextFieldDelegate()
         
     }
 
@@ -29,20 +29,12 @@ class AddAutherViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func didSelectSave() {
+        guard let family = familyTextField.text else { return }
+        guard let first = firstTextField.text else { return }
+        let auther = Authers.create(first: first, family: family)
+        auther.saveWithEvent()
         
     }
     
-    func create(first text: String, family str: String) {
-        let auther = Authers(firstName: text, familyName: str)
-        auther.saveEventually { (error) in
-            if error != nil {
-                print("\(error.localizedDescription)")
-            }
-        }
-    }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
 }
