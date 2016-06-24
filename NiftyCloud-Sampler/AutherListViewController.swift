@@ -40,7 +40,7 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func transition() {
-        self.performSegueWithIdentifier("", sender: nil)
+        self.performSegueWithIdentifier("toAddAuther", sender: nil)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +49,9 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AutherCell") as! AutherCell
+        
+        let auther = authers[indexPath.row]
+        cell.autherLabel.text = "\(auther.familyName) \(auther.firstName)"
         
         return cell
     }
