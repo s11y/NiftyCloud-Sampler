@@ -10,13 +10,17 @@ import UIKit
 
 class AddAutherViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var textField: UITextField!
+    @IBOutlet var firstTextField: UITextField!
+    
+    @IBOutlet var familyTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        textField.delegate = self
+        familyTextField.delegate = self
+        firstTextField.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,8 +32,13 @@ class AddAutherViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func create(text: String) {
-        
+    func create(first text: String, family str: String) {
+        let auther = Authers(firstName: text, familyName: str)
+        auther.saveEventually { (error) in
+            if error != nil {
+                print("\(error.localizedDescription)")
+            }
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
