@@ -40,7 +40,7 @@ class Books: NCMBObject, NCMBSubclassing {
         return book
     }
     
-    func saveWithEvent() {
+    func saveWithEvent(){
         self.saveEventually { (error) in
             if error != nil {
                 print("\(error.localizedDescription)")

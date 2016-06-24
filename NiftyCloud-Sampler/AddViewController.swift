@@ -32,8 +32,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleTextField.delegate = self
-        autherTextField.delegate = self
+        titleTextField.delegate = TextFieldDelegate()
+        autherTextField.delegate = TextFieldDelegate()
         segmentControl.addTarget(self, action: #selector(self.decideIsPublic(_:)), forControlEvents: .TouchUpInside)
         self.setDatePicker()
         self.setPickerView()
@@ -54,15 +54,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         guard let date = publishedDate else { return }
         guard let whichPublic = self.isPublic else { return }
         guard let auther = self.auther else { return }
-        let book: Books = Books(title: title, publishedDate: date, auther: auther, isPublic: whichPublic)
-        book.saveEventually { (error) in
-            if error != nil {
-                // 失敗
-            }else {
-                // 成功
-                self.navigationController?.popViewControllerAnimated(true)
-            }
-        }
+        let book = Books.create(titleOfBook: title, publishedDate: date, autherOfBook: auther, isPublic: whichPublic)
+        book.saveWithEvent()
     }
     
     func decideIsPublic(row: Int) {
@@ -101,9 +94,5 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
-    }
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
 }
