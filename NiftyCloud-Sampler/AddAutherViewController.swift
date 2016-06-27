@@ -20,7 +20,6 @@ class AddAutherViewController: UIViewController {
         // Do any additional setup after loading the view.
         familyTextField.delegate = TextFieldDelegate()
         firstTextField.delegate = TextFieldDelegate()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,8 +32,5 @@ class AddAutherViewController: UIViewController {
         guard let first = firstTextField.text else { return }
         let auther = Authers.create(first: first, family: family)
         auther.saveWithEvent()
-        
     }
-    
-    
 }

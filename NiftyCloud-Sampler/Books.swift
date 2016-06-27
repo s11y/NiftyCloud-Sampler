@@ -16,13 +16,8 @@ class Books: NCMBObject, NCMBSubclassing {
     @NSManaged var isPublic: NSNumber!
     @NSManaged var user: NCMBUser!
     
-    init(title: String, publishedDate: NSDate, auther: Authers, isPublic: NSNumber, user: NCMBUser) {
-        super.init()
-        self.title = title
-        self.auther = auther
-        self.publishedDate = publishedDate
-        self.isPublic = isPublic
-        self.user = user
+    override init!(className: String!) {
+        super.init(className: className)
     }
     
     override init() {
@@ -38,7 +33,12 @@ class Books: NCMBObject, NCMBSubclassing {
     }
     
     static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers, isPublic: NSNumber, user: NCMBUser) -> Books {
-        let book = Books(title: title, publishedDate: date, auther: auther, isPublic: isPublic, user: user)
+        let book = Books(className: "Books")
+        book.title = title
+        book.publishedDate = date
+        book.auther = auther
+        book.isPublic = isPublic
+        book.user = user
         return book
     }
     
@@ -55,8 +55,12 @@ class Books: NCMBObject, NCMBSubclassing {
         let query = NCMBQuery(className: self.ncmbClassName())
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
-                for book in objects {
-                    books.append(book as! Books)
+                print("objects...\(objects)")
+                for object in objects {
+//                    books.append(book as! Books)
+                    if let book: Books = object as? Books {
+                        books.append(book)
+                    }
                 }
             }else {
                 print("\(error.localizedDescription)")

@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -154,7 +154,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="X8F-sa-ghl" kind="relationship" relationship="viewControllers" id="fvR-8c-nhd"/>
-                        <segue destination="4WP-Zx-lpc" kind="show" id="zUq-Rl-bwN"/>
+                        <segue destination="4WP-Zx-lpc" kind="relationship" relationship="viewControllers" id="5tR-Rc-jXL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMA-zL-geP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -164,7 +164,7 @@
         <!--Auther List View Controller-->
         <scene sceneID="7vR-lb-wBD">
             <objects>
-                <viewController id="Qnv-o5-XdR" customClass="AutherListViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Qnv-o5-XdR" customClass="AutherListViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KWf-Iz-wwL"/>
                         <viewControllerLayoutGuide type="bottom" id="KYA-8G-fvh"/>
@@ -258,10 +258,11 @@
             </objects>
             <point key="canvasLocation" x="2223" y="1731"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="tQO-bT-TCm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4WP-Zx-lpc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Rgb-Uu-eHV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9r6-eN-SoZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -274,7 +275,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJE-IR-F0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="1731"/>
+            <point key="canvasLocation" x="584" y="1713"/>
         </scene>
     </scenes>
 </document>

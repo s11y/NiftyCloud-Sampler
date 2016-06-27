@@ -24,6 +24,11 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         autherTable.registerNib(UINib(nibName: "AutherCell", bundle: nil), forCellReuseIdentifier: "AutherCell")
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.read()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,8 +40,22 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func read() {
-        authers = Authers.loadAll()
+        authers = self.loadAll()
         autherTable.reloadData()
+    }
+    
+    func loadAll() -> [Authers] {
+        var authers: [Authers] = []
+        let query = NCMBQuery(className: "Authers")
+        query.orderByAscending("createDate")
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if error != nil {
+                print("\(error.localizedDescription)")
+            }else {
+                print("\(objects)")
+            }
+        }
+        return authers
     }
     
     func transition() {

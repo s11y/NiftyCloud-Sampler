@@ -14,42 +14,31 @@ class Authers: NCMBObject, NCMBSubclassing {
     @NSManaged var familyName: String!
     @NSManaged var firstName: String!
     
-    init(firstName: String, familyName: String) {
-        super.init()
-        self.familyName = familyName
-        self.firstName = firstName
+    override init!(className: String!) {
+        super.init(className: className)
     }
     
     override init() {
         super.init()
     }
     
-    static func create(firstName first: String, familyName family: String) {
-        let auther = Authers(firstName: first, familyName: family)
-        auther.saveEventually { (error) in
-            if error != nil {
-                print("\(error.localizedDescription)")
-            }
-        }
-    }
-    
     static func loadAll() -> [Authers] {
         var authers: [Authers] = []
-        let query = NCMBQuery(className: self.ncmbClassName())
+        let query = NCMBQuery(className: "Authers")
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error != nil {
                 print("\(error.localizedDescription)")
             }else {
-                for object in objects {
-                    authers.append(object as! Authers)
-                }
+                print("\(objects)")
             }
         }
         return authers
     }
     
     static func create(first text: String, family str: String) -> Authers {
-        let auther = Authers(firstName: text, familyName: str)
+        let auther = Authers(className: "Authers")
+        auther.firstName = text
+        auther.familyName = str
         return auther
         
     }

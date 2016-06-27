@@ -89,7 +89,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.auther = self.authers[row]
-        self.autherTextField.text = "\(self.auther.familyName) + \(self.auther.firstName)"
+        self.autherTextField.text = "\(self.auther.familyName) \(self.auther.firstName)"
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
