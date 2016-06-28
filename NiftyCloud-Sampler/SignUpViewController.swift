@@ -41,8 +41,11 @@ class SignUpViewController: UIViewController {
         guard let pass = passwordTextField.text else { return }
         guard let name = nameTextField.text else { return }
         guard let confirm = confirmPasswordTextField.text else { return }
-//        if confirm.
-        self.signup(email, password: pass, username: name)
+        if confirm.isEqual(text: pass) {
+            self.signup(email, password: pass, username: name)
+        }else {
+            self.presentPassConfirmAlert()
+        }
     }
     
     @IBAction func didSelectToLogin() {
@@ -71,6 +74,16 @@ class SignUpViewController: UIViewController {
         }else {
             print("ユーザーネームかぶっているよ")
         }
+    }
+    
+    func presentPassConfirmAlert() {
+        let alert = UIAlertController(title: "パスワードが一致しません", message: "パスワードが一致しなかったので、もう一度入力してください", preferredStyle: .Alert)
+        let btn = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.confirmPasswordTextField.text = ""
+            self.passwordTextField.text = ""
+        }
+        alert.addAction(btn)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func transition() {

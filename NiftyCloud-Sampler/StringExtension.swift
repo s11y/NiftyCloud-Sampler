@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+extension String {
+    func isEqual(text str: String) -> Bool {
+        return self == str
+    }
+}
