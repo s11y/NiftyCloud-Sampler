@@ -11,15 +11,11 @@ import NCMB
 
 class Authers: NCMBObject, NCMBSubclassing {
     
-    @NSManaged var familyName: String!
-    @NSManaged var firstName: String!
+    @NSManaged var familyName: NSString!
+    @NSManaged var firstName: NSString!
     
     override init!(className: String!) {
         super.init(className: className)
-    }
-    
-    override init() {
-        super.init()
     }
     
     static func loadAll() -> [Authers] {
@@ -37,8 +33,8 @@ class Authers: NCMBObject, NCMBSubclassing {
     
     static func create(first text: String, family str: String) -> Authers {
         let auther = Authers(className: "Authers")
-        auther.firstName = text
-        auther.familyName = str
+        auther.setObject(text, forKey: "firstName")
+        auther.setObject(str, forKey: "familyName")
         return auther
         
     }
@@ -47,6 +43,14 @@ class Authers: NCMBObject, NCMBSubclassing {
         self.saveEventually { (error) in
             if error != nil {
                 print("\(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func saveInBackground() {
+        self.saveInBackgroundWithBlock { (error) in
+            if error != nil {
+                print(error.localizedDescription)
             }
         }
     }

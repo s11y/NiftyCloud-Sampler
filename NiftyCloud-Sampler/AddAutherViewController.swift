@@ -31,6 +31,6 @@ class AddAutherViewController: UIViewController {
         guard let family = familyTextField.text else { return }
         guard let first = firstTextField.text else { return }
         let auther = Authers.create(first: first, family: family)
-        auther.saveWithEvent()
+        auther.saveInBackground()
     }
 }

@@ -25,6 +25,9 @@
 		3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */; };
 		39A821D01D1E01C600B8E51A /* NSDateExtesnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */; };
 		39B267BB1D16901C00AB274B /* Authers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B267BA1D16901C00AB274B /* Authers.swift */; };
+		39C865F01D220585004C6800 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865EF1D220585004C6800 /* AudioToolbox.framework */; };
+		39C865F21D220592004C6800 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865F11D220592004C6800 /* MobileCoreServices.framework */; };
+		39C865F41D22059B004C6800 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865F31D22059B004C6800 /* SystemConfiguration.framework */; };
 		39F4B9F51D164A1E003E2D04 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4B9F31D164A1E003E2D04 /* BookCell.swift */; };
 		39F4B9F61D164A1E003E2D04 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39F4B9F41D164A1E003E2D04 /* BookCell.xib */; };
 		39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4B9F71D164B37003E2D04 /* AddViewController.swift */; };
@@ -77,6 +80,10 @@
 		3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtesnsion.swift; sourceTree = "<group>"; };
 		39B267BA1D16901C00AB274B /* Authers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authers.swift; sourceTree = "<group>"; };
+		39C865EF1D220585004C6800 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		39C865F11D220592004C6800 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		39C865F31D22059B004C6800 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		39C865F51D2205A1004C6800 /* NCMB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NCMB.framework; path = "../../Library/Developer/Xcode/DerivedData/NiftyCloud-Sampler-hbvzskufbivlozeucmtqyndzqdhz/Build/Products/Debug-iphonesimulator/NCMB/NCMB.framework"; sourceTree = "<group>"; };
 		39F4B9F31D164A1E003E2D04 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		39F4B9F41D164A1E003E2D04 /* BookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		39F4B9F71D164B37003E2D04 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C865F41D22059B004C6800 /* SystemConfiguration.framework in Frameworks */,
+				39C865F21D220592004C6800 /* MobileCoreServices.framework in Frameworks */,
+				39C865F01D220585004C6800 /* AudioToolbox.framework in Frameworks */,
 				6148A4120C557989BEF49E8B /* Pods_NiftyCloud_Sampler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +245,10 @@
 		8D798141380CC7DFA6A0176C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39C865F51D2205A1004C6800 /* NCMB.framework */,
+				39C865F31D22059B004C6800 /* SystemConfiguration.framework */,
+				39C865F11D220592004C6800 /* MobileCoreServices.framework */,
+				39C865EF1D220585004C6800 /* AudioToolbox.framework */,
 				3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */,
 				A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */,
 				90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */,
