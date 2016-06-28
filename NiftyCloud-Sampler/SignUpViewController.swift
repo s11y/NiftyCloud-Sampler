@@ -62,13 +62,7 @@ class SignUpViewController: UIViewController {
                 if error != nil {
                     print(error.localizedDescription)
                 }else {
-                    NCMBUser.requestAuthenticationMailInBackground(mail, block: { (error) in
-                        if error != nil {
-                            print(error.localizedDescription)
-                        }else {
-                            self.transition()
-                        }
-                    })
+                    self.requestAuthentication(email: mail)
                 }
             }
         }else {
@@ -76,11 +70,30 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    func requestAuthentication(email address: String) {
+        NCMBUser.requestAuthenticationMailInBackground(address, block: { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                self.transition()
+            }
+        })
+    }
+    
     func presentPassConfirmAlert() {
         let alert = UIAlertController(title: "パスワードが一致しません", message: "パスワードが一致しなかったので、もう一度入力してください", preferredStyle: .Alert)
         let btn = UIAlertAction(title: "OK", style: .Default) { (action) in
             self.confirmPasswordTextField.text = ""
             self.passwordTextField.text = ""
+        }
+        alert.addAction(btn)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func presentCheckUsernameAlert()  {
+        let alert = UIAlertController(title: "ユーザーネームエラー", message: "記入されたユーザーネームは既に登録されています。\n違うユーザーネームを記入してください", preferredStyle: .Alert)
+        let btn = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.nameTextField.text = ""
         }
         alert.addAction(btn)
         self.presentViewController(alert, animated: true, completion: nil)
