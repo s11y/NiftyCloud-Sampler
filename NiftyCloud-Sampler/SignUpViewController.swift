@@ -15,6 +15,8 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet var passwordTextField: UITextField!
     
+    @IBOutlet var confirmPasswordTextField: UITextField!
+    
     @IBOutlet var nameTextField: UITextField!
 
     override func viewDidLoad() {
@@ -24,7 +26,9 @@ class SignUpViewController: UIViewController {
         emailTextField.delegate = TextFieldDelegate()
         passwordTextField.delegate = TextFieldDelegate()
         nameTextField.delegate = TextFieldDelegate()
+        confirmPasswordTextField.delegate = TextFieldDelegate()
         passwordTextField.secureTextEntry = true
+        confirmPasswordTextField.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +40,12 @@ class SignUpViewController: UIViewController {
         guard let email = emailTextField.text else { return }
         guard let pass = passwordTextField.text else { return }
         guard let name = nameTextField.text else { return }
-        self.signup(email, password: pass, username: name)
+        guard let confirm = confirmPasswordTextField.text else { return }
+        if confirm.isEqual(text: pass) {
+            self.signup(email, password: pass, username: name)
+        }else {
+            self.presentPassConfirmAlert()
+        }
     }
     
     @IBAction func didSelectToLogin() {
@@ -48,19 +57,47 @@ class SignUpViewController: UIViewController {
         user.password = password
         user.mailAddress = mail
         user.userName = username
-        user.signUpInBackgroundWithBlock { (error) in
+        if user.isNew == true {
+            user.signUpInBackgroundWithBlock { (error) in
+                if error != nil {
+                    print(error.localizedDescription)
+                }else {
+                    self.requestAuthentication(email: mail)
+                }
+            }
+        }else {
+            print("ユーザーネームかぶっているよ")
+            self.presentCheckUsernameAlert()
+        }
+    }
+    
+    func requestAuthentication(email address: String) {
+        NCMBUser.requestAuthenticationMailInBackground(address, block: { (error) in
             if error != nil {
                 print(error.localizedDescription)
             }else {
-                NCMBUser.requestAuthenticationMailInBackground(mail, block: { (error) in
-                    if error != nil {
-                        print(error.localizedDescription)
-                    }else {
-                        self.transition()
-                    }
-                })
+                self.transition()
             }
+        })
+    }
+    
+    func presentPassConfirmAlert() {
+        let alert = UIAlertController(title: "パスワードが一致しません", message: "パスワードが一致しなかったので、もう一度入力してください", preferredStyle: .Alert)
+        let btn = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.confirmPasswordTextField.text = ""
+            self.passwordTextField.text = ""
         }
+        alert.addAction(btn)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func presentCheckUsernameAlert()  {
+        let alert = UIAlertController(title: "ユーザーネームエラー", message: "記入されたユーザーネームは既に登録されています。\n違うユーザーネームを記入してください", preferredStyle: .Alert)
+        let btn = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.nameTextField.text = ""
+        }
+        alert.addAction(btn)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func transition() {
