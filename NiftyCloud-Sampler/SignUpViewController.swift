@@ -67,6 +67,7 @@ class SignUpViewController: UIViewController {
             }
         }else {
             print("ユーザーネームかぶっているよ")
+            self.presentCheckUsernameAlert()
         }
     }
     
