@@ -15,6 +15,8 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet var passwordTextField: UITextField!
     
+    @IBOutlet var confirmPasswordTextField: UITextField!
+    
     @IBOutlet var nameTextField: UITextField!
 
     override func viewDidLoad() {
@@ -24,7 +26,9 @@ class SignUpViewController: UIViewController {
         emailTextField.delegate = TextFieldDelegate()
         passwordTextField.delegate = TextFieldDelegate()
         nameTextField.delegate = TextFieldDelegate()
+        confirmPasswordTextField.delegate = TextFieldDelegate()
         passwordTextField.secureTextEntry = true
+        confirmPasswordTextField.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +40,8 @@ class SignUpViewController: UIViewController {
         guard let email = emailTextField.text else { return }
         guard let pass = passwordTextField.text else { return }
         guard let name = nameTextField.text else { return }
+        guard let confirm = confirmPasswordTextField.text else { return }
+//        if confirm.
         self.signup(email, password: pass, username: name)
     }
     
@@ -48,18 +54,22 @@ class SignUpViewController: UIViewController {
         user.password = password
         user.mailAddress = mail
         user.userName = username
-        user.signUpInBackgroundWithBlock { (error) in
-            if error != nil {
-                print(error.localizedDescription)
-            }else {
-                NCMBUser.requestAuthenticationMailInBackground(mail, block: { (error) in
-                    if error != nil {
-                        print(error.localizedDescription)
-                    }else {
-                        self.transition()
-                    }
-                })
+        if user.isNew == true {
+            user.signUpInBackgroundWithBlock { (error) in
+                if error != nil {
+                    print(error.localizedDescription)
+                }else {
+                    NCMBUser.requestAuthenticationMailInBackground(mail, block: { (error) in
+                        if error != nil {
+                            print(error.localizedDescription)
+                        }else {
+                            self.transition()
+                        }
+                    })
+                }
             }
+        }else {
+            print("ユーザーネームかぶっているよ")
         }
     }
     
