@@ -46,9 +46,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("BookCell") as! BookCell
         
+        let book = books[indexPath.row]
+        cell.autherLabel.text = "\(book.auther.familyName) \(book.auther.firstName)"
+        cell.titleLabel.text = book.title
+        cell.publishedDateLabel.text = book.publishedDate.convert()
+        
+        
         return cell
     }
-    
-    
 }
 

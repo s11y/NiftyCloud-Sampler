@@ -14,13 +14,10 @@ class Books: NCMBObject, NCMBSubclassing {
     @NSManaged var auther: Authers!
     @NSManaged var publishedDate: NSDate!
     @NSManaged var isPublic: NSNumber!
+    @NSManaged var user: NCMBUser!
     
-    init(title: String, publishedDate: NSDate, auther: Authers, isPublic: NSNumber) {
-        super.init()
-        self.title = title
-        self.auther = auther
-        self.publishedDate = publishedDate
-        self.isPublic = isPublic
+    override init!(className: String!) {
+        super.init(className: className)
     }
     
     override init() {
@@ -35,9 +32,18 @@ class Books: NCMBObject, NCMBSubclassing {
         return "Books"
     }
     
-    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers, isPublic: NSNumber) {
-        let book = Books(title: title, publishedDate: date, auther: auther, isPublic: isPublic)
-        book.saveEventually { (error) in
+    static func create(titleOfBook title: String, publishedDate date: NSDate, autherOfBook auther: Authers, isPublic: NSNumber, user: NCMBUser) -> Books {
+        let book = Books(className: "Books")
+        book.title = title
+        book.publishedDate = date
+        book.auther = auther
+        book.isPublic = isPublic
+        book.user = user
+        return book
+    }
+    
+    func saveWithEvent(){
+        self.saveEventually { (error) in
             if error != nil {
                 print("\(error.localizedDescription)")
             }
@@ -49,8 +55,12 @@ class Books: NCMBObject, NCMBSubclassing {
         let query = NCMBQuery(className: self.ncmbClassName())
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error == nil {
-                for book in objects {
-                    books.append(book as! Books)
+                print("objects...\(objects)")
+                for object in objects {
+//                    books.append(book as! Books)
+                    if let book: Books = object as? Books {
+                        books.append(book)
+                    }
                 }
             }else {
                 print("\(error.localizedDescription)")
@@ -58,4 +68,6 @@ class Books: NCMBObject, NCMBSubclassing {
         }
         return books
     }
+    
+
 }

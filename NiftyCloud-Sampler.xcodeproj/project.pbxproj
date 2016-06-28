@@ -12,6 +12,7 @@
 		39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F221D1778E6000BA688 /* AutherListViewController.swift */; };
 		39550F261D177995000BA688 /* AutherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F241D177995000BA688 /* AutherCell.swift */; };
 		39550F271D177995000BA688 /* AutherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39550F251D177995000BA688 /* AutherCell.xib */; };
+		397DA24F1D1DB66100852954 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */; };
 		3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B61D196EA800735A58 /* SignUpViewController.swift */; };
 		3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B81D196EAF00735A58 /* LoginViewController.swift */; };
 		3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */; };
@@ -22,7 +23,11 @@
 		3990BD081D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */; };
 		3990BD131D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */; };
 		3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */; };
+		39A821D01D1E01C600B8E51A /* NSDateExtesnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */; };
 		39B267BB1D16901C00AB274B /* Authers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B267BA1D16901C00AB274B /* Authers.swift */; };
+		39C865F01D220585004C6800 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865EF1D220585004C6800 /* AudioToolbox.framework */; };
+		39C865F21D220592004C6800 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865F11D220592004C6800 /* MobileCoreServices.framework */; };
+		39C865F41D22059B004C6800 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865F31D22059B004C6800 /* SystemConfiguration.framework */; };
 		39F4B9F51D164A1E003E2D04 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4B9F31D164A1E003E2D04 /* BookCell.swift */; };
 		39F4B9F61D164A1E003E2D04 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39F4B9F41D164A1E003E2D04 /* BookCell.xib */; };
 		39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4B9F71D164B37003E2D04 /* AddViewController.swift */; };
@@ -56,6 +61,7 @@
 		39550F221D1778E6000BA688 /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherListViewController.swift; sourceTree = "<group>"; };
 		39550F241D177995000BA688 /* AutherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherCell.swift; sourceTree = "<group>"; };
 		39550F251D177995000BA688 /* AutherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutherCell.xib; sourceTree = "<group>"; };
+		397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		3984A9B61D196EA800735A58 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3984A9B81D196EAF00735A58 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +78,12 @@
 		3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiftyCloud_SamplerUITests.swift; sourceTree = "<group>"; };
 		3990BD141D0CD51900F6EBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
+		39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtesnsion.swift; sourceTree = "<group>"; };
 		39B267BA1D16901C00AB274B /* Authers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authers.swift; sourceTree = "<group>"; };
+		39C865EF1D220585004C6800 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		39C865F11D220592004C6800 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		39C865F31D22059B004C6800 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		39C865F51D2205A1004C6800 /* NCMB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NCMB.framework; path = "../../Library/Developer/Xcode/DerivedData/NiftyCloud-Sampler-hbvzskufbivlozeucmtqyndzqdhz/Build/Products/Debug-iphonesimulator/NCMB/NCMB.framework"; sourceTree = "<group>"; };
 		39F4B9F31D164A1E003E2D04 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		39F4B9F41D164A1E003E2D04 /* BookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
 		39F4B9F71D164B37003E2D04 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C865F41D22059B004C6800 /* SystemConfiguration.framework in Frameworks */,
+				39C865F21D220592004C6800 /* MobileCoreServices.framework in Frameworks */,
+				39C865F01D220585004C6800 /* AudioToolbox.framework in Frameworks */,
 				6148A4120C557989BEF49E8B /* Pods_NiftyCloud_Sampler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +188,8 @@
 				3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */,
 				39B267BC1D16915800AB274B /* Models */,
 				39550F291D1779A3000BA688 /* Cells */,
+				397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */,
+				39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */,
 			);
 			path = "NiftyCloud-Sampler";
 			sourceTree = "<group>";
@@ -229,6 +245,10 @@
 		8D798141380CC7DFA6A0176C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39C865F51D2205A1004C6800 /* NCMB.framework */,
+				39C865F31D22059B004C6800 /* SystemConfiguration.framework */,
+				39C865F11D220592004C6800 /* MobileCoreServices.framework */,
+				39C865EF1D220585004C6800 /* AudioToolbox.framework */,
 				3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */,
 				A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */,
 				90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */,
@@ -256,12 +276,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3990BD171D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-Sampler" */;
 			buildPhases = (
-				DA892960B2B56172777A4A11 /* 📦 Check Pods Manifest.lock */,
+				DA892960B2B56172777A4A11 /* [CP] Check Pods Manifest.lock */,
 				3990BCEB1D0CD51900F6EBBA /* Sources */,
 				3990BCEC1D0CD51900F6EBBA /* Frameworks */,
 				3990BCED1D0CD51900F6EBBA /* Resources */,
-				31F5861CB82CC65B4B46181F /* 📦 Embed Pods Frameworks */,
-				43A03132CE5F0C94956B76F6 /* 📦 Copy Pods Resources */,
+				31F5861CB82CC65B4B46181F /* [CP] Embed Pods Frameworks */,
+				43A03132CE5F0C94956B76F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,12 +296,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3990BD1A1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerTests" */;
 			buildPhases = (
-				9C50EADFD0DDC86BF8B21268 /* 📦 Check Pods Manifest.lock */,
+				9C50EADFD0DDC86BF8B21268 /* [CP] Check Pods Manifest.lock */,
 				3990BCFF1D0CD51900F6EBBA /* Sources */,
 				3990BD001D0CD51900F6EBBA /* Frameworks */,
 				3990BD011D0CD51900F6EBBA /* Resources */,
-				13C859767BD68E56FC9D2538 /* 📦 Embed Pods Frameworks */,
-				A9A1C03B3AD8B4A4C6025334 /* 📦 Copy Pods Resources */,
+				13C859767BD68E56FC9D2538 /* [CP] Embed Pods Frameworks */,
+				A9A1C03B3AD8B4A4C6025334 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,11 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3990BD1D1D0CD51900F6EBBA /* Build configuration list for PBXNativeTarget "NiftyCloud-SamplerUITests" */;
 			buildPhases = (
-				54E35ACC243B4E2AF3488475 /* 📦 Check Pods Manifest.lock */,
+				54E35ACC243B4E2AF3488475 /* [CP] Check Pods Manifest.lock */,
 				3990BD0A1D0CD51900F6EBBA /* Sources */,
 				3990BD0B1D0CD51900F6EBBA /* Frameworks */,
 				3990BD0C1D0CD51900F6EBBA /* Resources */,
-				350EC7EB5850845690804E46 /* 📦 Copy Pods Resources */,
+				350EC7EB5850845690804E46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,14 +406,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13C859767BD68E56FC9D2538 /* 📦 Embed Pods Frameworks */ = {
+		13C859767BD68E56FC9D2538 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,14 +421,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		31F5861CB82CC65B4B46181F /* 📦 Embed Pods Frameworks */ = {
+		31F5861CB82CC65B4B46181F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,14 +436,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		350EC7EB5850845690804E46 /* 📦 Copy Pods Resources */ = {
+		350EC7EB5850845690804E46 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,14 +451,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-SamplerUITests/Pods-NiftyCloud-SamplerUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		43A03132CE5F0C94956B76F6 /* 📦 Copy Pods Resources */ = {
+		43A03132CE5F0C94956B76F6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,14 +466,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		54E35ACC243B4E2AF3488475 /* 📦 Check Pods Manifest.lock */ = {
+		54E35ACC243B4E2AF3488475 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,14 +481,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9C50EADFD0DDC86BF8B21268 /* 📦 Check Pods Manifest.lock */ = {
+		9C50EADFD0DDC86BF8B21268 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,14 +496,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A9A1C03B3AD8B4A4C6025334 /* 📦 Copy Pods Resources */ = {
+		A9A1C03B3AD8B4A4C6025334 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,14 +511,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA892960B2B56172777A4A11 /* 📦 Check Pods Manifest.lock */ = {
+		DA892960B2B56172777A4A11 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				397DA24F1D1DB66100852954 /* TextFieldDelegate.swift in Sources */,
 				3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */,
 				3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */,
 				39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */,
@@ -522,6 +543,7 @@
 				39550F261D177995000BA688 /* AutherCell.swift in Sources */,
 				3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */,
 				39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */,
+				39A821D01D1E01C600B8E51A /* NSDateExtesnsion.swift in Sources */,
 				3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */,
 				39075E341D162EDC00CEBD44 /* Books.swift in Sources */,
 				39F4B9F51D164A1E003E2D04 /* BookCell.swift in Sources */,

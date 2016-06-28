@@ -9,7 +9,7 @@
 import UIKit
 import NCMB
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
     
     @IBOutlet var emailTextField: UITextField!
     
@@ -19,8 +19,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
+        emailTextField.delegate = TextFieldDelegate()
+        passwordTextField.delegate = TextFieldDelegate()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +28,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        return true
+    @IBAction func didSelectLogin() {
+        guard let mail = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        self.login(mail, password: password)
+    }
+    
+    func login(mail: String, password: String) {
+        NCMBUser.logInWithMailAddressInBackground(mail, password: password) { (user, error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                if user.isAuthenticated() {
+                    
+                }
+            }
+        }
     }
 }

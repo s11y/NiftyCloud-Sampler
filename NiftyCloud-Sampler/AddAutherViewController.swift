@@ -8,15 +8,18 @@
 
 import UIKit
 
-class AddAutherViewController: UIViewController, UITextFieldDelegate {
+class AddAutherViewController: UIViewController {
     
-    @IBOutlet var textField: UITextField!
+    @IBOutlet var firstTextField: UITextField!
+    
+    @IBOutlet var familyTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        textField.delegate = self
+        familyTextField.delegate = TextFieldDelegate()
+        firstTextField.delegate = TextFieldDelegate()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,15 +28,9 @@ class AddAutherViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func didSelectSave() {
-        
-    }
-    
-    func create(text: String) {
-        
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        guard let family = familyTextField.text else { return }
+        guard let first = firstTextField.text else { return }
+        let auther = Authers.create(first: first, family: family)
+        auther.saveInBackground()
     }
 }

@@ -9,21 +9,22 @@
 import UIKit
 import NCMB
 
-class SignUpViewController: UIViewController, UITextFieldDelegate {
+class SignUpViewController: UIViewController {
     
     @IBOutlet var emailTextField: UITextField!
     
-    @IBOutlet var usernameTextField: UITextField!
-    
     @IBOutlet var passwordTextField: UITextField!
+    
+    @IBOutlet var nameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        emailTextField.delegate = self
-        usernameTextField.delegate = self
-        passwordTextField.delegate = self
+        emailTextField.delegate = TextFieldDelegate()
+        passwordTextField.delegate = TextFieldDelegate()
+        nameTextField.delegate = TextFieldDelegate()
+        passwordTextField.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,12 +32,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func signup() {
-        
+    @IBAction func didSelectSignup() {
+        guard let email = emailTextField.text else { return }
+        guard let pass = passwordTextField.text else { return }
+        guard let name = nameTextField.text else { return}
+        self.signup(email, password: pass, username: name)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    func signup(mail: String, password: String, username: String) {
+        let user = NCMBUser(className: "user")
+        user.password = password
+        user.mailAddress = mail
+        user.userName = username
+        user.signUpInBackgroundWithBlock { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                NCMBUser.requestAuthenticationMailInBackground(mail, block: { (error) in
+                    if error != nil {
+                        print(error.localizedDescription)
+                    }
+                })
+            }
+        }
     }
 }

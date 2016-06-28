@@ -11,41 +11,48 @@ import NCMB
 
 class Authers: NCMBObject, NCMBSubclassing {
     
-    @NSManaged var familyName: String!
-    @NSManaged var firstName: String!
+    @NSManaged var familyName: NSString!
+    @NSManaged var firstName: NSString!
     
-    init(firstName: String, familyName: String) {
-        super.init()
-        self.familyName = familyName
-        self.firstName = firstName
-    }
-    
-    override init() {
-        super.init()
-    }
-    
-    static func create(firstName first: String, familyName family: String) {
-        let auther = Authers(firstName: first, familyName: family)
-        auther.saveEventually { (error) in
-            if error != nil {
-                print("\(error.localizedDescription)")
-            }
-        }
+    override init!(className: String!) {
+        super.init(className: className)
     }
     
     static func loadAll() -> [Authers] {
         var authers: [Authers] = []
-        let query = NCMBQuery(className: self.ncmbClassName())
+        let query = NCMBQuery(className: "Authers")
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error != nil {
                 print("\(error.localizedDescription)")
             }else {
-                for object in objects {
-                    authers.append(object as! Authers)
-                }
+                print("\(objects)")
             }
         }
         return authers
+    }
+    
+    static func create(first text: String, family str: String) -> Authers {
+        let auther = Authers(className: "Authers")
+        auther.setObject(text, forKey: "firstName")
+        auther.setObject(str, forKey: "familyName")
+        return auther
+        
+    }
+    
+    func saveWithEvent() {
+        self.saveEventually { (error) in
+            if error != nil {
+                print("\(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func saveInBackground() {
+        self.saveInBackgroundWithBlock { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     static func ncmbClassName() -> String! {
