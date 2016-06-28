@@ -215,13 +215,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-ML-xKE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnd-ML-xKE">
                                 <rect key="frame" x="20" y="185" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJF-BA-avh">
-                                <rect key="frame" x="248" y="306" width="104" height="58"/>
+                                <rect key="frame" x="248" y="373" width="104" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="7e7-oW-zgM"/>
                                     <constraint firstAttribute="height" constant="58" id="yXN-4k-8n2"/>
@@ -231,13 +231,13 @@
                                     <action selector="didSelectSignup" destination="r0T-O8-fBS" eventType="touchUpInside" id="hvG-uf-UOb"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-en-fSX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-en-fSX">
                                 <rect key="frame" x="20" y="253" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft0-Zo-mMM">
-                                <rect key="frame" x="268" y="378" width="65" height="40"/>
+                                <rect key="frame" x="268" y="445" width="65" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Mtc-Jh-UKy"/>
                                     <constraint firstAttribute="height" constant="40" id="WBQ-j8-H5J"/>
@@ -247,6 +247,11 @@
                                     <action selector="didSelectToLogin" destination="r0T-O8-fBS" eventType="touchUpInside" id="v4U-oa-gkQ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfD-FU-tX6">
+                                <rect key="frame" x="20" y="321" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -254,22 +259,26 @@
                             <constraint firstAttribute="trailingMargin" secondItem="HWa-en-fSX" secondAttribute="trailing" id="45o-2z-1QJ"/>
                             <constraint firstItem="Ft0-Zo-mMM" firstAttribute="top" secondItem="BJF-BA-avh" secondAttribute="bottom" constant="14" id="6tz-dJ-1uf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fnd-ML-xKE" secondAttribute="trailing" id="Cef-ua-hKW"/>
+                            <constraint firstItem="BJF-BA-avh" firstAttribute="top" secondItem="rfD-FU-tX6" secondAttribute="bottom" constant="22" id="Evt-PK-TKe"/>
                             <constraint firstItem="yk6-0F-ZNj" firstAttribute="top" secondItem="E76-PG-e58" secondAttribute="bottom" constant="53" id="GBp-2w-NCG"/>
                             <constraint firstItem="HWa-en-fSX" firstAttribute="top" secondItem="Fnd-ML-xKE" secondAttribute="bottom" constant="38" id="Jye-Re-yBB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="yk6-0F-ZNj" secondAttribute="leading" id="KqY-OR-Kbq"/>
-                            <constraint firstItem="BJF-BA-avh" firstAttribute="top" secondItem="HWa-en-fSX" secondAttribute="bottom" constant="23" id="YjV-jW-eNK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yk6-0F-ZNj" secondAttribute="trailing" id="bTk-Tb-lRD"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rfD-FU-tX6" secondAttribute="leading" id="hjn-Nx-34b"/>
                             <constraint firstItem="Fnd-ML-xKE" firstAttribute="top" secondItem="yk6-0F-ZNj" secondAttribute="bottom" constant="38" id="nFZ-sL-qYY"/>
+                            <constraint firstItem="rfD-FU-tX6" firstAttribute="top" secondItem="HWa-en-fSX" secondAttribute="bottom" constant="38" id="sGf-rM-ngt"/>
                             <constraint firstItem="BJF-BA-avh" firstAttribute="centerX" secondItem="m0D-aa-CA8" secondAttribute="centerX" id="t98-L2-GOR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rfD-FU-tX6" secondAttribute="trailing" id="vMe-ra-wjW"/>
                             <constraint firstItem="Ft0-Zo-mMM" firstAttribute="centerX" secondItem="m0D-aa-CA8" secondAttribute="centerX" id="vWj-xa-2pw"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Fnd-ML-xKE" secondAttribute="leading" id="vYn-z5-GUa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yYa-W4-4hO"/>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="rfD-FU-tX6" id="OTk-o7-854"/>
                         <outlet property="emailTextField" destination="yk6-0F-ZNj" id="9wn-Uw-CDz"/>
-                        <outlet property="nameTextField" destination="HWa-en-fSX" id="SlG-hH-omk"/>
-                        <outlet property="passwordTextField" destination="Fnd-ML-xKE" id="W9d-FO-tvd"/>
+                        <outlet property="nameTextField" destination="Fnd-ML-xKE" id="h8c-bQ-NVg"/>
+                        <outlet property="passwordTextField" destination="HWa-en-fSX" id="Vat-jb-2Tr"/>
                         <segue destination="Ude-3O-mc5" kind="show" identifier="toLoginView" id="uBm-eF-EBo"/>
                     </connections>
                 </viewController>
