@@ -35,8 +35,12 @@ class SignUpViewController: UIViewController {
     @IBAction func didSelectSignup() {
         guard let email = emailTextField.text else { return }
         guard let pass = passwordTextField.text else { return }
-        guard let name = nameTextField.text else { return}
+        guard let name = nameTextField.text else { return }
         self.signup(email, password: pass, username: name)
+    }
+    
+    @IBAction func didSelectToLogin() {
+        self.transition()
     }
     
     func signup(mail: String, password: String, username: String) {
@@ -51,9 +55,15 @@ class SignUpViewController: UIViewController {
                 NCMBUser.requestAuthenticationMailInBackground(mail, block: { (error) in
                     if error != nil {
                         print(error.localizedDescription)
+                    }else {
+                        self.transition()
                     }
                 })
             }
         }
+    }
+    
+    func transition() {
+        self.performSegueWithIdentifier("toLoginView", sender: nil)
     }
 }
