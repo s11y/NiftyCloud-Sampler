@@ -64,7 +64,7 @@ class SignUpViewController: UIViewController {
         user.password = password
         user.mailAddress = mail
         user.userName = username
-        if user.isNew == true {
+        if user.isNew == false {
             user.signUpInBackgroundWithBlock { (error) in
                 if error != nil {
                     print(error.localizedDescription)

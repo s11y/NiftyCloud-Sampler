@@ -37,6 +37,10 @@ class LoginViewController: UIViewController {
         self.login(mail, password: password)
     }
     
+    @IBAction func selectForgetPassword() {
+        self.presentEmailTextField()
+    }
+    
     func login(mail: String, password: String) {
         NCMBUser.logInWithMailAddressInBackground(mail, password: password) { (user, error) in
             if error != nil {
@@ -51,6 +55,33 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func requestResetPassword(email address: String) {
+        NCMBUser.requestPasswordResetForEmailInBackground(address) { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func presentEmailTextField() {
+        let alert = UIAlertController(title: "パスワードをリセット", message: "パスワードをリセットするためのメールアドレスを記入してください", preferredStyle: .Alert)
+        alert.addTextFieldWithConfigurationHandler { (textField) in
+            textField.placeholder = "Enter Email Address"
+        }
+        let btn = UIAlertAction(title: "Finish", style: .Default) { (action) in
+            if let textField: UITextField = alert.textFields![0] {
+                if let text = textField.text {
+                    self.requestResetPassword(email: text)
+                }else {
+                    print("メールアドレスが記入されてないよ")
+                }
+                
+            }
+        }
+        alert.addAction(btn)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     func presentAuthAlert() {
         let alert = UIAlertController(title: "ユーザー認証失敗", message: "メールアドレスの認証を行ってください。", preferredStyle: .Alert)
         let btn = UIAlertAction(title: "OK", style: .Default, handler: nil)
@@ -60,6 +91,6 @@ class LoginViewController: UIViewController {
     
     func transition() {
         let tabCon = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("tabCon")
-        self.presentViewController(tabCon, animated: true, completion: nil)
+        self.presentViewController(tabCon, animated: false, completion: nil)
     }
 }
