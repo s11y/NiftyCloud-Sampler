@@ -30,6 +30,13 @@ class SignUpViewController: UIViewController {
         passwordTextField.secureTextEntry = true
         confirmPasswordTextField.secureTextEntry = true
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if NCMBUser.currentUser() != nil {
+            self.toView()
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -98,6 +105,11 @@ class SignUpViewController: UIViewController {
         }
         alert.addAction(btn)
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func toView()  {
+        let view = self.storyboard?.instantiateViewControllerWithIdentifier("tabCon")
+        self.presentViewController(view!, animated: true, completion: nil)
     }
     
     func transition() {
