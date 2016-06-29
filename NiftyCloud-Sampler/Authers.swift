@@ -26,6 +26,9 @@ class Authers: NCMBObject, NCMBSubclassing {
                 print("\(error.localizedDescription)")
             }else {
                 print("\(objects)")
+                for object in objects {
+                    authers.append(object as! Authers)
+                }
             }
         }
         return authers
