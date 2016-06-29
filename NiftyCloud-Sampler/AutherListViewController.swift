@@ -40,6 +40,8 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("autherCell") as! AutherCell
+        let auther = autherArray[indexPath.row]
+        cell.nameLabel.text = auther.familyName + auther.firstName
         return cell
     }
 }

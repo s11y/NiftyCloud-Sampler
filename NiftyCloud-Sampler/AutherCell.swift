@@ -9,6 +9,8 @@
 import UIKit
 
 class AutherCell: UITableViewCell {
+    
+    @IBOutlet var nameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
