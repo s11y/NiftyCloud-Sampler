@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         emailTextField.delegate = TextFieldDelegate()
         passwordTextField.delegate = TextFieldDelegate()
+        
+        passwordTextField.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {

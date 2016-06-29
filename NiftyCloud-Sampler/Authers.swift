@@ -11,8 +11,8 @@ import NCMB
 
 class Authers: NCMBObject, NCMBSubclassing {
     
-    @NSManaged var familyName: NSString!
-    @NSManaged var firstName: NSString!
+    @NSManaged var familyName: String!
+    @NSManaged var firstName: String!
     
     override init!(className: String!) {
         super.init(className: className)
@@ -26,13 +26,16 @@ class Authers: NCMBObject, NCMBSubclassing {
                 print("\(error.localizedDescription)")
             }else {
                 print("\(objects)")
+                for object in objects {
+                    authers.append(object as! Authers)
+                }
             }
         }
         return authers
     }
     
     static func create(first text: String, family str: String) -> Authers {
-        let auther = Authers(className: "Authers")
+        let auther = Authers(className: self.ncmbClassName())
         auther.setObject(text, forKey: "firstName")
         auther.setObject(str, forKey: "familyName")
         return auther

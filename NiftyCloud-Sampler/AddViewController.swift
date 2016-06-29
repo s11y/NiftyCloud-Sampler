@@ -58,6 +58,10 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         book.saveWithEvent()
     }
     
+    func read() {
+        authers = Authers.loadAll()
+    }
+    
     func decideIsPublic(row: Int) {
         self.isPublic = NSNumber(integer: row)
     }
