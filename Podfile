@@ -7,6 +7,8 @@ target 'NiftyCloud-Sampler' do
 
   # Pods for NiftyCloud-Sampler
   pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
+  pod 'ActionButton'
+
 
   target 'NiftyCloud-SamplerTests' do
     inherit! :search_paths
