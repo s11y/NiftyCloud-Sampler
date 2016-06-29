@@ -25,7 +25,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     var publishedDate: NSDate!
     
-    var isPublic: NSNumber! = 0
+    var isPublic: Int! = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,11 +59,17 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         guard let title = titleTextField.text else { return }
         guard let date = publishedDate else { return }
         guard let whichPublic = self.isPublic else { return }
-        let book = NCMBObject(className: "Books")
-        book.setObject(title, forKey: "title")
-        book.setObject(date, forKey: "publishedDate")
-        book.setObject(whichPublic, forKey: "isPublic")
-        book.setObject(NCMBUser.currentUser(), forKey: "user")
+        let book = Books(className: "Books")
+        book.title = title
+        book.isPublic = whichPublic
+        book.publishedDate = date
+        book.user = NCMBUser.currentUser()
+//        book.user = NCMBUser.currentUser()
+//        let book = NCMBObject(className: "Books")
+//        book.setObject(title, forKey: "title")
+//        book.setObject(date, forKey: "publishedDate")
+//        book.setObject(whichPublic, forKey: "isPublic")
+//        book.setObject(NCMBUser.currentUser(), forKey: "user")
         book.saveInBackgroundWithBlock { (error) in
             if error != nil {
                 print(error.localizedDescription)
@@ -76,7 +82,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     }
     
     func decideIsPublic(row: Int) {
-        self.isPublic = NSNumber(integer: row)
+//        self.isPublic = NSNumber(integer: row)
     }
     
     func setDatePicker() {

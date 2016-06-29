@@ -48,6 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print(error.localizedDescription)
             }else {
                 print(objects)
+                self.books.removeAll()
                 for object in objects {
                     self.books.append(object as! NCMBObject)
                 }
