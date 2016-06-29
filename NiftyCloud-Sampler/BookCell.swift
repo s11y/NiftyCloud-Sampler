@@ -12,8 +12,6 @@ class BookCell: UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     
-    @IBOutlet var autherLabel: UILabel!
-    
     @IBOutlet var publishedDateLabel: UILabel!
     
     

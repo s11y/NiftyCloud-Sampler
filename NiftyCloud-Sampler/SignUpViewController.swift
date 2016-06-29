@@ -29,13 +29,14 @@ class SignUpViewController: UIViewController {
         confirmPasswordTextField.delegate = TextFieldDelegate()
         passwordTextField.secureTextEntry = true
         confirmPasswordTextField.secureTextEntry = true
+        if NCMBUser.currentUser() != nil {
+            self.toView()
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        if NCMBUser.currentUser() != nil {
-            self.toView()
-        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -108,8 +109,7 @@ class SignUpViewController: UIViewController {
     }
     
     func toView()  {
-        let view = self.storyboard?.instantiateViewControllerWithIdentifier("tabCon")
-        self.presentViewController(view!, animated: true, completion: nil)
+        self.performSegueWithIdentifier("toView", sender: nil)
     }
     
     func transition() {

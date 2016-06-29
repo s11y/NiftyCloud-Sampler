@@ -13,12 +13,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var table: UITableView!
     
-    var books: [Books] = []
+    var books: [AnyObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         table.registerNib(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.read()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+//        self.read()
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,8 +37,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func read() {
-        books = Books.loadAll()
-        table.reloadData()
+        let query = NCMBQuery(className: "Books")
+        query.whereKeyExists("title")
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                for object in objects {
+                    self.books.append(object)
+                }
+                self.table.reloadData()
+            }
+        }
     }
     
     @IBAction func didSelectAdd() {
@@ -47,10 +67,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("BookCell") as! BookCell
         
         let book = books[indexPath.row]
-        cell.autherLabel.text = "\(book.auther.familyName) \(book.auther.firstName)"
         cell.titleLabel.text = book.title
-        cell.publishedDateLabel.text = book.publishedDate.convert()
-        
+        cell.publishedDateLabel.text = (book["publishedDate"] as! NSDate).convert()
         
         return cell
     }
