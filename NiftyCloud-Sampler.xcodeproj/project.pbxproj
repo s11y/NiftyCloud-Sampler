@@ -119,11 +119,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		391D88EE1D246D79001A1DFD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				39484A8B1D22A728002731D1 /* StringExtension.swift */,
+				39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		391D88EF1D246D83001A1DFD /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		391D88F01D246D8B001A1DFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				391D88EC1D246BAB001A1DFD /* Books.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		39550F291D1779A3000BA688 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				39F4B9F91D16504D003E2D04 /* BookCell */,
-				39484A8B1D22A728002731D1 /* StringExtension.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -169,10 +193,10 @@
 				3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */,
 				3990BCFE1D0CD51900F6EBBA /* Info.plist */,
 				3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */,
+				391D88EE1D246D79001A1DFD /* Extension */,
 				39550F291D1779A3000BA688 /* Cells */,
-				397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */,
-				39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */,
-				391D88EC1D246BAB001A1DFD /* Books.swift */,
+				391D88EF1D246D83001A1DFD /* Delegate */,
+				391D88F01D246D8B001A1DFD /* Models */,
 			);
 			path = "NiftyCloud-Sampler";
 			sourceTree = "<group>";

@@ -21,13 +21,39 @@ class Books: NCMBObject, NCMBSubclassing {
         }
     }
     
-    var 
+    var publishedDate: NSDate {
+        get {
+            return objectForKey("publishedDate") as! NSDate
+        }
+        set {
+            setObject(newValue, forKey: "publishedDate")
+        }
+    }
+    
+    var isPublic: Int {
+        get {
+            return objectForKey("isPublic") as! Int
+        }
+        set {
+            setObject(newValue, forKey: "isPublic")
+        }
+    }
+    
+    var user: NCMBUser {
+        get {
+            return objectForKey("user") as! NCMBUser
+        }
+        set {
+            setObject(newValue, forKey: "user")
+        }
+    }
     
     
     
     override init!(className: String!) {
         super.init(className: className)
     }
+    
     static func ncmbClassName() -> String! {
         return "Books"
     }
