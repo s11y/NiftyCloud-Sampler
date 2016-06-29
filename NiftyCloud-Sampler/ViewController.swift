@@ -13,16 +13,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var table: UITableView!
     
-    var books: [AnyObject] = []
+    var books: [NCMBObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        table.registerNib(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
+        table.delegate = self
+        table.dataSource = self
+        table.registerNib(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "bookCell")
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        table.estimatedRowHeight = 71
+        table.rowHeight = UITableViewAutomaticDimension
         self.read()
     }
     
@@ -43,12 +47,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if error != nil {
                 print(error.localizedDescription)
             }else {
+                print(objects)
                 for object in objects {
-                    self.books.append(object)
+                    self.books.append(object as! NCMBObject)
                 }
-                self.table.reloadData()
             }
+            self.table.reloadData()
         }
+        
     }
     
     @IBAction func didSelectAdd() {
@@ -64,11 +70,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BookCell") as! BookCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("bookCell") as! BookCell
         
         let book = books[indexPath.row]
-        cell.titleLabel.text = book.title
-        cell.publishedDateLabel.text = (book["publishedDate"] as! NSDate).convert()
+        print(book.objectForKey("title"))
+        cell.titleLabel.text = "\(book.objectForKey("title"))"
+        cell.publishedDateLabel.text = (book.objectForKey("publishedDate") as! NSDate).convert()
         
         return cell
     }
