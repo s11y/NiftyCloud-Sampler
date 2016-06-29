@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.delegate = self
         table.dataSource = self
         table.registerNib(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "bookCell")
+        self.setActionButton()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -85,8 +86,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func setActionButton() {
-        let editBtn = ActionButtonItem(title: "Add", image: UIImage(named: ""))
-        let autherBtn = ActionButtonItem(title: "Auther", image: UIImage(named: ""))
+        let editBtn = ActionButtonItem(title: "Add", image: UIImage(named: "edit"))
+        let autherBtn = ActionButtonItem(title: "Auther", image: UIImage(named: "avatar"))
         editBtn.action = { item in
             self.transition()
         }
