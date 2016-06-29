@@ -8,12 +8,15 @@
 
 import UIKit
 import NCMB
+import ActionButton
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
     
     var books: [NCMBObject] = []
+    
+    var action: ActionButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +61,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    @IBAction func didSelectAdd() {
-        self.transition()
-    }
-    
     func transition() {
         self.performSegueWithIdentifier("toAddView", sender: nil)
+    }
+    
+    func toAutherList() {
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,6 +82,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.publishedDateLabel.text = (book.objectForKey("publishedDate") as! NSDate).convert()
         
         return cell
+    }
+    
+    func setActionButton() {
+        let editBtn = ActionButtonItem(title: "Add", image: UIImage(named: ""))
+        let autherBtn = ActionButtonItem(title: "Auther", image: UIImage(named: ""))
+        editBtn.action = { item in
+            self.transition()
+        }
+        autherBtn.action = { item in
+            self.toAutherList()
+        }
+        action = ActionButton(attachedToView: self.view, items: [editBtn, autherBtn])
+        action.action = { button in
+            button.toggleMenu()
+        }
+        action.setTitle("+", forState: .Normal)
+        action.backgroundColor = UIColor(red: 238/255, green: 130/255, blue: 34/255, alpha: 1)
     }
 }
 

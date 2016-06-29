@@ -100,13 +100,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aD2-Wm-nm5" secondAttribute="bottom" id="oeC-0i-nYz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Books" id="aya-L0-asl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bu4-wj-4KV">
-                            <connections>
-                                <action selector="didSelectAdd" destination="BYZ-38-t0r" id="3Ed-G5-oI8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Books" id="aya-L0-asl"/>
                     <connections>
                         <outlet property="table" destination="aD2-Wm-nm5" id="fwa-nA-tS9"/>
                         <segue destination="pOU-eI-fVr" kind="show" identifier="toAddView" id="vG1-8o-kH6"/>

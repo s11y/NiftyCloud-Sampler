@@ -64,12 +64,6 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         book.isPublic = whichPublic
         book.publishedDate = date
         book.user = NCMBUser.currentUser()
-//        book.user = NCMBUser.currentUser()
-//        let book = NCMBObject(className: "Books")
-//        book.setObject(title, forKey: "title")
-//        book.setObject(date, forKey: "publishedDate")
-//        book.setObject(whichPublic, forKey: "isPublic")
-//        book.setObject(NCMBUser.currentUser(), forKey: "user")
         book.saveInBackgroundWithBlock { (error) in
             if error != nil {
                 print(error.localizedDescription)
@@ -112,4 +106,6 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    
+    
 }
