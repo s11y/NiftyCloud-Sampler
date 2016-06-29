@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		39484A8C1D22A728002731D1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39484A8B1D22A728002731D1 /* StringExtension.swift */; };
-		39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F201D1773A7000BA688 /* AddAutherViewController.swift */; };
-		39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F221D1778E6000BA688 /* AutherListViewController.swift */; };
-		39550F261D177995000BA688 /* AutherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39550F241D177995000BA688 /* AutherCell.swift */; };
-		39550F271D177995000BA688 /* AutherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39550F251D177995000BA688 /* AutherCell.xib */; };
 		397DA24F1D1DB66100852954 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */; };
 		3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B61D196EA800735A58 /* SignUpViewController.swift */; };
 		3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B81D196EAF00735A58 /* LoginViewController.swift */; };
@@ -56,10 +52,6 @@
 		1417E81DC3DA8217C8D1D2F5 /* Pods-NiftyCloud-SamplerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-SamplerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CEDB2C78858578985D5359A /* Pods-NiftyCloud-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
 		39484A8B1D22A728002731D1 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		39550F201D1773A7000BA688 /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAutherViewController.swift; sourceTree = "<group>"; };
-		39550F221D1778E6000BA688 /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherListViewController.swift; sourceTree = "<group>"; };
-		39550F241D177995000BA688 /* AutherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherCell.swift; sourceTree = "<group>"; };
-		39550F251D177995000BA688 /* AutherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutherCell.xib; sourceTree = "<group>"; };
 		397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		3984A9B61D196EA800735A58 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3984A9B81D196EAF00735A58 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -125,20 +117,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		39550F281D17799B000BA688 /* AutherCell */ = {
-			isa = PBXGroup;
-			children = (
-				39550F241D177995000BA688 /* AutherCell.swift */,
-				39550F251D177995000BA688 /* AutherCell.xib */,
-			);
-			name = AutherCell;
-			sourceTree = "<group>";
-		};
 		39550F291D1779A3000BA688 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				39F4B9F91D16504D003E2D04 /* BookCell */,
-				39550F281D17799B000BA688 /* AutherCell */,
 				39484A8B1D22A728002731D1 /* StringExtension.swift */,
 			);
 			name = Cells;
@@ -224,8 +206,6 @@
 			children = (
 				3990BCF41D0CD51900F6EBBA /* ViewController.swift */,
 				39F4B9F71D164B37003E2D04 /* AddViewController.swift */,
-				39550F201D1773A7000BA688 /* AddAutherViewController.swift */,
-				39550F221D1778E6000BA688 /* AutherListViewController.swift */,
 				3984A9BA1D196F1300735A58 /* Auth */,
 			);
 			name = Controller;
@@ -370,7 +350,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39550F271D177995000BA688 /* AutherCell.xib in Resources */,
 				39F4B9F61D164A1E003E2D04 /* BookCell.xib in Resources */,
 				3990BCFD1D0CD51900F6EBBA /* LaunchScreen.storyboard in Resources */,
 				3990BCFA1D0CD51900F6EBBA /* Assets.xcassets in Resources */,
@@ -526,10 +505,7 @@
 				3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */,
 				39484A8C1D22A728002731D1 /* StringExtension.swift in Sources */,
 				3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */,
-				39550F231D1778E6000BA688 /* AutherListViewController.swift in Sources */,
-				39550F211D1773A7000BA688 /* AddAutherViewController.swift in Sources */,
 				3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */,
-				39550F261D177995000BA688 /* AutherCell.swift in Sources */,
 				3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */,
 				39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */,
 				39A821D01D1E01C600B8E51A /* NSDateExtesnsion.swift in Sources */,

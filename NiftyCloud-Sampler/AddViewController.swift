@@ -13,15 +13,13 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     @IBOutlet var titleTextField: UITextField!
     
-    @IBOutlet var autherTextField: UITextField!
-    
     @IBOutlet var dateTextField: UITextField!
     
     @IBOutlet var segmentControl: UISegmentedControl!
     
-    var authers: [Authers] = []
+    var authers: [AnyObject] = []
     
-    var auther: Authers!
+    var auther: AnyObject!
     
     var datePicker: UIDatePicker!
     
@@ -33,10 +31,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         super.viewDidLoad()
         
         titleTextField.delegate = TextFieldDelegate()
-        autherTextField.delegate = TextFieldDelegate()
         segmentControl.addTarget(self, action: #selector(self.decideIsPublic(_:)), forControlEvents: .TouchUpInside)
         self.setDatePicker()
-        self.setPickerView()
         // Do any additional setup after loading the view.
     }
     
@@ -57,14 +53,12 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     @IBAction func didTapGeture() {
         titleTextField.resignFirstResponder()
         dateTextField.resignFirstResponder()
-        autherTextField.resignFirstResponder()
     }
     
     func create() {
         guard let title = titleTextField.text else { return }
         guard let date = publishedDate else { return }
         guard let whichPublic = self.isPublic else { return }
-//        guard let auther = self.auther else { return }
         let book = NCMBObject(className: "Books")
         book.setObject(title, forKey: "title")
         book.setObject(date, forKey: "publishedDate")
@@ -78,7 +72,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     }
     
     func read() {
-        authers = Authers.loadAll()
+        
     }
     
     func decideIsPublic(row: Int) {
@@ -97,13 +91,6 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         dateFormatter.dateFormat = "yyyy/MM/dd"
         dateTextField.text = dateFormatter.stringFromDate(datePicker.date)
         self.publishedDate = datePicker.date
-    }
-    
-    func setPickerView() {
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        pickerView.dataSource  = self
-        autherTextField.inputView = pickerView
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

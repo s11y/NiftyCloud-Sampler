@@ -90,7 +90,6 @@ class LoginViewController: UIViewController {
     }
     
     func transition() {
-        let tabCon = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("tabCon")
-        self.presentViewController(tabCon, animated: false, completion: nil)
+        self.performSegueWithIdentifier("toViewCon", sender: nil)
     }
 }
