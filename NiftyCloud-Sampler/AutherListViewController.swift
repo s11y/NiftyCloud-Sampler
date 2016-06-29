@@ -11,6 +11,8 @@ import UIKit
 class AutherListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
+    
+    var autherArray: [Authers] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,7 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return autherArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var table: UITableView!
     
-    var books: [NCMBObject] = []
+    var books: [Books] = []
     
     var action: ActionButton!
     
@@ -54,7 +54,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print(objects)
                 self.books.removeAll()
                 for object in objects {
-                    self.books.append(object as! NCMBObject)
+                    if let thing: Books = object as! Books {
+                        self.books.append(thing)
+                    }
                 }
             }
             self.table.reloadData()
@@ -78,9 +80,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("bookCell") as! BookCell
         
         let book = books[indexPath.row]
-        print(book.objectForKey("title"))
-        cell.titleLabel.text = "\(book.objectForKey("title"))"
-        cell.publishedDateLabel.text = (book.objectForKey("publishedDate") as! NSDate).convert()
+        print(book.title)
+        cell.titleLabel.text = book.title
+        cell.publishedDateLabel.text = book.publishedDate.convert()
         
         return cell
     }
