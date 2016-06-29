@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NCMB
 
 class AddAutherViewController: UIViewController {
     
@@ -27,10 +28,20 @@ class AddAutherViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func create(first: String, family: String) {
+        let auther = NCMBObject(className: "Authers")
+        auther.setObject(first, forKey: "firstName")
+        auther.setObject(family, forKey: "familyName")
+        auther.saveEventually { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     @IBAction func didSelectSave() {
-        guard let family = familyTextField.text else { return }
-        guard let first = firstTextField.text else { return }
-        let auther = Authers.create(first: first, family: family)
-        auther.saveInBackground()
+        guard let family: String = familyTextField.text else { return }
+        guard let first: String = firstTextField.text else { return }
+        self.create(first, family: family)
     }
 }

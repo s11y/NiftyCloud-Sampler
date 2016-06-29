@@ -109,7 +109,7 @@ class SignUpViewController: UIViewController {
     
     func toView()  {
         let view = self.storyboard?.instantiateViewControllerWithIdentifier("tabCon")
-        self.presentViewController(view!, animated: true, completion: nil)
+        self.presentViewController(view!, animated: false, completion: nil)
     }
     
     func transition() {

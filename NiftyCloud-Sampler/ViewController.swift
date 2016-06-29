@@ -21,14 +21,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.registerNib(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "BookCell")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.read()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.read()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func read() {
-        books = Books.loadAll()
-        table.reloadData()
+        let query = NCMBQuery(className: "Books")
+        query.whereKeyExists("title")
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                print(objects)
+            }
+        }
     }
     
     @IBAction func didSelectAdd() {

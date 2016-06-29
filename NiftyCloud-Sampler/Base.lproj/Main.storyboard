@@ -165,6 +165,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="lMM-su-Qpy" secondAttribute="leading" id="55d-RG-JtT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CYV-4w-2Ez" secondAttribute="leading" id="6qj-Kg-fEf"/>
@@ -180,6 +181,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="efc-hr-EDc" secondAttribute="trailing" id="uxQ-Bx-gzj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CYV-4w-2Ez" secondAttribute="trailing" id="yzL-J7-oLF"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vLV-hB-sBH" appends="YES" id="odb-qC-5h0"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="autherTextField" destination="CYV-4w-2Ez" id="FVm-oQ-U4h"/>
@@ -189,6 +193,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPD-47-Hcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vLV-hB-sBH">
+                    <connections>
+                        <action selector="didTapGeture" destination="pOU-eI-fVr" id="r2c-bb-tek"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1869" y="1062"/>
         </scene>

@@ -27,7 +27,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     var publishedDate: NSDate!
     
-    var isPublic: NSNumber!
+    var isPublic: NSNumber! = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.read()
+//        self.read()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,13 +54,27 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         self.create()
     }
     
+    @IBAction func didTapGeture() {
+        titleTextField.resignFirstResponder()
+        dateTextField.resignFirstResponder()
+        autherTextField.resignFirstResponder()
+    }
+    
     func create() {
         guard let title = titleTextField.text else { return }
         guard let date = publishedDate else { return }
         guard let whichPublic = self.isPublic else { return }
-        guard let auther = self.auther else { return }
-        let book = Books.create(titleOfBook: title, publishedDate: date, autherOfBook: auther, isPublic: whichPublic, user: NCMBUser.currentUser())
-        book.saveWithEvent()
+//        guard let auther = self.auther else { return }
+        let book = NCMBObject(className: "Books")
+        book.setObject(title, forKey: "title")
+        book.setObject(date, forKey: "publishedDate")
+        book.setObject(whichPublic, forKey: "isPublic")
+        book.setObject(NCMBUser.currentUser(), forKey: "user")
+        book.saveInBackgroundWithBlock { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func read() {
@@ -93,12 +107,13 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return authers.count
+//        return authers.count
+        return 1
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.auther = self.authers[row]
-        self.autherTextField.text = "\(self.auther.familyName) \(self.auther.firstName)"
+//        self.auther = self.authers[row]
+//        self.autherTextField.text = "\(self.auther.familyName) \(self.auther.firstName)"
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

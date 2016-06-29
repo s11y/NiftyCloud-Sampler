@@ -50,11 +50,10 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
     //    func loadAll() -> [Authers] {
     func loadAll()  {
         let query: NCMBQuery = NCMBQuery(className: "Authers")
-        
         query.orderByAscending("createDate")
-        query.findObjectsInBackgroundWithBlock { (Objects, error) in
+        query.findObjectsInBackgroundWithBlock { (autherLists, error) in
             if error == nil {
-                print(Objects.count)
+                print(autherLists.count)
             }else {
                 print("\(error.localizedDescription)")
             }
