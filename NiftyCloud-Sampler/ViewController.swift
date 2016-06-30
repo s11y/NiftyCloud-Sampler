@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print(objects)
                 self.books.removeAll()
                 for object in objects {
-                    if let thing: Books = object as! Books {
+                    if let thing: Books = object as? Books {
                         self.books.append(thing)
                     }
                 }
@@ -69,6 +69,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func toAutherList() {
+        
+    }
+    
+    func toAddAuther() {
         
     }
     
@@ -90,13 +94,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func setActionButton() {
         let editBtn = ActionButtonItem(title: "Add", image: UIImage(named: "edit"))
         let autherBtn = ActionButtonItem(title: "Auther", image: UIImage(named: "avatar"))
+        let addAutherBtn = ActionButtonItem(title: "Add Auther", image: UIImage(named: "avatar_edit"))
         editBtn.action = { item in
             self.transition()
         }
         autherBtn.action = { item in
             self.toAutherList()
         }
-        action = ActionButton(attachedToView: self.view, items: [editBtn, autherBtn])
+        addAutherBtn.action = { item in
+            self.toAddAuther()
+        }
+        action = ActionButton(attachedToView: self.view, items: [editBtn, autherBtn, addAutherBtn   ])
         action.action = { button in
             button.toggleMenu()
         }
