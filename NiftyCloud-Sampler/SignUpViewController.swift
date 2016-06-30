@@ -29,9 +29,6 @@ class SignUpViewController: UIViewController {
         confirmPasswordTextField.delegate = TextFieldDelegate()
         passwordTextField.secureTextEntry = true
         confirmPasswordTextField.secureTextEntry = true
-        if NCMBUser.currentUser() != nil {
-            self.toView()
-        }
     }
     
     override func viewWillAppear(animated: Bool) {
