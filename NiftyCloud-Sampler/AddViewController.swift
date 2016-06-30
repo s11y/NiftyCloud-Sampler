@@ -96,6 +96,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     func setPickerView() {
         self.picker = UIPickerView()
         self.picker.delegate = self
+        self.addToolBar()
         autherTextField.inputView = picker
     }
     
@@ -103,7 +104,35 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         datePicker = UIDatePicker()
         datePicker.datePickerMode = .Date
         datePicker.addTarget(self, action: #selector(self.convertDateToDate), forControlEvents: .ValueChanged)
+        self.addDone()
         dateTextField.inputView = datePicker
+    }
+    
+    func addToolBar() {
+        let toolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.width, 40.0))
+        toolBar.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height-20)
+        toolBar.barStyle = .BlackTranslucent
+        toolBar.tintColor = UIColor.whiteColor()
+        toolBar.backgroundColor = UIColor.blackColor()
+        
+        let toolBtn = UIBarButtonItem(title: "DONE", style: .Plain, target: self, action: #selector(resign))
+        toolBar.items = [toolBtn]
+    }
+    
+    func resign() {
+        autherTextField.resignFirstResponder()
+        dateTextField.resignFirstResponder()
+    }
+    
+    func addDone() {
+        let toolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.width, 40.0))
+        toolBar.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height-20)
+        toolBar.barStyle = .BlackTranslucent
+        toolBar.tintColor = UIColor.whiteColor()
+        toolBar.backgroundColor = UIColor.blackColor()
+        
+        let doneBtn = UIBarButtonItem(title: "DONE", style: .Plain, target: self, action: #selector(resign))
+        toolBar.items = [doneBtn]
     }
     
     func convertDateToDate() {
