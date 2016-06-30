@@ -117,6 +117,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         
         let toolBtn = UIBarButtonItem(title: "DONE", style: .Plain, target: self, action: #selector(resign))
         toolBar.items = [toolBtn]
+        
+        autherTextField.inputAccessoryView = toolBar
     }
     
     func resign() {
@@ -133,6 +135,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         
         let doneBtn = UIBarButtonItem(title: "DONE", style: .Plain, target: self, action: #selector(resign))
         toolBar.items = [doneBtn]
+        dateTextField.inputAccessoryView = toolBar
     }
     
     func convertDateToDate() {

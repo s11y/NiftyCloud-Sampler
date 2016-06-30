@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dci-uj-jKt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WeN-on-HfH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1o9-vV-16R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="-339"/>
+            <point key="canvasLocation" x="1988" y="258"/>
         </scene>
         <!--Add Auther View Controller-->
         <scene sceneID="ygP-89-ueW">
@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMP-Nz-IjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2078" y="525"/>
+            <point key="canvasLocation" x="2711" y="1931"/>
         </scene>
         <!--Books-->
         <scene sceneID="tne-QT-ifu">
@@ -161,6 +161,7 @@
                         <segue destination="pOU-eI-fVr" kind="show" identifier="toAddView" id="vG1-8o-kH6"/>
                         <segue destination="Pp7-xj-ico" kind="show" identifier="toAutherList" id="p5r-q1-Tkz"/>
                         <segue destination="vDF-9O-2E5" kind="show" identifier="toAddAutherView" id="KsP-OM-KlS"/>
+                        <segue destination="dci-uj-jKt" kind="modal" identifier="toSignupView" id="kvc-wX-jJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -368,12 +369,11 @@
                         <outlet property="nameTextField" destination="Fnd-ML-xKE" id="h8c-bQ-NVg"/>
                         <outlet property="passwordTextField" destination="HWa-en-fSX" id="Vat-jb-2Tr"/>
                         <segue destination="Ude-3O-mc5" kind="show" identifier="toLoginView" id="uBm-eF-EBo"/>
-                        <segue destination="WeN-on-HfH" kind="presentation" identifier="toView" id="Xe3-Bt-cWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAh-OY-Lzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="-339"/>
+            <point key="canvasLocation" x="1321" y="252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SQT-cR-z9a">
@@ -391,12 +391,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGP-W0-NYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297" y="-339"/>
+            <point key="canvasLocation" x="657" y="258"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="ITo-eL-5ng">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WeN-on-HfH" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WeN-on-HfH" customClass="NavigationViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Og3-bD-jUg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -412,7 +412,4 @@
             <point key="canvasLocation" x="1396" y="1193"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="DI3-I5-QGy"/>
-    </inferredMetricsTieBreakers>
 </document>
