@@ -51,15 +51,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if error != nil {
                 print(error.localizedDescription)
             }else {
-                print(objects)
                 self.books.removeAll()
                 for object in objects {
                     if let thing: Books = object as? Books {
                         self.books.append(thing)
                     }
                 }
+                self.table.reloadData()
             }
-            self.table.reloadData()
         }
         
     }
@@ -69,11 +68,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func toAutherList() {
-        
+        self.performSegueWithIdentifier("toAutherList", sender: nil)
     }
     
     func toAddAuther() {
-        
+        self.performSegueWithIdentifier("toAddAutherView", sender: nil)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

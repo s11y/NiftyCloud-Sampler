@@ -75,6 +75,61 @@
             </objects>
             <point key="canvasLocation" x="1763" y="-339"/>
         </scene>
+        <!--Add Auther View Controller-->
+        <scene sceneID="ygP-89-ueW">
+            <objects>
+                <viewController id="vDF-9O-2E5" customClass="AddAutherViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pkq-Zg-WVy"/>
+                        <viewControllerLayoutGuide type="bottom" id="uqG-CH-7Kc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6AS-Xk-Irn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epA-2i-aqj">
+                                <rect key="frame" x="20" y="125" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="family name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nsm-Ih-6eS">
+                                <rect key="frame" x="20" y="197" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwI-N9-ApI">
+                                <rect key="frame" x="250" y="272" width="100" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="mQU-75-0uV"/>
+                                    <constraint firstAttribute="height" constant="55" id="uFe-NE-Z0l"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="didSelectSave" destination="vDF-9O-2E5" eventType="touchUpInside" id="Uak-dO-1G4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Nsm-Ih-6eS" secondAttribute="leading" id="Jfu-zV-VeK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nsm-Ih-6eS" secondAttribute="trailing" id="MYQ-uo-31e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="epA-2i-aqj" secondAttribute="trailing" id="O3R-CX-RUb"/>
+                            <constraint firstItem="Nsm-Ih-6eS" firstAttribute="top" secondItem="epA-2i-aqj" secondAttribute="bottom" constant="42" id="R1O-gn-t8C"/>
+                            <constraint firstItem="zwI-N9-ApI" firstAttribute="top" secondItem="Nsm-Ih-6eS" secondAttribute="bottom" constant="45" id="UGj-TM-xhL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="epA-2i-aqj" secondAttribute="leading" id="VBu-WS-7lM"/>
+                            <constraint firstItem="zwI-N9-ApI" firstAttribute="centerX" secondItem="6AS-Xk-Irn" secondAttribute="centerX" id="thx-Ac-AY7"/>
+                            <constraint firstItem="epA-2i-aqj" firstAttribute="top" secondItem="pkq-Zg-WVy" secondAttribute="bottom" constant="61" id="y0w-27-vmj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="familyTextField" destination="Nsm-Ih-6eS" id="iTP-i1-kQR"/>
+                        <outlet property="firstTextField" destination="epA-2i-aqj" id="sQe-e1-YDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMP-Nz-IjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="525"/>
+        </scene>
         <!--Books-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -104,7 +159,8 @@
                     <connections>
                         <outlet property="table" destination="aD2-Wm-nm5" id="fwa-nA-tS9"/>
                         <segue destination="pOU-eI-fVr" kind="show" identifier="toAddView" id="vG1-8o-kH6"/>
-                        <segue destination="Pp7-xj-ico" kind="show" id="p5r-q1-Tkz"/>
+                        <segue destination="Pp7-xj-ico" kind="show" identifier="toAutherList" id="p5r-q1-Tkz"/>
+                        <segue destination="vDF-9O-2E5" kind="show" identifier="toAddAutherView" id="KsP-OM-KlS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -187,26 +243,35 @@
                                     <action selector="didSelectAdd" destination="pOU-eI-fVr" eventType="touchUpInside" id="EyP-ZX-q61"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Auther" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWw-WL-0Yt">
+                                <rect key="frame" x="20" y="162" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="lMM-su-Qpy" secondAttribute="leading" id="55d-RG-JtT"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="BWw-WL-0Yt" secondAttribute="leading" id="8bD-3d-vix"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lMM-su-Qpy" secondAttribute="trailing" id="L6F-Z2-yWt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="efc-hr-EDc" secondAttribute="leading" id="NAC-9q-WAx"/>
                             <constraint firstAttribute="leadingMargin" secondItem="FMi-KB-Z1C" secondAttribute="leading" id="Qlp-jZ-aNz"/>
+                            <constraint firstItem="BWw-WL-0Yt" firstAttribute="top" secondItem="lMM-su-Qpy" secondAttribute="bottom" constant="26" id="S4f-RI-o9P"/>
                             <constraint firstItem="U1t-07-ljc" firstAttribute="top" secondItem="FMi-KB-Z1C" secondAttribute="bottom" constant="21" id="Ttc-aj-nF2"/>
                             <constraint firstItem="U1t-07-ljc" firstAttribute="centerX" secondItem="JL7-jX-ugx" secondAttribute="centerX" id="ZMg-Ln-Cef"/>
                             <constraint firstItem="FMi-KB-Z1C" firstAttribute="top" secondItem="efc-hr-EDc" secondAttribute="bottom" constant="21" id="bpJ-ps-5br"/>
-                            <constraint firstItem="efc-hr-EDc" firstAttribute="top" secondItem="lMM-su-Qpy" secondAttribute="bottom" constant="83" id="nMA-bl-LSO"/>
+                            <constraint firstItem="efc-hr-EDc" firstAttribute="top" secondItem="BWw-WL-0Yt" secondAttribute="bottom" constant="27" id="hQk-RL-1eg"/>
                             <constraint firstItem="lMM-su-Qpy" firstAttribute="top" secondItem="8WX-ea-fvk" secondAttribute="bottom" constant="42" id="qAT-3b-Y8I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="efc-hr-EDc" secondAttribute="trailing" id="uxQ-Bx-gzj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BWw-WL-0Yt" secondAttribute="trailing" id="yww-vY-lU1"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="vLV-hB-sBH" appends="YES" id="odb-qC-5h0"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="autherTextField" destination="BWw-WL-0Yt" id="dkd-SV-zcH"/>
                         <outlet property="dateTextField" destination="efc-hr-EDc" id="hPu-1e-uGw"/>
                         <outlet property="segmentControl" destination="FMi-KB-Z1C" id="K3Y-qT-2z1"/>
                         <outlet property="titleTextField" destination="lMM-su-Qpy" id="tYJ-E9-XaV"/>
