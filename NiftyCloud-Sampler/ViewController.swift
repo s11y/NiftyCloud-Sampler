@@ -8,12 +8,15 @@
 
 import UIKit
 import NCMB
+import ActionButton
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
     
-    var books: [NCMBObject] = []
+    var books: [Books] = []
+    
+    var action: ActionButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.delegate = self
         table.dataSource = self
         table.registerNib(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "bookCell")
+        self.setActionButton()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,7 +54,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print(objects)
                 self.books.removeAll()
                 for object in objects {
-                    self.books.append(object as! NCMBObject)
+                    if let thing: Books = object as? Books {
+                        self.books.append(thing)
+                    }
                 }
             }
             self.table.reloadData()
@@ -58,12 +64,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    @IBAction func didSelectAdd() {
-        self.transition()
-    }
-    
     func transition() {
         self.performSegueWithIdentifier("toAddView", sender: nil)
+    }
+    
+    func toAutherList() {
+        
+    }
+    
+    func toAddAuther() {
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,11 +84,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("bookCell") as! BookCell
         
         let book = books[indexPath.row]
-        print(book.objectForKey("title"))
-        cell.titleLabel.text = "\(book.objectForKey("title"))"
-        cell.publishedDateLabel.text = (book.objectForKey("publishedDate") as! NSDate).convert()
+        print(book.title)
+        cell.titleLabel.text = book.title
+        cell.publishedDateLabel.text = book.publishedDate.convert()
         
         return cell
+    }
+    
+    func setActionButton() {
+        let editBtn = ActionButtonItem(title: "Add", image: UIImage(named: "edit"))
+        let autherBtn = ActionButtonItem(title: "Auther", image: UIImage(named: "avatar"))
+        let addAutherBtn = ActionButtonItem(title: "Add Auther", image: UIImage(named: "avatar_edit"))
+        editBtn.action = { item in
+            self.transition()
+        }
+        autherBtn.action = { item in
+            self.toAutherList()
+        }
+        addAutherBtn.action = { item in
+            self.toAddAuther()
+        }
+        action = ActionButton(attachedToView: self.view, items: [editBtn, autherBtn, addAutherBtn   ])
+        action.action = { button in
+            button.toggleMenu()
+        }
+        action.setTitle("+", forState: .Normal)
+        action.backgroundColor = UIColor(red: 238/255, green: 130/255, blue: 34/255, alpha: 1)
     }
 }
 

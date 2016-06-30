@@ -15,13 +15,17 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     @IBOutlet var dateTextField: UITextField!
     
+    @IBOutlet var autherTextField: UITextField!
+    
     @IBOutlet var segmentControl: UISegmentedControl!
     
-    var authers: [AnyObject] = []
+    var authers: [Authers] = []
     
-    var auther: AnyObject!
+    var auther: Authers!
     
     var datePicker: UIDatePicker!
+    
+    var picker: UIPickerView!
     
     var publishedDate: NSDate!
     
@@ -33,6 +37,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         titleTextField.delegate = TextFieldDelegate()
         segmentControl.addTarget(self, action: #selector(self.decideIsPublic(_:)), forControlEvents: .TouchUpInside)
         self.setDatePicker()
+        self.setPickerView()
         // Do any additional setup after loading the view.
     }
     
@@ -64,13 +69,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         book.isPublic = whichPublic
         book.publishedDate = date
         book.user = NCMBUser.currentUser()
-//        book.user = NCMBUser.currentUser()
-//        let book = NCMBObject(className: "Books")
-//        book.setObject(title, forKey: "title")
-//        book.setObject(date, forKey: "publishedDate")
-//        book.setObject(whichPublic, forKey: "isPublic")
-//        book.setObject(NCMBUser.currentUser(), forKey: "user")
-        book.saveInBackgroundWithBlock { (error) in
+        book.saveEventually { (error) in
             if error != nil {
                 print(error.localizedDescription)
             }
@@ -82,7 +81,13 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     }
     
     func decideIsPublic(row: Int) {
-//        self.isPublic = NSNumber(integer: row)
+        self.isPublic = row
+    }
+    
+    func setPickerView() {
+        self.picker = UIPickerView()
+        self.picker.delegate = self
+        autherTextField.inputView = picker
     }
     
     func setDatePicker() {
@@ -100,13 +105,12 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return authers.count
-        return 1
+        return authers.count
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        self.auther = self.authers[row]
-//        self.autherTextField.text = "\(self.auther.familyName) \(self.auther.firstName)"
+        self.auther = self.authers[row]
+        self.autherTextField.text = "\(self.auther.familyName) \(self.auther.firstName)"
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

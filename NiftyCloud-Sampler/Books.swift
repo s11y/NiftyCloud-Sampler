@@ -48,7 +48,14 @@ class Books: NCMBObject, NCMBSubclassing {
         }
     }
     
-    
+    var auther: Authers {
+        get {
+            return objectForKey("auther") as! Authers
+        }
+        set {
+            setObject(newValue, forKey: "auther")
+        }
+    }
     
     override init!(className: String!) {
         super.init(className: className)

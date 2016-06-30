@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="1763" y="-339"/>
         </scene>
-        <!--View Controller-->
+        <!--Books-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,21 +100,49 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aD2-Wm-nm5" secondAttribute="bottom" id="oeC-0i-nYz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aya-L0-asl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bu4-wj-4KV">
-                            <connections>
-                                <action selector="didSelectAdd" destination="BYZ-38-t0r" id="3Ed-G5-oI8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Books" id="aya-L0-asl"/>
                     <connections>
                         <outlet property="table" destination="aD2-Wm-nm5" id="fwa-nA-tS9"/>
                         <segue destination="pOU-eI-fVr" kind="show" identifier="toAddView" id="vG1-8o-kH6"/>
+                        <segue destination="Pp7-xj-ico" kind="show" id="p5r-q1-Tkz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2078" y="1193"/>
+        </scene>
+        <!--Auther List View Controller-->
+        <scene sceneID="S8j-aS-sxx">
+            <objects>
+                <viewController id="Pp7-xj-ico" customClass="AutherListViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g8h-rb-Hv2"/>
+                        <viewControllerLayoutGuide type="bottom" id="EHH-QV-Yv7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bPB-NR-mEe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yFJ-wb-4aG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yFJ-wb-4aG" firstAttribute="top" secondItem="g8h-rb-Hv2" secondAttribute="bottom" id="AsJ-fc-ePV"/>
+                            <constraint firstItem="EHH-QV-Yv7" firstAttribute="top" secondItem="yFJ-wb-4aG" secondAttribute="bottom" id="PUs-z0-YRs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yFJ-wb-4aG" secondAttribute="trailing" constant="-20" id="YCo-kV-ALx"/>
+                            <constraint firstItem="yFJ-wb-4aG" firstAttribute="leading" secondItem="bPB-NR-mEe" secondAttribute="leadingMargin" constant="-20" id="aeF-tq-242"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="yFJ-wb-4aG" id="ecX-CC-UZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4H7-LP-9Pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="1931"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="EzR-A2-WgH">
@@ -191,7 +219,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2681" y="1062"/>
+            <point key="canvasLocation" x="2766" y="1193"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="aQ0-vm-m3b">
@@ -316,7 +344,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbB-Yn-a9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592" y="390"/>
+            <point key="canvasLocation" x="1396" y="1193"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
