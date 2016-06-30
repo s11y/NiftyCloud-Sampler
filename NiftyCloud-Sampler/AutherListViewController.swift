@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NCMB
 
 class AutherListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -32,6 +33,20 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func read() {
+        let query = NCMBQuery(className: "Authers")
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                for object in objects {
+                    self.autherArray.append(object as! Authers)
+                }
+                self.table.reloadData()
+            }
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
