@@ -72,6 +72,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         book.saveEventually { (error) in
             if error != nil {
                 print(error.localizedDescription)
+            }else {
+                self.navigationController?.popViewControllerAnimated(true)
             }
         }
     }
