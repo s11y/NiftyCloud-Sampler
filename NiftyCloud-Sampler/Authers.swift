@@ -29,6 +29,12 @@ class Authers: NCMBObject, NCMBSubclassing {
         }
     }
     
+    static func create(firstName: String, familyName: String) -> Authers {
+        let auther = Authers(className: "Authers")
+        auther.familyName = familyName
+        auther.firstName = firstName
+        return auther
+    }
     
     override init!(className: String!) {
         super.init(className: "Authers")
