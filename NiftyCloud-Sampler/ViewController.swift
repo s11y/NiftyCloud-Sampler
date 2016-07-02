@@ -36,7 +36,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-//        self.read()
         if NCMBUser.currentUser() == nil {
             self.performSegueWithIdentifier("toSignupView", sender: nil)
         }
