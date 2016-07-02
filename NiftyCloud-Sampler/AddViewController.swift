@@ -33,7 +33,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.read()
         titleTextField.delegate = TextFieldDelegate()
         segmentControl.addTarget(self, action: #selector(self.decideIsPublic(_:)), forControlEvents: .TouchUpInside)
         self.setDatePicker()
@@ -43,7 +43,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        self.read()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +85,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
                 for object in objects {
                     self.authers.append(object as! Authers)
                 }
+                print(self.authers)
             }
         }
     }
@@ -147,6 +148,10 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return authers.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return authers[row].familyName + authers[row].firstName
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
