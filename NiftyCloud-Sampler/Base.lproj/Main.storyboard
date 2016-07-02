@@ -171,7 +171,7 @@
         <!--Auther List View Controller-->
         <scene sceneID="S8j-aS-sxx">
             <objects>
-                <viewController id="Pp7-xj-ico" customClass="AutherListViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Pp7-xj-ico" customClass="AutherListViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g8h-rb-Hv2"/>
                         <viewControllerLayoutGuide type="bottom" id="EHH-QV-Yv7"/>
