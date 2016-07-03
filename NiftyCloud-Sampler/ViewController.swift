@@ -10,7 +10,7 @@ import UIKit
 import NCMB
 import ActionButton
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
     @IBOutlet var table: UITableView!
     
@@ -62,7 +62,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.table.reloadData()
             }
         }
-        
     }
     
     func transition() {
@@ -75,21 +74,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func toAddAuther() {
         self.performSegueWithIdentifier("toAddAutherView", sender: nil)
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return books.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("bookCell") as! BookCell
-        
-        let book = books[indexPath.row]
-        print(book.title)
-        cell.titleLabel.text = book.title
-        cell.publishedDateLabel.text = book.publishedDate.convert()
-        
-        return cell
     }
     
     func setActionButton() {

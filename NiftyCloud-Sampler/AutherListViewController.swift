@@ -9,7 +9,7 @@
 import UIKit
 import NCMB
 
-class AutherListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AutherListViewController: UIViewController  {
     
     @IBOutlet var table: UITableView!
     
@@ -51,16 +51,5 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.table.reloadData()
             }
         }
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return autherArray.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("autherCell") as! AutherCell
-        let auther = autherArray[indexPath.row]
-        cell.nameLabel.text = auther.familyName + auther.firstName
-        return cell
     }
 }
