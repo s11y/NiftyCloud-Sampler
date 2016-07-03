@@ -29,11 +29,12 @@ extension ViewController: UITableViewDataSource{
 extension ViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .Default, title: "Delete") { (action, index) in
-            
+            self.deleteObject(index)
         }
         
         let edit = UITableViewRowAction(style: .Default, title: "Edit") { (action, index) in
             
+            self.transition()
         }
         
         return [delete, edit]

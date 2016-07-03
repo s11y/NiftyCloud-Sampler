@@ -10,6 +10,11 @@ import UIKit
 import NCMB
 import ActionButton
 
+enum NCMBCreateType {
+    case Create
+    case Update
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet var table: UITableView!
@@ -60,6 +65,15 @@ class ViewController: UIViewController {
                     }
                 }
                 self.table.reloadData()
+            }
+        }
+    }
+    
+    func deleteObject(indexPath: NSIndexPath) {
+        let object = books[indexPath.row]
+        object.deleteEventually { (error) in
+            if error != nil {
+                print(error.localizedDescription)
             }
         }
     }
