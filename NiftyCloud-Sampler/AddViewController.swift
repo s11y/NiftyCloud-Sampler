@@ -36,6 +36,10 @@ class AddViewController: UIViewController {
     var originalImage: UIImage!
     
     var imagePicker: UIImagePickerController!
+    
+    var mode: NCMBCreateType = .Create
+    
+    var updateBook: Books!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +59,7 @@ class AddViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print(mode)
     }
 
     override func didReceiveMemoryWarning() {

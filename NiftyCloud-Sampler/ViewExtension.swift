@@ -33,10 +33,10 @@ extension ViewController: UITableViewDelegate {
         }
         
         let edit = UITableViewRowAction(style: .Default, title: "Edit") { (action, index) in
-            
+            self.updateBook = self.books[index.row]
             self.transition()
         }
-        
+        edit.backgroundColor = UIColor.greenColor()
         return [delete, edit]
     }
 }

@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     
     var action: ActionButton!
     
+    var updateBook: Books!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -88,6 +90,14 @@ class ViewController: UIViewController {
     
     func toAddAuther() {
         self.performSegueWithIdentifier("toAddAutherView", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toAddView" {
+            let addView = segue.destinationViewController as! AddViewController
+            addView.mode = .Update
+            addView.updateBook = self.updateBook
+        }
     }
     
     func setActionButton() {
