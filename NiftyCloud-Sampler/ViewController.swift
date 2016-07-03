@@ -54,20 +54,9 @@ class ViewController: UIViewController {
     }
     
     func read() {
-        let query = NCMBQuery(className: "Books")
-        query.whereKeyExists("title")
-        query.findObjectsInBackgroundWithBlock { (objects, error) in
-            if error != nil {
-                print(error.localizedDescription)
-            }else {
-                self.books.removeAll()
-                for object in objects {
-                    if let thing: Books = object as? Books {
-                        self.books.append(thing)
-                    }
-                }
-                self.table.reloadData()
-            }
+        Books.loadAll { (objects) in
+            self.books = objects
+            self.table.reloadData()
         }
     }
     
