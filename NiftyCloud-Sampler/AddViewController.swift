@@ -102,12 +102,19 @@ class AddViewController: UIViewController {
     
     func create(title: String, date: NSDate, whichPublic: Int, user: NCMBUser, autherObject: Authers) {
         let book = Books.create(title, date: date, isPublic: whichPublic, user: user, auther: autherObject)
-        book.saveEventually { (error) in
-            if error != nil {
-                print(error.localizedDescription)
-            }else {
-                self.navigationController?.popViewControllerAnimated(true)
-            }
+        book.saveWithEvent { 
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+    }
+    
+    func updateObject(title: String, date: NSDate, isPublic: Int, autherObject: Authers) {
+        let object = Books(className: "Books")
+        object.title = title
+        object.publishedDate = date
+        object.isPublic = isPublic
+        object.auther = autherObject
+        object.saveWithEvent { 
+            self.navigationController?.popViewControllerAnimated(true)
         }
     }
     

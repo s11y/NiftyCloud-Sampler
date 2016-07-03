@@ -52,4 +52,13 @@ class AutherListViewController: UIViewController  {
             }
         }
     }
+    
+    func deleteObject(indexPath: NSIndexPath) {
+        let object = autherArray[indexPath.row]
+        object.deleteEventually { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

@@ -71,10 +71,12 @@ class Books: NCMBObject, NCMBSubclassing {
         return book
     }
     // MARK: Not Usage
-    func saveWithEvent() {
+    func saveWithEvent(callback: () -> Void) {
         self.saveEventually { (error) in
             if error != nil {
                 print(error.localizedDescription)
+            }else {
+                callback()
             }
         }
     }
