@@ -9,7 +9,7 @@
 import UIKit
 import NCMB
 
-class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddViewController: UIViewController {
     
     @IBOutlet var titleTextField: UITextField!
     
@@ -18,6 +18,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     @IBOutlet var autherTextField: UITextField!
     
     @IBOutlet var segmentControl: UISegmentedControl!
+    
+    @IBOutlet var imageView: UIImageView!
     
     var authers: [Authers] = []
     
@@ -32,6 +34,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     var isPublic: Int! = 0
     
     var originalImage: UIImage!
+    
+    var imagePicker: UIImagePickerController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +45,11 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         self.setDatePicker()
         self.setPickerView()
         
-        let imagePicker = UIImagePickerController()
+        imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        
+        let gesture = UIGestureRecognizer(target: self, action: #selector(self.selectImage))
+        imageView.addGestureRecognizer(gesture)
         // Do any additional setup after loading the view.
     }
     
@@ -61,19 +67,23 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         self.create()
     }
     
-    @IBAction func didTapGeture() {
-        titleTextField.resignFirstResponder()
-        dateTextField.resignFirstResponder()
-    }
-    
-    @IBAction func selectImage() {
+    func selectImage() {
+        print("select image")
         let alert = UIAlertController(title: "写真を選択", message: "どちらから写真を取得しますか？", preferredStyle: .ActionSheet)
-        let camera = UIAlertAction(title: "", style: .Default) { (action) in
-            
+        let camera = UIAlertAction(title: "カメラ", style: .Default) { (action) in
+            if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+                self.imagePicker.allowsEditing = true
+                self.imagePicker.sourceType = .Camera
+                self.presentViewController(self.imagePicker, animated: true, completion: nil)
+            }
         }
         
-        let library = UIAlertAction(title: "", style: .Default) { (action) in
-            
+        let library = UIAlertAction(title: "フォトライブラリー", style: .Default) { (action) in
+            if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+                self.imagePicker.allowsEditing = true
+                self.imagePicker.sourceType = .PhotoLibrary
+                self.presentViewController(self.imagePicker, animated: true, completion: nil)
+            }
         }
         
         alert.addAction(camera)
@@ -161,35 +171,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     }
     
     func convertDateToDate() {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
-        dateTextField.text = dateFormatter.stringFromDate(datePicker.date)
+        dateTextField.text = datePicker.date.convert()
         self.publishedDate = datePicker.date
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        self.originalImage = image
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return authers.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return authers[row].familyName + authers[row].firstName
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.auther = self.authers[row]
-        self.autherTextField.text = "\(self.auther.familyName) \(self.auther.firstName)"
-    }
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
     }
 }

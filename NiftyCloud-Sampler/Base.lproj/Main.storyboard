@@ -249,15 +249,12 @@
                                     <action selector="didSelectAdd" destination="pOU-eI-fVr" eventType="touchUpInside" id="EyP-ZX-q61"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-M9-89M">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photos" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-M9-89M">
                                 <rect key="frame" x="20" y="319" width="560" height="128"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="zKD-Dx-NOi"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="6oV-OY-b2Q" appends="YES" id="OZh-Ot-Mhd"/>
-                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -280,28 +277,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="efc-hr-EDc" secondAttribute="trailing" id="uxQ-Bx-gzj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BWw-WL-0Yt" secondAttribute="trailing" id="yww-vY-lU1"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="vLV-hB-sBH" appends="YES" id="odb-qC-5h0"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="autherTextField" destination="BWw-WL-0Yt" id="dkd-SV-zcH"/>
                         <outlet property="dateTextField" destination="efc-hr-EDc" id="hPu-1e-uGw"/>
+                        <outlet property="imageView" destination="d5A-M9-89M" id="tnf-Nd-N5h"/>
                         <outlet property="segmentControl" destination="FMi-KB-Z1C" id="K3Y-qT-2z1"/>
                         <outlet property="titleTextField" destination="lMM-su-Qpy" id="tYJ-E9-XaV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPD-47-Hcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="vLV-hB-sBH">
-                    <connections>
-                        <action selector="didTapGeture" destination="pOU-eI-fVr" id="r2c-bb-tek"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="6oV-OY-b2Q">
-                    <connections>
-                        <action selector="selectImage" destination="pOU-eI-fVr" id="HCY-z2-j4f"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2766" y="1193"/>
         </scene>
@@ -430,4 +415,7 @@
             <point key="canvasLocation" x="1396" y="1193"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photos" width="128" height="128"/>
+    </resources>
 </document>
