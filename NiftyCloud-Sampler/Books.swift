@@ -70,7 +70,20 @@ class Books: NCMBObject, NCMBSubclassing {
         book.publishedDate = date
         return book
     }
-    // MARK: Not Usage
+    
+    static func loadAll(callback: (objects: [Books]) -> Void) {
+        let query = NCMBQuery(className: "Books")
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                let obj = objects as! [Books]
+                print(obj)
+                callback(objects: obj)
+            }
+        }
+    }
+    
     func saveWithEvent(callback: () -> Void) {
         self.saveEventually { (error) in
             if error != nil {

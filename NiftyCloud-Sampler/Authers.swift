@@ -46,6 +46,19 @@ class Authers: NCMBObject, NCMBSubclassing {
         }
     }
     
+    static func loadAll(callback: (objects: [Authers]) -> Void) {
+        let query = NCMBQuery(className: "Authers")
+        query.findObjectsInBackgroundWithBlock { (objects, error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                let obj = objects as! [Authers]
+                print(obj)
+                callback(objects: obj)
+            }
+        }
+    }
+    
     override init!(className: String!) {
         super.init(className: "Authers")
     }

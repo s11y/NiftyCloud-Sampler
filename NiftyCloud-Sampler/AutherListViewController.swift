@@ -40,16 +40,9 @@ class AutherListViewController: UIViewController  {
     }
     
     func read() {
-        let query = NCMBQuery(className: "Authers")
-        query.findObjectsInBackgroundWithBlock { (objects, error) in
-            if error != nil {
-                print(error.localizedDescription)
-            }else {
-                for object in objects {
-                    self.autherArray.append(object as! Authers)
-                }
-                self.table.reloadData()
-            }
+        Authers.loadAll { (objects) in
+            self.autherArray = objects
+            self.table.reloadData()
         }
     }
     
