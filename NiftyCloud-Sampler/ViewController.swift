@@ -10,6 +10,11 @@ import UIKit
 import NCMB
 import ActionButton
 
+enum NCMBCreateType {
+    case Create
+    case Update
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet var table: UITableView!
@@ -17,6 +22,8 @@ class ViewController: UIViewController {
     var books: [Books] = []
     
     var action: ActionButton!
+    
+    var updateBook: Books!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +71,15 @@ class ViewController: UIViewController {
         }
     }
     
+    func deleteObject(indexPath: NSIndexPath) {
+        let object = books[indexPath.row]
+        object.deleteEventually { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func transition() {
         self.performSegueWithIdentifier("toAddView", sender: nil)
     }
@@ -74,6 +90,14 @@ class ViewController: UIViewController {
     
     func toAddAuther() {
         self.performSegueWithIdentifier("toAddAutherView", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toAddView" {
+            let addView = segue.destinationViewController as! AddViewController
+            addView.mode = .Update
+            addView.updateBook = self.updateBook
+        }
     }
     
     func setActionButton() {
