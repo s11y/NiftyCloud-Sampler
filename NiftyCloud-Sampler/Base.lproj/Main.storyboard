@@ -171,7 +171,7 @@
         <!--Auther List View Controller-->
         <scene sceneID="S8j-aS-sxx">
             <objects>
-                <viewController id="Pp7-xj-ico" customClass="AutherListViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Pp7-xj-ico" customClass="AutherListViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g8h-rb-Hv2"/>
                         <viewControllerLayoutGuide type="bottom" id="EHH-QV-Yv7"/>
@@ -233,8 +233,13 @@
                                     <segment title="Private"/>
                                 </segments>
                             </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Auther" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWw-WL-0Yt">
+                                <rect key="frame" x="20" y="162" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1t-07-ljc">
-                                <rect key="frame" x="253" y="319" width="95" height="59"/>
+                                <rect key="frame" x="253" y="461" width="95" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="IPD-y7-NK6"/>
                                     <constraint firstAttribute="width" constant="95" id="xh6-YR-kqH"/>
@@ -244,24 +249,32 @@
                                     <action selector="didSelectAdd" destination="pOU-eI-fVr" eventType="touchUpInside" id="EyP-ZX-q61"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Auther" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWw-WL-0Yt">
-                                <rect key="frame" x="20" y="162" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-M9-89M">
+                                <rect key="frame" x="20" y="319" width="560" height="128"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="zKD-Dx-NOi"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="6oV-OY-b2Q" appends="YES" id="OZh-Ot-Mhd"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="lMM-su-Qpy" secondAttribute="leading" id="55d-RG-JtT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d5A-M9-89M" secondAttribute="trailing" id="6GN-Cm-enz"/>
                             <constraint firstAttribute="leadingMargin" secondItem="BWw-WL-0Yt" secondAttribute="leading" id="8bD-3d-vix"/>
+                            <constraint firstItem="d5A-M9-89M" firstAttribute="top" secondItem="FMi-KB-Z1C" secondAttribute="bottom" constant="21" id="IAN-Nk-cR9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lMM-su-Qpy" secondAttribute="trailing" id="L6F-Z2-yWt"/>
                             <constraint firstAttribute="leadingMargin" secondItem="efc-hr-EDc" secondAttribute="leading" id="NAC-9q-WAx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="d5A-M9-89M" secondAttribute="leading" id="PfW-V7-5R0"/>
                             <constraint firstAttribute="leadingMargin" secondItem="FMi-KB-Z1C" secondAttribute="leading" id="Qlp-jZ-aNz"/>
                             <constraint firstItem="BWw-WL-0Yt" firstAttribute="top" secondItem="lMM-su-Qpy" secondAttribute="bottom" constant="26" id="S4f-RI-o9P"/>
-                            <constraint firstItem="U1t-07-ljc" firstAttribute="top" secondItem="FMi-KB-Z1C" secondAttribute="bottom" constant="21" id="Ttc-aj-nF2"/>
                             <constraint firstItem="U1t-07-ljc" firstAttribute="centerX" secondItem="JL7-jX-ugx" secondAttribute="centerX" id="ZMg-Ln-Cef"/>
                             <constraint firstItem="FMi-KB-Z1C" firstAttribute="top" secondItem="efc-hr-EDc" secondAttribute="bottom" constant="21" id="bpJ-ps-5br"/>
+                            <constraint firstItem="U1t-07-ljc" firstAttribute="top" secondItem="d5A-M9-89M" secondAttribute="bottom" constant="14" id="guk-Lq-eu9"/>
                             <constraint firstItem="efc-hr-EDc" firstAttribute="top" secondItem="BWw-WL-0Yt" secondAttribute="bottom" constant="27" id="hQk-RL-1eg"/>
                             <constraint firstItem="lMM-su-Qpy" firstAttribute="top" secondItem="8WX-ea-fvk" secondAttribute="bottom" constant="42" id="qAT-3b-Y8I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="efc-hr-EDc" secondAttribute="trailing" id="uxQ-Bx-gzj"/>
@@ -282,6 +295,11 @@
                 <tapGestureRecognizer id="vLV-hB-sBH">
                     <connections>
                         <action selector="didTapGeture" destination="pOU-eI-fVr" id="r2c-bb-tek"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6oV-OY-b2Q">
+                    <connections>
+                        <action selector="selectImage" destination="pOU-eI-fVr" id="HCY-z2-j4f"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

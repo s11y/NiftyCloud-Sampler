@@ -9,7 +9,7 @@
 import UIKit
 import NCMB
 
-class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var titleTextField: UITextField!
     
@@ -30,6 +30,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     var publishedDate: NSDate!
     
     var isPublic: Int! = 0
+    
+    var originalImage: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,10 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         segmentControl.addTarget(self, action: #selector(self.decideIsPublic(_:)), forControlEvents: .TouchUpInside)
         self.setDatePicker()
         self.setPickerView()
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        self.presentViewController(imagePicker, animated: true, completion: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -60,18 +66,33 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         dateTextField.resignFirstResponder()
     }
     
+    @IBAction func selectImage() {
+        let alert = UIAlertController(title: "写真を選択", message: "どちらから写真を取得しますか？", preferredStyle: .ActionSheet)
+        let camera = UIAlertAction(title: "", style: .Default) { (action) in
+            
+        }
+        
+        let library = UIAlertAction(title: "", style: .Default) { (action) in
+            
+        }
+        
+        alert.addAction(camera)
+        alert.addAction(library)
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
     func create() {
         guard let title = titleTextField.text else { return }
         guard let date = publishedDate else { return }
         guard let whichPublic = self.isPublic else { return }
-        let book = Books(className: "Books")
-        book.title = title
-        book.isPublic = whichPublic
-        book.publishedDate = date
-        book.user = NCMBUser.currentUser()
+        guard let autherObejct = self.auther else { return }
+        let book = Books.create(title, date: date, isPublic: whichPublic, user: NCMBUser.currentUser(), auther: autherObejct)
         book.saveEventually { (error) in
             if error != nil {
                 print(error.localizedDescription)
+            }else {
+                self.navigationController?.popViewControllerAnimated(true)
             }
         }
     }
@@ -144,6 +165,15 @@ class AddViewController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         dateFormatter.dateFormat = "yyyy/MM/dd"
         dateTextField.text = dateFormatter.stringFromDate(datePicker.date)
         self.publishedDate = datePicker.date
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.originalImage = image
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

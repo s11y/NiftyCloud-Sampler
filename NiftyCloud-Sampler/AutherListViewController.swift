@@ -26,8 +26,12 @@ class AutherListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.read()
+        
         table.estimatedRowHeight = 30
         table.rowHeight = UITableViewAutomaticDimension
+        table.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {

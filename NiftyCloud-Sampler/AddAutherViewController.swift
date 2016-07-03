@@ -34,12 +34,12 @@ class AddAutherViewController: UIViewController {
     }
     
     func create(first: String, family: String) {
-        let auther = Authers(className: "Authers")
-        auther.familyName = family
-        auther.firstName = first
+        let auther = Authers.create(first, familyName: family)
         auther.saveEventually { (error) in
             if error != nil {
                 print(error.localizedDescription)
+            }else {
+                self.navigationController?.popViewControllerAnimated(true)
             }
         }
     }

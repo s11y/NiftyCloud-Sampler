@@ -61,6 +61,24 @@ class Books: NCMBObject, NCMBSubclassing {
         super.init(className: className)
     }
     
+    static func create(title: String, date: NSDate, isPublic: Int, user: NCMBUser, auther: Authers) -> Books{
+        let book = Books(className: "Books")
+        book.auther = auther
+        book.isPublic = isPublic
+        book.title = title
+        book.user = user
+        book.publishedDate = date
+        return book
+    }
+    // MARK: Not Usage
+    func saveWithEvent() {
+        self.saveEventually { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     static func ncmbClassName() -> String! {
         return "Books"
     }
