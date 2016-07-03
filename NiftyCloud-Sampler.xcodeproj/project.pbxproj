@@ -17,6 +17,7 @@
 		397DA24F1D1DB66100852954 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */; };
 		3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B61D196EA800735A58 /* SignUpViewController.swift */; };
 		3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B81D196EAF00735A58 /* LoginViewController.swift */; };
+		39872C521D28E94000F82D9A /* AddViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39872C511D28E94000F82D9A /* AddViewExtension.swift */; };
 		3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */; };
 		3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF41D0CD51900F6EBBA /* ViewController.swift */; };
 		3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF61D0CD51900F6EBBA /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		3984A9B61D196EA800735A58 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3984A9B81D196EAF00735A58 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		39872C511D28E94000F82D9A /* AddViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewExtension.swift; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3990BCF41D0CD51900F6EBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,14 @@
 			name = Auth;
 			sourceTree = "<group>";
 		};
+		39872C531D28E94600F82D9A /* ViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				39872C511D28E94000F82D9A /* AddViewExtension.swift */,
+			);
+			name = ViewExtensions;
+			sourceTree = "<group>";
+		};
 		3990BCE61D0CD51900F6EBBA = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +228,7 @@
 				39550F291D1779A3000BA688 /* Cells */,
 				391D88EF1D246D83001A1DFD /* Delegate */,
 				391D88F01D246D8B001A1DFD /* Models */,
+				39872C531D28E94600F82D9A /* ViewExtensions */,
 			);
 			path = "NiftyCloud-Sampler";
 			sourceTree = "<group>";
@@ -554,6 +565,7 @@
 			files = (
 				391D88F21D24746E001A1DFD /* Authers.swift in Sources */,
 				397DA24F1D1DB66100852954 /* TextFieldDelegate.swift in Sources */,
+				39872C521D28E94000F82D9A /* AddViewExtension.swift in Sources */,
 				391D88FB1D247B15001A1DFD /* AutherCell.swift in Sources */,
 				3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */,
 				39484A8C1D22A728002731D1 /* StringExtension.swift in Sources */,
