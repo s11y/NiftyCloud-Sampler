@@ -72,7 +72,13 @@ class AddViewController: UIViewController {
         guard let date = publishedDate else { return }
         guard let whichPublic = self.isPublic else { return }
         guard let autherObject = self.auther else { return }
-        self.create(title, date: date, whichPublic: whichPublic, user: NCMBUser.currentUser(), autherObject: autherObject)
+        switch mode {
+        case .Update:
+            self.updateObject(title, date: date, isPublic: whichPublic, autherObject: autherObject)
+        case .Create:
+            self.create(title, date: date, whichPublic: whichPublic, autherObject: autherObject)
+        }
+        
     }
     
     func selectImage() {
@@ -100,20 +106,14 @@ class AddViewController: UIViewController {
         
     }
     
-    func create(title: String, date: NSDate, whichPublic: Int, user: NCMBUser, autherObject: Authers) {
-        let book = Books.create(title, date: date, isPublic: whichPublic, user: user, auther: autherObject)
-        book.saveWithEvent { 
+    func create(title: String, date: NSDate, whichPublic: Int, autherObject: Authers) {
+        Books.create(title, date: date, isPublic: whichPublic, user: NCMBUser.currentUser(), auther: autherObject).saveWithEvent {
             self.navigationController?.popViewControllerAnimated(true)
         }
     }
     
     func updateObject(title: String, date: NSDate, isPublic: Int, autherObject: Authers) {
-        let object = Books(className: "Books")
-        object.title = title
-        object.publishedDate = date
-        object.isPublic = isPublic
-        object.auther = autherObject
-        object.saveWithEvent { 
+        Books.update(updateBook, user: NCMBUser.currentUser(), title: title, date: date, isPublic: isPublic, auther: autherObject).saveWithEvent { 
             self.navigationController?.popViewControllerAnimated(true)
         }
     }
