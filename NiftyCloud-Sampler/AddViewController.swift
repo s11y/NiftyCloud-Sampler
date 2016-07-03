@@ -48,7 +48,7 @@ class AddViewController: UIViewController {
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-        let gesture = UIGestureRecognizer(target: self, action: #selector(self.selectImage))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.selectImage))
         imageView.addGestureRecognizer(gesture)
         // Do any additional setup after loading the view.
     }
@@ -64,7 +64,11 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func didSelectAdd() {
-        self.create()
+        guard let title = titleTextField.text else { return }
+        guard let date = publishedDate else { return }
+        guard let whichPublic = self.isPublic else { return }
+        guard let autherObject = self.auther else { return }
+        self.create(title, date: date, whichPublic: whichPublic, user: NCMBUser.currentUser(), autherObject: autherObject)
     }
     
     func selectImage() {
@@ -92,12 +96,8 @@ class AddViewController: UIViewController {
         
     }
     
-    func create() {
-        guard let title = titleTextField.text else { return }
-        guard let date = publishedDate else { return }
-        guard let whichPublic = self.isPublic else { return }
-        guard let autherObejct = self.auther else { return }
-        let book = Books.create(title, date: date, isPublic: whichPublic, user: NCMBUser.currentUser(), auther: autherObejct)
+    func create(title: String, date: NSDate, whichPublic: Int, user: NCMBUser, autherObject: Authers) {
+        let book = Books.create(title, date: date, isPublic: whichPublic, user: user, auther: autherObject)
         book.saveEventually { (error) in
             if error != nil {
                 print(error.localizedDescription)
