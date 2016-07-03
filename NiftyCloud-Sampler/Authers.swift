@@ -36,6 +36,16 @@ class Authers: NCMBObject, NCMBSubclassing {
         return auther
     }
     
+    func saveWithEvent(callback: () -> Void) {
+        self.saveEventually { (error) in
+            if error != nil {
+                print(error.localizedDescription)
+            }else {
+                callback()
+            }
+        }
+    }
+    
     override init!(className: String!) {
         super.init(className: "Authers")
     }
