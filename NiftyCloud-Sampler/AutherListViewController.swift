@@ -14,6 +14,8 @@ class AutherListViewController: UIViewController  {
     @IBOutlet var table: UITableView!
     
     var autherArray: [Authers] = []
+    
+    var updateAuther: Authers!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,14 @@ class AutherListViewController: UIViewController  {
             if error != nil {
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toAddAutherView" {
+            let viewController = segue.destinationViewController as! AddAutherViewController
+            viewController.updateAuther = self.updateAuther
+            viewController.mode = .Update
         }
     }
 }

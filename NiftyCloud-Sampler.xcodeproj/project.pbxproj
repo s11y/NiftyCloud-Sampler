@@ -13,6 +13,7 @@
 		391D88FB1D247B15001A1DFD /* AutherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D88F91D247B15001A1DFD /* AutherCell.swift */; };
 		391D88FC1D247B15001A1DFD /* AutherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391D88FA1D247B15001A1DFD /* AutherCell.xib */; };
 		39484A8C1D22A728002731D1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39484A8B1D22A728002731D1 /* StringExtension.swift */; };
+		3951A49D1D2A705400ADDC7F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3951A49C1D2A705400ADDC7F /* Utility.swift */; };
 		3978F01E1D25CD26006DB9A2 /* AddAutherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3978F01D1D25CD26006DB9A2 /* AddAutherViewController.swift */; };
 		397DA24F1D1DB66100852954 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */; };
 		3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B61D196EA800735A58 /* SignUpViewController.swift */; };
@@ -66,6 +67,7 @@
 		391D88F91D247B15001A1DFD /* AutherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherCell.swift; sourceTree = "<group>"; };
 		391D88FA1D247B15001A1DFD /* AutherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutherCell.xib; sourceTree = "<group>"; };
 		39484A8B1D22A728002731D1 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		3951A49C1D2A705400ADDC7F /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3978F01D1D25CD26006DB9A2 /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAutherViewController.swift; sourceTree = "<group>"; };
 		397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		3984A9B61D196EA800735A58 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		391D88EE1D246D79001A1DFD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3951A49C1D2A705400ADDC7F /* Utility.swift */,
 				39484A8B1D22A728002731D1 /* StringExtension.swift */,
 				39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */,
 			);
@@ -575,6 +578,7 @@
 				391D88FB1D247B15001A1DFD /* AutherCell.swift in Sources */,
 				3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */,
 				39484A8C1D22A728002731D1 /* StringExtension.swift in Sources */,
+				3951A49D1D2A705400ADDC7F /* Utility.swift in Sources */,
 				391D88ED1D246BAB001A1DFD /* Books.swift in Sources */,
 				3978F01E1D25CD26006DB9A2 /* AddAutherViewController.swift in Sources */,
 				39872C571D28F03400F82D9A /* AutherListExtension.swift in Sources */,
