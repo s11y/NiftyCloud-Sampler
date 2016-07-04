@@ -17,7 +17,7 @@ extension AutherListViewController: UITableViewDelegate {
         }
         
         let edit = UITableViewRowAction(style: .Default, title: "Edit") { (action, index) in
-            
+            self.updateAuther = self.autherArray[index.row]
         }
         edit.backgroundColor = UIColor.greenColor()
         return [delete, edit]

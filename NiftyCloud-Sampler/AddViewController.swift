@@ -90,7 +90,6 @@ class AddViewController: UIViewController {
     }
     
     func selectImage() {
-        print("select image")
         let alert = UIAlertController(title: "写真を選択", message: "どちらから写真を取得しますか？", preferredStyle: .ActionSheet)
         let camera = UIAlertAction(title: "カメラ", style: .Default) { (action) in
             if UIImagePickerController.isSourceTypeAvailable(.Camera) {
