@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMP-Nz-IjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711" y="1931"/>
+            <point key="canvasLocation" x="2778" y="1940"/>
         </scene>
         <!--Books-->
         <scene sceneID="tne-QT-ifu">
@@ -195,6 +195,7 @@
                     </view>
                     <connections>
                         <outlet property="table" destination="yFJ-wb-4aG" id="ecX-CC-UZa"/>
+                        <segue destination="vDF-9O-2E5" kind="show" identifier="toAddAutherView" id="QDQ-D8-YjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4H7-LP-9Pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -418,4 +419,7 @@
     <resources>
         <image name="photos" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QDQ-D8-YjE"/>
+    </inferredMetricsTieBreakers>
 </document>
