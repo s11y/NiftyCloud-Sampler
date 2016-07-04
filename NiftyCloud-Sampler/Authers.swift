@@ -59,6 +59,12 @@ class Authers: NCMBObject, NCMBSubclassing {
         }
     }
     
+    static func update(object: Authers, firstName: String, familyName: String) -> Authers {
+        object.familyName = familyName
+        object.firstName = firstName
+        return object
+    }
+    
     override init!(className: String!) {
         super.init(className: "Authers")
     }

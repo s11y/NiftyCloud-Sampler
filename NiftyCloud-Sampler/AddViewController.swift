@@ -59,7 +59,9 @@ class AddViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print(mode)
+        if mode == .Update {
+            self.displayRawData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,12 +69,25 @@ class AddViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func displayRawData() {
+        self.titleTextField.text = updateBook.title
+        self.autherTextField.text = updateBook.auther.familyName + updateBook.auther.familyName
+        self.dateTextField.text = updateBook.publishedDate.convert()
+        self.segmentControl.selectedSegmentIndex = updateBook.isPublic
+    }
+    
     @IBAction func didSelectAdd() {
         guard let title = titleTextField.text else { return }
         guard let date = publishedDate else { return }
         guard let whichPublic = self.isPublic else { return }
         guard let autherObject = self.auther else { return }
-        self.create(title, date: date, whichPublic: whichPublic, user: NCMBUser.currentUser(), autherObject: autherObject)
+        switch mode {
+        case .Update:
+            self.updateObject(title, date: date, isPublic: whichPublic, autherObject: autherObject)
+        case .Create:
+            self.create(title, date: date, whichPublic: whichPublic, autherObject: autherObject)
+        }
+        
     }
     
     func selectImage() {
@@ -100,35 +115,21 @@ class AddViewController: UIViewController {
         
     }
     
-    func create(title: String, date: NSDate, whichPublic: Int, user: NCMBUser, autherObject: Authers) {
-        let book = Books.create(title, date: date, isPublic: whichPublic, user: user, auther: autherObject)
-        book.saveWithEvent { 
+    func create(title: String, date: NSDate, whichPublic: Int, autherObject: Authers) {
+        Books.create(title, date: date, isPublic: whichPublic, user: NCMBUser.currentUser(), auther: autherObject).saveWithEvent {
             self.navigationController?.popViewControllerAnimated(true)
         }
     }
     
     func updateObject(title: String, date: NSDate, isPublic: Int, autherObject: Authers) {
-        let object = Books(className: "Books")
-        object.title = title
-        object.publishedDate = date
-        object.isPublic = isPublic
-        object.auther = autherObject
-        object.saveWithEvent { 
+        Books.update(updateBook, user: NCMBUser.currentUser(), title: title, date: date, isPublic: isPublic, auther: autherObject).saveWithEvent { 
             self.navigationController?.popViewControllerAnimated(true)
         }
     }
     
     func read() {
-        let query = NCMBQuery(className: "Authers")
-        query.findObjectsInBackgroundWithBlock { (objects, error) in
-            if error != nil {
-                print(error.localizedDescription)
-            }else {
-                for object in objects {
-                    self.authers.append(object as! Authers)
-                }
-                print(self.authers)
-            }
+        Authers.loadAll { (objects) in
+            self.authers = objects
         }
     }
     

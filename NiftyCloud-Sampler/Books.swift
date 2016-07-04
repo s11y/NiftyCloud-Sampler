@@ -71,6 +71,16 @@ class Books: NCMBObject, NCMBSubclassing {
         return book
     }
     
+    static func update(object: Books, user: NCMBUser, title: String, date: NSDate, isPublic: Int, auther: Authers) -> Books{
+        if object.user == user {
+            object.title = title
+            object.auther = auther
+            object.isPublic = isPublic
+            object.publishedDate = date
+        }
+        return object
+    }
+    
     static func loadAll(callback: (objects: [Books]) -> Void) {
         let query = NCMBQuery(className: "Books")
         query.findObjectsInBackgroundWithBlock { (objects, error) in
