@@ -59,12 +59,21 @@ class AddViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print(mode)
+        if mode == .Update {
+            self.displayRawData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func displayRawData() {
+        self.titleTextField.text = updateBook.title
+        self.autherTextField.text = updateBook.auther.familyName + updateBook.auther.familyName
+        self.dateTextField.text = updateBook.publishedDate.convert()
+        self.segmentControl.selectedSegmentIndex = updateBook.isPublic
     }
     
     @IBAction func didSelectAdd() {
