@@ -128,16 +128,8 @@ class AddViewController: UIViewController {
     }
     
     func read() {
-        let query = NCMBQuery(className: "Authers")
-        query.findObjectsInBackgroundWithBlock { (objects, error) in
-            if error != nil {
-                print(error.localizedDescription)
-            }else {
-                for object in objects {
-                    self.authers.append(object as! Authers)
-                }
-                print(self.authers)
-            }
+        Authers.loadAll { (objects) in
+            self.authers = objects
         }
     }
     
