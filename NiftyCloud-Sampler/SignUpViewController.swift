@@ -9,7 +9,9 @@
 import UIKit
 import NCMB
 
-class SignUpViewController: UIViewController {
+
+
+class SignUpViewController: UIViewController{
     
     @IBOutlet var emailTextField: UITextField!
     
@@ -23,7 +25,8 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        emailTextField.delegate = TextFieldDelegate()
+        let delegate = TextFieldDelegate()
+        emailTextField.delegate = delegate
         passwordTextField.delegate = TextFieldDelegate()
         nameTextField.delegate = TextFieldDelegate()
         confirmPasswordTextField.delegate = TextFieldDelegate()

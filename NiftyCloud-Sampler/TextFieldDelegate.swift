@@ -8,11 +8,13 @@
 
 import UIKit
 
-class TextFieldDelegate: NSObject ,UITextFieldDelegate {
+
+
+class TextFieldDelegate: UIView, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print(textField)
         textField.resignFirstResponder()
         return true
     }
-
 }

@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
         if NCMBUser.currentUser() == nil {
             self.performSegueWithIdentifier("toSignupView", sender: nil)
         }
