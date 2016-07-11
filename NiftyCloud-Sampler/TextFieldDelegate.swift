@@ -10,10 +10,15 @@ import UIKit
 
 
 
-class TextFieldDelegate: UIView, UITextFieldDelegate {
-    
+extension AddViewController: UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        print(textField)
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension AddAutherViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

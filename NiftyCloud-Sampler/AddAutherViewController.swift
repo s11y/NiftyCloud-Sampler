@@ -21,8 +21,8 @@ class AddAutherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstTextField.delegate = TextFieldDelegate()
-        familyTextField.delegate = TextFieldDelegate()
+        firstTextField.delegate = self
+        familyTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
