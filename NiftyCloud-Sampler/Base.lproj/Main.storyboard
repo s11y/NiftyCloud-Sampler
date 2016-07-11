@@ -379,10 +379,10 @@
             </objects>
             <point key="canvasLocation" x="1321" y="252"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="SQT-cR-z9a">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dci-uj-jKt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dci-uj-jKt" customClass="NavigationViewController" customModule="NiftyCloud_Sampler" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t0E-Nm-skp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

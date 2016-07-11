@@ -43,7 +43,7 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.read()
-        titleTextField.delegate = TextFieldDelegate()
+        titleTextField.delegate = self
         segmentControl.addTarget(self, action: #selector(self.decideIsPublic(_:)), forControlEvents: .TouchUpInside)
         self.setDatePicker()
         self.setPickerView()

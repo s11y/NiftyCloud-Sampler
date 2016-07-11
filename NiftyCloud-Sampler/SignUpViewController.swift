@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController{
 
         // Do any additional setup after loading the view.
         let delegate = TextFieldDelegate()
-        emailTextField.delegate = delegate
+        emailTextField.delegate = CustomTextFieldDelegate()
         passwordTextField.delegate = TextFieldDelegate()
         nameTextField.delegate = TextFieldDelegate()
         confirmPasswordTextField.delegate = TextFieldDelegate()
@@ -114,5 +114,16 @@ class SignUpViewController: UIViewController{
     
     func transition() {
         self.performSegueWithIdentifier("toLoginView", sender: nil)
+    }
+    
+    
+}
+
+@objc class CustomTextFieldDelegate: UIView, UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print(textField)
+        textField.resignFirstResponder()
+        return true
     }
 }
