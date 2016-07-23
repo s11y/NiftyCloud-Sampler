@@ -35,7 +35,7 @@ extension ViewController: UITableViewDelegate {
         
         let edit = UITableViewRowAction(style: .Default, title: "Edit") { (action, index) in
             self.updateBook = self.books[index.row]
-            self.transition()
+            self.toAddWithData(self.books[index.row])
         }
         edit.backgroundColor = UIColor.greenColor()
         return [delete, edit]

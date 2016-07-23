@@ -19,8 +19,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        emailTextField.delegate = TextFieldDelegate()
-        passwordTextField.delegate = TextFieldDelegate()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         passwordTextField.secureTextEntry = true
     }

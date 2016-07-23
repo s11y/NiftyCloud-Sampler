@@ -73,6 +73,10 @@ class ViewController: UIViewController {
         self.performSegueWithIdentifier("toAddView", sender: nil)
     }
     
+    func toAddWithData(data: Books)  {
+        self.performSegueWithIdentifier("toAddView", sender: data)
+    }
+    
     func toAutherList() {
         self.performSegueWithIdentifier("toAutherList", sender: nil)
     }
@@ -82,10 +86,10 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toAddView" {
+        if segue.identifier == "toAddView" && sender != nil{
             let addView = segue.destinationViewController as! AddViewController
             addView.mode = .Update
-            addView.updateBook = self.updateBook
+            addView.updateBook = sender as! Books
         }
     }
     

@@ -90,6 +90,7 @@ class Books: NCMBObject, NCMBSubclassing {
     static func loadAll(callback: (objects: [Books]) -> Void) {
         // NCMBQueryをクエリとして作成
         let query = NCMBQuery(className: "Books")
+        query.includeKey = "auther"
         // クエリに従ってすべてを取得
         query.findObjectsInBackgroundWithBlock { (objects, error) in
             if error != nil { // エラーがあるとき

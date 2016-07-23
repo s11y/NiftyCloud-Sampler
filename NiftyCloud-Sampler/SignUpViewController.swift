@@ -25,11 +25,10 @@ class SignUpViewController: UIViewController{
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let delegate = TextFieldDelegate()
         emailTextField.delegate = CustomTextFieldDelegate()
-        passwordTextField.delegate = TextFieldDelegate()
-        nameTextField.delegate = TextFieldDelegate()
-        confirmPasswordTextField.delegate = TextFieldDelegate()
+        passwordTextField.delegate = self
+        nameTextField.delegate = self
+        confirmPasswordTextField.delegate = self
         passwordTextField.secureTextEntry = true
         confirmPasswordTextField.secureTextEntry = true
     }
