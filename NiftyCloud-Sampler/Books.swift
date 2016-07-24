@@ -98,6 +98,7 @@ class Books: NCMBObject, NCMBSubclassing {
             }else { // エラーがないとき
                 // 取得したデータをBooksクラスに変換
                 let obj = objects as! [Books]
+                print("autherとは...\(obj[0].auther)")
                 print(obj)
                 // 引数で受け取った処理を行う
                 callback(objects: obj)
