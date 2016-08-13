@@ -11,7 +11,7 @@ import NCMB // Nifty Cloud mobile backendをインポート
 
 @objc(Authers)
 class Authers: NCMBObject, NCMBSubclassing {
-    
+
     // それぞれのカラムを指定
     var familyName : String {
         get {
@@ -21,7 +21,7 @@ class Authers: NCMBObject, NCMBSubclassing {
             setObject(newValue, forKey: "familyName")
         }
     }
-    
+
     var firstName: String {
         get {
             return objectForKey("firstName") as! String
@@ -29,7 +29,7 @@ class Authers: NCMBObject, NCMBSubclassing {
             setObject(newValue, forKey: "firstName")
         }
     }
-    
+
     // 保存・作成するためのNCMBObject(Books)を作成するためのメソッド
     static func create(firstName: String, familyName: String) -> Authers {
         // インスタンスを作成
@@ -39,19 +39,19 @@ class Authers: NCMBObject, NCMBSubclassing {
         auther.firstName = firstName
         return auther
     }
-    
+
     // データを非同期で通信状況に合わせて送信する
     func saveWithEvent(callback: () -> Void) {
         self.saveEventually { (error) in
             if error != nil { // エラーがあるとき
                 print(error.localizedDescription)
             }else { // エラーがないとき
-                // 引数で受け取った書影を行う
+                // 引数で受け取った処理を行う
                 callback()
             }
         }
     }
-    
+
     // Booksテーブルからすべてを取得
     static func loadAll(callback: (objects: [Authers]) -> Void) {
         // NCMBQueryをクエリとして作成
@@ -69,19 +69,19 @@ class Authers: NCMBObject, NCMBSubclassing {
             }
         }
     }
-    
+
     // データを更新するためのメソッド
     static func update(object: Authers, firstName: String, familyName: String) -> Authers {
         object.familyName = familyName
         object.firstName = firstName
         return object
     }
-    
+
     //　必須 呼び出すときに、Class Nameを指定
     override init!(className: String!) {
         super.init(className: "Authers")
     }
-    
+
     // 必須。
     static func ncmbClassName() -> String! {
         return "Authers"

@@ -11,7 +11,7 @@ import NCMB // Nifty Cloud mobile backendをインポート
 
 @objc(Books)
 class Books: NCMBObject, NCMBSubclassing {
-    
+
     // それぞれのカラムを指定
     var title: String! {
         get {
@@ -21,7 +21,7 @@ class Books: NCMBObject, NCMBSubclassing {
             setObject(newValue, forKey: "title")
         }
     }
-    
+
     var publishedDate: NSDate {
         get {
             return objectForKey("publishedDate") as! NSDate
@@ -30,7 +30,7 @@ class Books: NCMBObject, NCMBSubclassing {
             setObject(newValue, forKey: "publishedDate")
         }
     }
-    
+
     var isPublic: Int {
         get {
             return objectForKey("isPublic") as! Int
@@ -39,7 +39,7 @@ class Books: NCMBObject, NCMBSubclassing {
             setObject(newValue, forKey: "isPublic")
         }
     }
-    
+
     var user: NCMBUser {
         get {
             return objectForKey("user") as! NCMBUser
@@ -48,7 +48,7 @@ class Books: NCMBObject, NCMBSubclassing {
             setObject(newValue, forKey: "user")
         }
     }
-    
+
     var auther: Authers {
         get {
             return objectForKey("auther") as! Authers
@@ -57,12 +57,12 @@ class Books: NCMBObject, NCMBSubclassing {
             setObject(newValue, forKey: "auther")
         }
     }
-    
+
     //　必須 呼び出すときに、Class Nameを指定
     override init!(className: String!) {
         super.init(className: className)
     }
-    
+
     // 保存・作成するためのNCMBObject(Books)を作成するためのメソッド
     static func create(title: String, date: NSDate, isPublic: Int, user: NCMBUser, auther: Authers) -> Books{
         // インスタンスを作成
@@ -85,7 +85,7 @@ class Books: NCMBObject, NCMBSubclassing {
         }
         return object
     }
-    
+
     // Booksテーブルからすべてを取得
     static func loadAll(callback: (objects: [Books]) -> Void) {
         // NCMBQueryをクエリとして作成
@@ -105,19 +105,19 @@ class Books: NCMBObject, NCMBSubclassing {
             }
         }
     }
-    
+
     // データを非同期で通信状況に合わせて送信する
     func saveWithEvent(callback: () -> Void) {
         self.saveEventually { (error) in
             if error != nil { // エラーがあるとき
                 print(error.localizedDescription)
             }else { // エラーがないとき
-                // 引数で受け取った書影を行う
+                // 引数で受け取った処理を行う
                 callback()
             }
         }
     }
-    
+
     // 必須。
     static func ncmbClassName() -> String! {
         return "Books"

@@ -16,15 +16,15 @@ enum NCMBCreateType {
 }
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet var table: UITableView!
-    
+
     var books: [Books] = []
-    
+
     var action: ActionButton!
-    
+
     var updateBook: Books!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,33 +33,35 @@ class ViewController: UIViewController {
         table.registerNib(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "bookCell")
         self.setActionButton()
     }
-    
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         table.estimatedRowHeight = 71
         table.rowHeight = UITableViewAutomaticDimension
         self.read()
     }
-    
+
     override func viewDidAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if NCMBUser.currentUser() == nil {
             self.performSegueWithIdentifier("toSignupView", sender: nil)
         }
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     func read() {
         Books.loadAll { (objects) in
+            //booksという配列に取得したデータを入れる
             self.books = objects
+            //TableViewをリフレッシュ
             self.table.reloadData()
         }
     }
-    
+
     func deleteObject(indexPath: NSIndexPath) {
         let object = books[indexPath.row]
         object.deleteEventually { (error) in
@@ -68,23 +70,23 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+
     func transition() {
         self.performSegueWithIdentifier("toAddView", sender: nil)
     }
-    
+
     func toAddWithData(data: Books)  {
         self.performSegueWithIdentifier("toAddView", sender: data)
     }
-    
+
     func toAutherList() {
         self.performSegueWithIdentifier("toAutherList", sender: nil)
     }
-    
+
     func toAddAuther() {
         self.performSegueWithIdentifier("toAddAutherView", sender: nil)
     }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toAddView" && sender != nil{
             let addView = segue.destinationViewController as! AddViewController
@@ -92,7 +94,7 @@ class ViewController: UIViewController {
             addView.updateBook = sender as! Books
         }
     }
-    
+
     func setActionButton() {
         let editBtn = ActionButtonItem(title: "Add", image: UIImage(named: "edit"))
         let autherBtn = ActionButtonItem(title: "Auther", image: UIImage(named: "avatar"))
@@ -114,5 +116,3 @@ class ViewController: UIViewController {
         action.backgroundColor = UIColor(red: 238/255, green: 130/255, blue: 34/255, alpha: 1)
     }
 }
-
-
