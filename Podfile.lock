@@ -1,6 +1,6 @@
 PODS:
   - ActionButton (0.1.4)
-  - NCMB (2.3.2)
+  - NCMB (2.3.3)
 
 DEPENDENCIES:
   - ActionButton
@@ -12,12 +12,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NCMB:
-    :commit: 0bc471b471fe23e1346607086576956507d2e35e
+    :commit: cc06a5deb3636533dd7560087beac180c2d62012
     :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
 
 SPEC CHECKSUMS:
   ActionButton: 1b94024013cf57e960d09aa56792f29e1bb545e0
-  NCMB: 0a2d8732ef733a55e8fba69f9fb3d04d442da3a9
+  NCMB: 33829337aeb2e91a0fc1c771eeb77b642f7f6589
 
 PODFILE CHECKSUM: 1977b07d1d40456025f3b0847eefb2d35777bd7b
 
