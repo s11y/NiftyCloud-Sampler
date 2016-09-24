@@ -1,3 +1,4 @@
+
 //
 //  LoginViewController.swift
 //  NiftyCloud-Sampler
@@ -22,7 +23,7 @@ class LoginViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
-        passwordTextField.secureTextEntry = true
+        passwordTextField.isSecureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +35,7 @@ class LoginViewController: UIViewController {
         guard let mail = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
-        self.login(mail, password: password)
+        self.login(mail: mail, password: password)
     }
     
     @IBAction func selectForgetPassword() {
@@ -42,11 +43,11 @@ class LoginViewController: UIViewController {
     }
     
     func login(mail: String, password: String) {
-        NCMBUser.logInWithMailAddressInBackground(mail, password: password) { (user, error) in
+        NCMBUser.logInWithMailAddress(inBackground: mail, password: password) { (user, error) in
             if error != nil {
-                print(error.localizedDescription)
+                print(error?.localizedDescription)
             }else {
-                if user.isAuthenticated() {
+                if user!.isAuthenticated() {
                     self.transition()
                 }else {
                     self.presentAuthAlert()
@@ -56,20 +57,20 @@ class LoginViewController: UIViewController {
     }
     
     func requestResetPassword(email address: String) {
-        NCMBUser.requestPasswordResetForEmailInBackground(address) { (error) in
+        NCMBUser.requestPasswordResetForEmail(inBackground: address) { (error) in
             if error != nil {
-                print(error.localizedDescription)
+                print(error?.localizedDescription)
             }
         }
     }
     
     func presentEmailTextField() {
-        let alert = UIAlertController(title: "パスワードをリセット", message: "パスワードをリセットするためのメールアドレスを記入してください", preferredStyle: .Alert)
-        alert.addTextFieldWithConfigurationHandler { (textField) in
+        let alert = UIAlertController(title: "パスワードをリセット", message: "パスワードをリセットするためのメールアドレスを記入してください", preferredStyle: .alert)
+        alert.addTextField { (textField) in
             textField.placeholder = "Enter Email Address"
         }
-        let btn = UIAlertAction(title: "Finish", style: .Default) { (action) in
-            if let textField: UITextField = alert.textFields![0] {
+        let btn = UIAlertAction(title: "Finish", style: .default) { (action) in
+            if let textField: UITextField = alert.textFields?[0] {
                 if let text = textField.text {
                     self.requestResetPassword(email: text)
                 }else {
@@ -79,17 +80,17 @@ class LoginViewController: UIViewController {
             }
         }
         alert.addAction(btn)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func presentAuthAlert() {
-        let alert = UIAlertController(title: "ユーザー認証失敗", message: "メールアドレスの認証を行ってください。", preferredStyle: .Alert)
-        let btn = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let alert = UIAlertController(title: "ユーザー認証失敗", message: "メールアドレスの認証を行ってください。", preferredStyle: .alert)
+        let btn = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(btn)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func transition() {
-        self.performSegueWithIdentifier("toViewCon", sender: nil)
+        self.performSegue(withIdentifier: "toViewCon", sender: nil)
     }
 }

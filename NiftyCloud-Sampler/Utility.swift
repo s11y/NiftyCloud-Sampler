@@ -1,3 +1,4 @@
+
 //
 //  Utility.swift
 //  NiftyCloud-Sampler
@@ -10,11 +11,11 @@ import UIKit
 
 extension UIToolbar {
     func addDoneBtn(target: AnyObject?, textField: UITextField, selector: Selector) {
-        self.barStyle = .BlackTranslucent
-        self.tintColor = UIColor.whiteColor()
-        self.backgroundColor = UIColor.blackColor()
+        self.barStyle = .blackTranslucent
+        self.tintColor = UIColor.white
+        self.backgroundColor = UIColor.black
         
-        let toolBtn = UIBarButtonItem(title: "DONE", style: .Plain, target: target, action: selector)
+        let toolBtn = UIBarButtonItem(title: "DONE", style: .plain, target: target, action: selector)
         self.items = [toolBtn]
         
         textField.inputAccessoryView = self

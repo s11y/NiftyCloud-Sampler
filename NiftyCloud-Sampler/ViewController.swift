@@ -30,21 +30,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         table.delegate = self
         table.dataSource = self
-        table.registerNib(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "bookCell")
+        table.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "bookCell")
         self.setActionButton()
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         table.estimatedRowHeight = 71
         table.rowHeight = UITableViewAutomaticDimension
         self.read()
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if NCMBUser.currentUser() == nil {
-            self.performSegueWithIdentifier("toSignupView", sender: nil)
+        if NCMBUser.current() == nil {
+            self.performSegue(withIdentifier: "toSignupView", sender: nil)
         }
     }
 
@@ -62,34 +62,34 @@ class ViewController: UIViewController {
         }
     }
 
-    func deleteObject(indexPath: NSIndexPath) {
+    func deleteObject(indexPath: IndexPath) {
         let object = books[indexPath.row]
         object.deleteEventually { (error) in
             if error != nil {
-                print(error.localizedDescription)
+                print(error?.localizedDescription)
             }
         }
     }
 
     func transition() {
-        self.performSegueWithIdentifier("toAddView", sender: nil)
+        self.performSegue(withIdentifier: "toAddView", sender: nil)
     }
 
     func toAddWithData(data: Books)  {
-        self.performSegueWithIdentifier("toAddView", sender: data)
+        self.performSegue(withIdentifier: "toAddView", sender: data)
     }
 
     func toAutherList() {
-        self.performSegueWithIdentifier("toAutherList", sender: nil)
+        self.performSegue(withIdentifier: "toAutherList", sender: nil)
     }
 
     func toAddAuther() {
-        self.performSegueWithIdentifier("toAddAutherView", sender: nil)
+        self.performSegue(withIdentifier: "toAddAutherView", sender: nil)
     }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddView" && sender != nil{
-            let addView = segue.destinationViewController as! AddViewController
+            let addView = segue.destination as! AddViewController
             addView.mode = .Update
             addView.updateBook = sender as! Books
         }
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         action.action = { button in
             button.toggleMenu()
         }
-        action.setTitle("+", forState: .Normal)
+        action.setTitle("+", forState: .normal)
         action.backgroundColor = UIColor(red: 238/255, green: 130/255, blue: 34/255, alpha: 1)
     }
 }

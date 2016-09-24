@@ -23,10 +23,10 @@ class AutherListViewController: UIViewController  {
         // Do any additional setup after loading the view.
         table.delegate = self
         table.dataSource = self
-        table.registerNib(UINib(nibName: "AutherCell", bundle: nil), forCellReuseIdentifier: "autherCell")
+        table.register(UINib(nibName: "AutherCell", bundle: nil), forCellReuseIdentifier: "autherCell")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.read()
@@ -48,18 +48,18 @@ class AutherListViewController: UIViewController  {
         }
     }
     
-    func deleteObject(indexPath: NSIndexPath) {
+    func deleteObject(indexPath: IndexPath) {
         let object = autherArray[indexPath.row]
         object.deleteEventually { (error) in
             if error != nil {
-                print(error.localizedDescription)
+                print(error?.localizedDescription)
             }
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddAutherView" {
-            let viewController = segue.destinationViewController as! AddAutherViewController
+            let viewController = segue.destination as! AddAutherViewController
             viewController.updateAuther = self.updateAuther
             viewController.mode = .Update
         }

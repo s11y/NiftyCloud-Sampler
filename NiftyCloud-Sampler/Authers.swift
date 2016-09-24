@@ -15,7 +15,7 @@ class Authers: NCMBObject, NCMBSubclassing {
     // それぞれのカラムを指定
     var familyName : String {
         get {
-            return objectForKey("familyName") as! String
+            return object(forKey: "familyName") as! String
         }
         set {
             setObject(newValue, forKey: "familyName")
@@ -24,7 +24,7 @@ class Authers: NCMBObject, NCMBSubclassing {
 
     var firstName: String {
         get {
-            return objectForKey("firstName") as! String
+            return object(forKey: "firstName") as! String
         }set {
             setObject(newValue, forKey: "firstName")
         }
@@ -35,16 +35,16 @@ class Authers: NCMBObject, NCMBSubclassing {
         // インスタンスを作成
         let auther = Authers(className: "Authers")
         // それぞれのプロパティに適切なデータを入れる
-        auther.familyName = familyName
-        auther.firstName = firstName
-        return auther
+        auther?.familyName = familyName
+        auther?.firstName = firstName
+        return auther!
     }
 
     // データを非同期で通信状況に合わせて送信する
-    func saveWithEvent(callback: () -> Void) {
+    func saveWithEvent(callback: @escaping () -> Void) {
         self.saveEventually { (error) in
             if error != nil { // エラーがあるとき
-                print(error.localizedDescription)
+                print(error?.localizedDescription)
             }else { // エラーがないとき
                 // 引数で受け取った処理を行う
                 callback()
@@ -53,19 +53,19 @@ class Authers: NCMBObject, NCMBSubclassing {
     }
 
     // Booksテーブルからすべてを取得
-    static func loadAll(callback: (objects: [Authers]) -> Void) {
+    static func loadAll(callback: @escaping (_ objects: [Authers]) -> Void) {
         // NCMBQueryをクエリとして作成
         let query = NCMBQuery(className: "Authers")
         // クエリに従ってすべてを取得
-        query.findObjectsInBackgroundWithBlock { (objects, error) in
+        query?.findObjectsInBackground { (objects, error) in
             if error != nil { // エラーがあるとき
-                print(error.localizedDescription)
+                print(error?.localizedDescription)
             }else { // エラーがないとき
                 // 取得したデータをBooksクラスに変換
                 let obj = objects as! [Authers]
                 print(obj)
                 // 引数で受け取った処理を行う
-                callback(objects: obj)
+                callback(obj)
             }
         }
     }

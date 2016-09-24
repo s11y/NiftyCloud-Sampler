@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 extension ViewController: UITableViewDataSource{
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("bookCell") as! BookCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell") as! BookCell
         
         let book = books[indexPath.row]
         print(book.title)
@@ -27,17 +27,17 @@ extension ViewController: UITableViewDataSource{
 }
 
 extension ViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .Default, title: "Delete") { (action, index) in
-            self.deleteObject(index)
-            self.table.deleteRowsAtIndexPaths([index], withRowAnimation: .Fade)
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .default, title: "Delete") { (action, index) in
+            self.deleteObject(indexPath: index)
+            self.table.deleteRows(at: [index], with: .fade)
         }
         
-        let edit = UITableViewRowAction(style: .Default, title: "Edit") { (action, index) in
+        let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, index) in
             self.updateBook = self.books[index.row]
-            self.toAddWithData(self.books[index.row])
+            self.toAddWithData(data: self.books[index.row])
         }
-        edit.backgroundColor = UIColor.greenColor()
+        edit.backgroundColor = UIColor.green
         return [delete, edit]
     }
 }

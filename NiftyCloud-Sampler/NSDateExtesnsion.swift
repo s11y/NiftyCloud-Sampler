@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension NSDate {
+extension Date {
     func convert() -> String{
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
 }

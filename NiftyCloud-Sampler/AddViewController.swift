@@ -28,7 +28,7 @@ class AddViewController: UIViewController {
 
     var picker: UIPickerView!
 
-    var publishedDate: NSDate!
+    var publishedDate: Date!
 
     var isPublic: Int! = 0
 
@@ -44,7 +44,7 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         self.read()
         titleTextField.delegate = self
-        segmentControl.addTarget(self, action: #selector(self.decideIsPublic(_:)), forControlEvents: .TouchUpInside)
+        segmentControl.addTarget(self, action: #selector(AddViewController.decideIsPublic(row:)), for: .touchUpInside)
         self.setDatePicker()
         self.setPickerView()
 
@@ -56,7 +56,7 @@ class AddViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if mode == .Update {
             self.displayRawData()
@@ -82,47 +82,47 @@ class AddViewController: UIViewController {
         guard let autherObject = self.auther else { return }
         switch mode {
         case .Update:
-            self.updateObject(title, date: date, isPublic: whichPublic, autherObject: autherObject)
+            self.updateObject(title: title, date: date, isPublic: whichPublic, autherObject: autherObject)
         case .Create:
-            self.create(title, date: date, whichPublic: whichPublic, autherObject: autherObject)
+            self.create(title: title, date: date, whichPublic: whichPublic, autherObject: autherObject)
         }
 
     }
 
     func selectImage() {
-        let alert = UIAlertController(title: "写真を選択", message: "どちらから写真を取得しますか？", preferredStyle: .ActionSheet)
-        let camera = UIAlertAction(title: "カメラ", style: .Default) { (action) in
-            if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+        let alert = UIAlertController(title: "写真を選択", message: "どちらから写真を取得しますか？", preferredStyle: .actionSheet)
+        let camera = UIAlertAction(title: "カメラ", style: .default) { (action) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 self.imagePicker.allowsEditing = true
-                self.imagePicker.sourceType = .Camera
-                self.presentViewController(self.imagePicker, animated: true, completion: nil)
+                self.imagePicker.sourceType = .camera
+                self.present(self.imagePicker, animated: true, completion: nil)
             }
         }
 
-        let library = UIAlertAction(title: "フォトライブラリー", style: .Default) { (action) in
-            if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+        let library = UIAlertAction(title: "フォトライブラリー", style: .default) { (action) in
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 self.imagePicker.allowsEditing = true
-                self.imagePicker.sourceType = .PhotoLibrary
-                self.presentViewController(self.imagePicker, animated: true, completion: nil)
+                self.imagePicker.sourceType = .photoLibrary
+                self.present(self.imagePicker, animated: true, completion: nil)
             }
         }
 
         alert.addAction(camera)
         alert.addAction(library)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
 
     }
 
-    func create(title: String, date: NSDate, whichPublic: Int, autherObject: Authers) {
+    func create(title: String, date: Date, whichPublic: Int, autherObject: Authers) {
         //モデルクラスからcreateを呼び出し、その後、saveWithEventで保存処理を行う
-        Books.create(title, date: date, isPublic: whichPublic, user: NCMBUser.currentUser(), auther: autherObject).saveWithEvent {
-            self.navigationController?.popViewControllerAnimated(true)
+        Books.create(title: title, date: date, isPublic: whichPublic, user: NCMBUser.current(), auther: autherObject).saveWithEvent {
+            _ = self.navigationController?.popViewController(animated: true)
         }
     }
 
-    func updateObject(title: String, date: NSDate, isPublic: Int, autherObject: Authers) {
-        Books.update(updateBook, user: NCMBUser.currentUser(), title: title, date: date, isPublic: isPublic, auther: autherObject).saveWithEvent {
-            self.navigationController?.popViewControllerAnimated(true)
+    func updateObject(title: String, date: Date, isPublic: Int, autherObject: Authers) {
+        Books.update(object: updateBook, user: NCMBUser.current(), title: title, date: date, isPublic: isPublic, auther: autherObject).saveWithEvent {
+            _ = self.navigationController?.popViewController(animated: true)
         }
     }
 
@@ -145,16 +145,16 @@ class AddViewController: UIViewController {
 
     func setDatePicker() {
         datePicker = UIDatePicker()
-        datePicker.datePickerMode = .Date
-        datePicker.addTarget(self, action: #selector(self.convertDateToDate), forControlEvents: .ValueChanged)
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(self.convertDateToDate), for: .valueChanged)
         self.addDone()
         dateTextField.inputView = datePicker
     }
 
     func addToolBar() {
-        let toolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.width, 40.0))
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.width, height: 40.0))
         toolBar.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height-20)
-        toolBar.addDoneBtn(self, textField: autherTextField, selector: #selector(self.resign))
+        toolBar.addDoneBtn(target: self, textField: autherTextField, selector: #selector(self.resign))
     }
 
     func resign() {
@@ -163,9 +163,9 @@ class AddViewController: UIViewController {
     }
 
     func addDone() {
-        let toolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.width, 40.0))
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.width, height: 40.0))
         toolBar.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height-20)
-        toolBar.addDoneBtn(self, textField: dateTextField, selector: #selector(self.resign))
+        toolBar.addDoneBtn(target: self, textField: dateTextField, selector: #selector(self.resign))
     }
 
     func convertDateToDate() {

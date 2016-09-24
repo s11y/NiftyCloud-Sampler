@@ -26,7 +26,7 @@ class AddAutherViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if mode == .Update {
             self.displayUpdateAuther()
@@ -43,9 +43,9 @@ class AddAutherViewController: UIViewController {
         guard let text = familyTextField.text else { return }
         switch mode {
         case .Create:
-            self.create(str, family: text)
+            self.create(first: str, family: text)
         case .Update:
-            self.update(str, family: text)
+            self.update(first: str, family: text)
         }
     }
     
@@ -55,15 +55,15 @@ class AddAutherViewController: UIViewController {
     }
     
     func create(first: String, family: String) {
-        let auther = Authers.create(first, familyName: family)
+        let auther = Authers.create(firstName: first, familyName: family)
         auther.saveWithEvent { 
-            self.navigationController?.popViewControllerAnimated(true)
+            _ = self.navigationController?.popViewController(animated: true)
         }
     }
     
     func update(first: String, family: String)  {
-        Authers.update(updateAuther, firstName: first, familyName: family).saveWithEvent { 
-            self.navigationController?.popViewControllerAnimated(true)
+        Authers.update(object: updateAuther, firstName: first, familyName: family).saveWithEvent { 
+            _ = self.navigationController?.popViewController(animated: true)
         }
     }
 }

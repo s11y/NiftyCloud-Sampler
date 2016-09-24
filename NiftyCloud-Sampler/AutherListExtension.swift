@@ -10,27 +10,29 @@ import Foundation
 import UIKit
 
 extension AutherListViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .Default, title: "Delete") { (action, index) in
-            self.deleteObject(index)
-            self.table.deleteRowsAtIndexPaths([index], withRowAnimation: .Fade)
+    
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .default, title: "Delete") { (action, index) in
+            self.deleteObject(indexPath: index)
+            self.table.deleteRows(at: [index], with: .fade)
         }
         
-        let edit = UITableViewRowAction(style: .Default, title: "Edit") { (action, index) in
+        let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, index) in
             self.updateAuther = self.autherArray[index.row]
         }
-        edit.backgroundColor = UIColor.greenColor()
+        edit.backgroundColor = UIColor.green
         return [delete, edit]
     }
 }
 
 extension AutherListViewController: UITableViewDataSource {
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return autherArray.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("autherCell") as! AutherCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "autherCell") as! AutherCell
         let auther = autherArray[indexPath.row]
         cell.nameLabel.text = auther.familyName + auther.firstName
         return cell

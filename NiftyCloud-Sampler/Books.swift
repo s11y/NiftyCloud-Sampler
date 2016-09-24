@@ -15,16 +15,16 @@ class Books: NCMBObject, NCMBSubclassing {
     // それぞれのカラムを指定
     var title: String! {
         get {
-            return objectForKey("title") as! String
+            return object(forKey: "title") as! String
         }
         set {
             setObject(newValue, forKey: "title")
         }
     }
 
-    var publishedDate: NSDate {
+    var publishedDate: Date {
         get {
-            return objectForKey("publishedDate") as! NSDate
+            return object(forKey: "publishedDate") as! Date
         }
         set {
             setObject(newValue, forKey: "publishedDate")
@@ -33,7 +33,7 @@ class Books: NCMBObject, NCMBSubclassing {
 
     var isPublic: Int {
         get {
-            return objectForKey("isPublic") as! Int
+            return object(forKey: "isPublic") as! Int
         }
         set {
             setObject(newValue, forKey: "isPublic")
@@ -42,7 +42,7 @@ class Books: NCMBObject, NCMBSubclassing {
 
     var user: NCMBUser {
         get {
-            return objectForKey("user") as! NCMBUser
+            return object(forKey: "user") as! NCMBUser
         }
         set {
             setObject(newValue, forKey: "user")
@@ -51,7 +51,7 @@ class Books: NCMBObject, NCMBSubclassing {
 
     var auther: Authers {
         get {
-            return objectForKey("auther") as! Authers
+            return object(forKey: "auther") as! Authers
         }
         set {
             setObject(newValue, forKey: "auther")
@@ -64,19 +64,19 @@ class Books: NCMBObject, NCMBSubclassing {
     }
 
     // 保存・作成するためのNCMBObject(Books)を作成するためのメソッド
-    static func create(title: String, date: NSDate, isPublic: Int, user: NCMBUser, auther: Authers) -> Books{
+    static func create(title: String, date: Date, isPublic: Int, user: NCMBUser, auther: Authers) -> Books{
         // インスタンスを作成
         let book = Books(className: "Books")
         // それぞれのプロパティに適切なデータを入れる
-        book.auther = auther
-        book.isPublic = isPublic
-        book.title = title
-        book.user = user
-        book.publishedDate = date
-        return book
+        book?.auther = auther
+        book?.isPublic = isPublic
+        book?.title = title
+        book?.user = user
+        book?.publishedDate = date
+        return book!
     }
     // データを更新するためのメソッド
-    static func update(object: Books, user: NCMBUser, title: String, date: NSDate, isPublic: Int, auther: Authers) -> Books{
+    static func update(object: Books, user: NCMBUser, title: String, date: Date, isPublic: Int, auther: Authers) -> Books{
         if object.user == user {
             object.title = title
             object.auther = auther
@@ -87,30 +87,30 @@ class Books: NCMBObject, NCMBSubclassing {
     }
 
     // Booksテーブルからすべてを取得
-    static func loadAll(callback: (objects: [Books]) -> Void) {
+    static func loadAll(callback: @escaping (_ objects: [Books]) -> Void) {
         // NCMBQueryをクエリとして作成
         let query = NCMBQuery(className: "Books")
-        query.includeKey = "auther"
+        query?.includeKey = "auther"
         // クエリに従ってすべてを取得
-        query.findObjectsInBackgroundWithBlock { (objects, error) in
+        query?.findObjectsInBackground { (objects, error) in
             if error != nil { // エラーがあるとき
-                print(error.localizedDescription)
+                print(error?.localizedDescription)
             }else { // エラーがないとき
                 // 取得したデータをBooksクラスに変換
                 let obj = objects as! [Books]
                 print("autherとは...\(obj[0].auther)")
                 print(obj)
                 // 引数で受け取った処理を行う
-                callback(objects: obj)
+                callback(obj)
             }
         }
     }
 
     // データを非同期で通信状況に合わせて送信する
-    func saveWithEvent(callback: () -> Void) {
+    func saveWithEvent(callback: @escaping () -> Void) {
         self.saveEventually { (error) in
             if error != nil { // エラーがあるとき
-                print(error.localizedDescription)
+                print(error?.localizedDescription)
             }else { // エラーがないとき
                 // 引数で受け取った処理を行う
                 callback()
