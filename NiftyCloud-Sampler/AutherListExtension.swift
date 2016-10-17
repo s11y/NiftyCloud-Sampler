@@ -11,7 +11,6 @@ import UIKit
 
 extension AutherListViewController: UITableViewDelegate {
     
-    
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .default, title: "Delete") { (action, index) in
             self.deleteObject(indexPath: index)
