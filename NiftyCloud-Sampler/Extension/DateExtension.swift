@@ -1,8 +1,8 @@
 //
-//  NSDateExtesnsion.swift
+//  DateExtension.swift
 //  NiftyCloud-Sampler
 //
-//  Created by ShinokiRyosei on 2016/06/25.
+//  Created by ShinokiRyosei on 2016/12/24.
 //  Copyright © 2016年 ShinokiRyosei. All rights reserved.
 //
 
