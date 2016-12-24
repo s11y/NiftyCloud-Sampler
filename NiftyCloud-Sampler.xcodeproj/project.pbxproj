@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		391D88ED1D246BAB001A1DFD /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D88EC1D246BAB001A1DFD /* Books.swift */; };
-		391D88F21D24746E001A1DFD /* Authers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D88F11D24746E001A1DFD /* Authers.swift */; };
-		391D88F81D247A88001A1DFD /* AutherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D88F71D247A88001A1DFD /* AutherListViewController.swift */; };
-		391D88FB1D247B15001A1DFD /* AutherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D88F91D247B15001A1DFD /* AutherCell.swift */; };
-		391D88FC1D247B15001A1DFD /* AutherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391D88FA1D247B15001A1DFD /* AutherCell.xib */; };
-		39484A8C1D22A728002731D1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39484A8B1D22A728002731D1 /* StringExtension.swift */; };
-		3951A49D1D2A705400ADDC7F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3951A49C1D2A705400ADDC7F /* Utility.swift */; };
-		3978F01E1D25CD26006DB9A2 /* AddAutherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3978F01D1D25CD26006DB9A2 /* AddAutherViewController.swift */; };
-		397DA24F1D1DB66100852954 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */; };
-		3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B61D196EA800735A58 /* SignUpViewController.swift */; };
-		3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9B81D196EAF00735A58 /* LoginViewController.swift */; };
-		39872C521D28E94000F82D9A /* AddViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39872C511D28E94000F82D9A /* AddViewExtension.swift */; };
-		39872C551D28EF0D00F82D9A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39872C541D28EF0D00F82D9A /* ViewExtension.swift */; };
-		39872C571D28F03400F82D9A /* AutherListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39872C561D28F03400F82D9A /* AutherListExtension.swift */; };
+		397DD5551E0DDE97004ECD3B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5541E0DDE97004ECD3B /* DateExtension.swift */; };
+		397DD5581E0DDEBF004ECD3B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5561E0DDEBF004ECD3B /* StringExtension.swift */; };
+		397DD5591E0DDEBF004ECD3B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5571E0DDEBF004ECD3B /* Utility.swift */; };
+		397DD5601E0DDF01004ECD3B /* AutherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD55B1E0DDF01004ECD3B /* AutherCell.swift */; };
+		397DD5611E0DDF01004ECD3B /* AutherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397DD55C1E0DDF01004ECD3B /* AutherCell.xib */; };
+		397DD5621E0DDF01004ECD3B /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD55E1E0DDF01004ECD3B /* BookCell.swift */; };
+		397DD5631E0DDF01004ECD3B /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397DD55F1E0DDF01004ECD3B /* BookCell.xib */; };
+		397DD5671E0DDF2F004ECD3B /* AddViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5641E0DDF2F004ECD3B /* AddViewExtension.swift */; };
+		397DD5681E0DDF2F004ECD3B /* AutherListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5651E0DDF2F004ECD3B /* AutherListExtension.swift */; };
+		397DD5691E0DDF2F004ECD3B /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5661E0DDF2F004ECD3B /* ViewExtension.swift */; };
+		397DD56B1E0DDF4C004ECD3B /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD56A1E0DDF4C004ECD3B /* TextFieldDelegate.swift */; };
+		397DD56E1E0DDF5E004ECD3B /* Authers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD56C1E0DDF5E004ECD3B /* Authers.swift */; };
+		397DD56F1E0DDF5E004ECD3B /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD56D1E0DDF5E004ECD3B /* Books.swift */; };
+		397DD5771E0DDF95004ECD3B /* AddAutherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5701E0DDF95004ECD3B /* AddAutherViewController.swift */; };
+		397DD5781E0DDF95004ECD3B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5711E0DDF95004ECD3B /* AddViewController.swift */; };
+		397DD5791E0DDF95004ECD3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5731E0DDF95004ECD3B /* LoginViewController.swift */; };
+		397DD57A1E0DDF95004ECD3B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5741E0DDF95004ECD3B /* SignUpViewController.swift */; };
+		397DD57B1E0DDF95004ECD3B /* AutherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5751E0DDF95004ECD3B /* AutherListViewController.swift */; };
+		397DD57C1E0DDF95004ECD3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397DD5761E0DDF95004ECD3B /* ViewController.swift */; };
 		3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */; };
-		3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BCF41D0CD51900F6EBBA /* ViewController.swift */; };
 		3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF61D0CD51900F6EBBA /* Main.storyboard */; };
 		3990BCFA1D0CD51900F6EBBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCF91D0CD51900F6EBBA /* Assets.xcassets */; };
 		3990BCFD1D0CD51900F6EBBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */; };
 		3990BD081D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */; };
 		3990BD131D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */; };
 		3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */; };
-		39A821D01D1E01C600B8E51A /* NSDateExtesnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */; };
 		39C865F01D220585004C6800 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865EF1D220585004C6800 /* AudioToolbox.framework */; };
 		39C865F21D220592004C6800 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865F11D220592004C6800 /* MobileCoreServices.framework */; };
 		39C865F41D22059B004C6800 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C865F31D22059B004C6800 /* SystemConfiguration.framework */; };
-		39F4B9F51D164A1E003E2D04 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4B9F31D164A1E003E2D04 /* BookCell.swift */; };
-		39F4B9F61D164A1E003E2D04 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39F4B9F41D164A1E003E2D04 /* BookCell.xib */; };
-		39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4B9F71D164B37003E2D04 /* AddViewController.swift */; };
 		3F387CF958003164D718ED11 /* Pods_NiftyCloud_SamplerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */; };
 		6148A4120C557989BEF49E8B /* Pods_NiftyCloud_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */; };
 		A5A601CEEA8192EF4067A867 /* Pods_NiftyCloud_SamplerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */; };
@@ -61,23 +61,27 @@
 /* Begin PBXFileReference section */
 		1417E81DC3DA8217C8D1D2F5 /* Pods-NiftyCloud-SamplerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-SamplerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CEDB2C78858578985D5359A /* Pods-NiftyCloud-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
-		391D88EC1D246BAB001A1DFD /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
-		391D88F11D24746E001A1DFD /* Authers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authers.swift; sourceTree = "<group>"; };
-		391D88F71D247A88001A1DFD /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherListViewController.swift; sourceTree = "<group>"; };
-		391D88F91D247B15001A1DFD /* AutherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherCell.swift; sourceTree = "<group>"; };
-		391D88FA1D247B15001A1DFD /* AutherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutherCell.xib; sourceTree = "<group>"; };
-		39484A8B1D22A728002731D1 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		3951A49C1D2A705400ADDC7F /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		3978F01D1D25CD26006DB9A2 /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAutherViewController.swift; sourceTree = "<group>"; };
-		397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
-		3984A9B61D196EA800735A58 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		3984A9B81D196EAF00735A58 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		39872C511D28E94000F82D9A /* AddViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewExtension.swift; sourceTree = "<group>"; };
-		39872C541D28EF0D00F82D9A /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		39872C561D28F03400F82D9A /* AutherListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherListExtension.swift; sourceTree = "<group>"; };
+		397DD5541E0DDE97004ECD3B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Extension/DateExtension.swift; sourceTree = "<group>"; };
+		397DD5561E0DDEBF004ECD3B /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extension/StringExtension.swift; sourceTree = "<group>"; };
+		397DD5571E0DDEBF004ECD3B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Extension/Utility.swift; sourceTree = "<group>"; };
+		397DD55B1E0DDF01004ECD3B /* AutherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherCell.swift; sourceTree = "<group>"; };
+		397DD55C1E0DDF01004ECD3B /* AutherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutherCell.xib; sourceTree = "<group>"; };
+		397DD55E1E0DDF01004ECD3B /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		397DD55F1E0DDF01004ECD3B /* BookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
+		397DD5641E0DDF2F004ECD3B /* AddViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewExtension.swift; path = ViewExtensions/AddViewExtension.swift; sourceTree = "<group>"; };
+		397DD5651E0DDF2F004ECD3B /* AutherListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutherListExtension.swift; path = ViewExtensions/AutherListExtension.swift; sourceTree = "<group>"; };
+		397DD5661E0DDF2F004ECD3B /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = ViewExtensions/ViewExtension.swift; sourceTree = "<group>"; };
+		397DD56A1E0DDF4C004ECD3B /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldDelegate.swift; path = Delegate/TextFieldDelegate.swift; sourceTree = "<group>"; };
+		397DD56C1E0DDF5E004ECD3B /* Authers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authers.swift; path = Models/Authers.swift; sourceTree = "<group>"; };
+		397DD56D1E0DDF5E004ECD3B /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Books.swift; path = Models/Books.swift; sourceTree = "<group>"; };
+		397DD5701E0DDF95004ECD3B /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddAutherViewController.swift; path = Controller/AddAutherViewController.swift; sourceTree = "<group>"; };
+		397DD5711E0DDF95004ECD3B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = Controller/AddViewController.swift; sourceTree = "<group>"; };
+		397DD5731E0DDF95004ECD3B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		397DD5741E0DDF95004ECD3B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		397DD5751E0DDF95004ECD3B /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutherListViewController.swift; path = Controller/AutherListViewController.swift; sourceTree = "<group>"; };
+		397DD5761E0DDF95004ECD3B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3990BCF41D0CD51900F6EBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3990BCF71D0CD51900F6EBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3990BCF91D0CD51900F6EBBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3990BCFC1D0CD51900F6EBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,14 +93,10 @@
 		3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiftyCloud_SamplerUITests.swift; sourceTree = "<group>"; };
 		3990BD141D0CD51900F6EBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
-		39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtesnsion.swift; sourceTree = "<group>"; };
 		39C865EF1D220585004C6800 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		39C865F11D220592004C6800 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		39C865F31D22059B004C6800 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		39C865F51D2205A1004C6800 /* NCMB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NCMB.framework; path = "../../Library/Developer/Xcode/DerivedData/NiftyCloud-Sampler-hbvzskufbivlozeucmtqyndzqdhz/Build/Products/Debug-iphonesimulator/NCMB/NCMB.framework"; sourceTree = "<group>"; };
-		39F4B9F31D164A1E003E2D04 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
-		39F4B9F41D164A1E003E2D04 /* BookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
-		39F4B9F71D164B37003E2D04 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		3C7E0DF477BD3306016BF613 /* Pods_NiftyCloud_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90074B559DC1E432132A98F0 /* Pods_NiftyCloud_SamplerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_SamplerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7246F03D9AA57FBB87DCAE5 /* Pods_NiftyCloud_SamplerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiftyCloud_SamplerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,9 +140,9 @@
 		391D88EE1D246D79001A1DFD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3951A49C1D2A705400ADDC7F /* Utility.swift */,
-				39484A8B1D22A728002731D1 /* StringExtension.swift */,
-				39A821CF1D1E01C600B8E51A /* NSDateExtesnsion.swift */,
+				397DD5561E0DDEBF004ECD3B /* StringExtension.swift */,
+				397DD5571E0DDEBF004ECD3B /* Utility.swift */,
+				397DD5541E0DDE97004ECD3B /* DateExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 		391D88EF1D246D83001A1DFD /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				397DA24E1D1DB66100852954 /* TextFieldDelegate.swift */,
+				397DD56A1E0DDF4C004ECD3B /* TextFieldDelegate.swift */,
 			);
 			name = Delegate;
 			sourceTree = "<group>";
@@ -158,45 +158,57 @@
 		391D88F01D246D8B001A1DFD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				391D88EC1D246BAB001A1DFD /* Books.swift */,
-				391D88F11D24746E001A1DFD /* Authers.swift */,
+				397DD56C1E0DDF5E004ECD3B /* Authers.swift */,
+				397DD56D1E0DDF5E004ECD3B /* Books.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		391D88FD1D247B1B001A1DFD /* AutherCell */ = {
-			isa = PBXGroup;
-			children = (
-				391D88F91D247B15001A1DFD /* AutherCell.swift */,
-				391D88FA1D247B15001A1DFD /* AutherCell.xib */,
-			);
-			name = AutherCell;
 			sourceTree = "<group>";
 		};
 		39550F291D1779A3000BA688 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				39F4B9F91D16504D003E2D04 /* BookCell */,
-				391D88FD1D247B1B001A1DFD /* AutherCell */,
+				397DD55A1E0DDF01004ECD3B /* AutherCell */,
+				397DD55D1E0DDF01004ECD3B /* BookCell */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
 		};
-		3984A9BA1D196F1300735A58 /* Auth */ = {
+		397DD55A1E0DDF01004ECD3B /* AutherCell */ = {
 			isa = PBXGroup;
 			children = (
-				3984A9B61D196EA800735A58 /* SignUpViewController.swift */,
-				3984A9B81D196EAF00735A58 /* LoginViewController.swift */,
+				397DD55B1E0DDF01004ECD3B /* AutherCell.swift */,
+				397DD55C1E0DDF01004ECD3B /* AutherCell.xib */,
+			);
+			name = AutherCell;
+			path = Cells/AutherCell;
+			sourceTree = "<group>";
+		};
+		397DD55D1E0DDF01004ECD3B /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				397DD55E1E0DDF01004ECD3B /* BookCell.swift */,
+				397DD55F1E0DDF01004ECD3B /* BookCell.xib */,
+			);
+			name = BookCell;
+			path = Cells/BookCell;
+			sourceTree = "<group>";
+		};
+		397DD5721E0DDF95004ECD3B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				397DD5731E0DDF95004ECD3B /* LoginViewController.swift */,
+				397DD5741E0DDF95004ECD3B /* SignUpViewController.swift */,
 			);
 			name = Auth;
+			path = Controller/Auth;
 			sourceTree = "<group>";
 		};
 		39872C531D28E94600F82D9A /* ViewExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				39872C511D28E94000F82D9A /* AddViewExtension.swift */,
-				39872C541D28EF0D00F82D9A /* ViewExtension.swift */,
-				39872C561D28F03400F82D9A /* AutherListExtension.swift */,
+				397DD5641E0DDF2F004ECD3B /* AddViewExtension.swift */,
+				397DD5651E0DDF2F004ECD3B /* AutherListExtension.swift */,
+				397DD5661E0DDF2F004ECD3B /* ViewExtension.swift */,
 			);
 			name = ViewExtensions;
 			sourceTree = "<group>";
@@ -260,23 +272,14 @@
 			path = "NiftyCloud-SamplerUITests";
 			sourceTree = "<group>";
 		};
-		39F4B9F91D16504D003E2D04 /* BookCell */ = {
-			isa = PBXGroup;
-			children = (
-				39F4B9F31D164A1E003E2D04 /* BookCell.swift */,
-				39F4B9F41D164A1E003E2D04 /* BookCell.xib */,
-			);
-			name = BookCell;
-			sourceTree = "<group>";
-		};
 		39F4B9FA1D16505A003E2D04 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3990BCF41D0CD51900F6EBBA /* ViewController.swift */,
-				39F4B9F71D164B37003E2D04 /* AddViewController.swift */,
-				3978F01D1D25CD26006DB9A2 /* AddAutherViewController.swift */,
-				391D88F71D247A88001A1DFD /* AutherListViewController.swift */,
-				3984A9BA1D196F1300735A58 /* Auth */,
+				397DD5721E0DDF95004ECD3B /* Auth */,
+				397DD5701E0DDF95004ECD3B /* AddAutherViewController.swift */,
+				397DD5711E0DDF95004ECD3B /* AddViewController.swift */,
+				397DD5751E0DDF95004ECD3B /* AutherListViewController.swift */,
+				397DD5761E0DDF95004ECD3B /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -423,8 +426,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				391D88FC1D247B15001A1DFD /* AutherCell.xib in Resources */,
-				39F4B9F61D164A1E003E2D04 /* BookCell.xib in Resources */,
+				397DD5611E0DDF01004ECD3B /* AutherCell.xib in Resources */,
+				397DD5631E0DDF01004ECD3B /* BookCell.xib in Resources */,
 				3990BCFD1D0CD51900F6EBBA /* LaunchScreen.storyboard in Resources */,
 				3990BCFA1D0CD51900F6EBBA /* Assets.xcassets in Resources */,
 				3990BCF81D0CD51900F6EBBA /* Main.storyboard in Resources */,
@@ -590,25 +593,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				391D88F21D24746E001A1DFD /* Authers.swift in Sources */,
-				397DA24F1D1DB66100852954 /* TextFieldDelegate.swift in Sources */,
-				39872C521D28E94000F82D9A /* AddViewExtension.swift in Sources */,
-				391D88FB1D247B15001A1DFD /* AutherCell.swift in Sources */,
-				3984A9B91D196EAF00735A58 /* LoginViewController.swift in Sources */,
-				39484A8C1D22A728002731D1 /* StringExtension.swift in Sources */,
-				3951A49D1D2A705400ADDC7F /* Utility.swift in Sources */,
-				391D88ED1D246BAB001A1DFD /* Books.swift in Sources */,
-				3978F01E1D25CD26006DB9A2 /* AddAutherViewController.swift in Sources */,
-				39872C571D28F03400F82D9A /* AutherListExtension.swift in Sources */,
-				3984A9B71D196EA800735A58 /* SignUpViewController.swift in Sources */,
-				3990BCF51D0CD51900F6EBBA /* ViewController.swift in Sources */,
-				391D88F81D247A88001A1DFD /* AutherListViewController.swift in Sources */,
+				397DD57C1E0DDF95004ECD3B /* ViewController.swift in Sources */,
+				397DD56E1E0DDF5E004ECD3B /* Authers.swift in Sources */,
+				397DD5771E0DDF95004ECD3B /* AddAutherViewController.swift in Sources */,
+				397DD5781E0DDF95004ECD3B /* AddViewController.swift in Sources */,
+				397DD5551E0DDE97004ECD3B /* DateExtension.swift in Sources */,
+				397DD56F1E0DDF5E004ECD3B /* Books.swift in Sources */,
+				397DD5671E0DDF2F004ECD3B /* AddViewExtension.swift in Sources */,
+				397DD57A1E0DDF95004ECD3B /* SignUpViewController.swift in Sources */,
+				397DD5601E0DDF01004ECD3B /* AutherCell.swift in Sources */,
+				397DD5691E0DDF2F004ECD3B /* ViewExtension.swift in Sources */,
+				397DD5621E0DDF01004ECD3B /* BookCell.swift in Sources */,
+				397DD5791E0DDF95004ECD3B /* LoginViewController.swift in Sources */,
+				397DD5581E0DDEBF004ECD3B /* StringExtension.swift in Sources */,
+				397DD5591E0DDEBF004ECD3B /* Utility.swift in Sources */,
 				3990BCF31D0CD51900F6EBBA /* AppDelegate.swift in Sources */,
-				39F4B9F81D164B37003E2D04 /* AddViewController.swift in Sources */,
-				39A821D01D1E01C600B8E51A /* NSDateExtesnsion.swift in Sources */,
-				39872C551D28EF0D00F82D9A /* ViewExtension.swift in Sources */,
 				3990BD211D0CEC5300F6EBBA /* GlobalVariable.swift in Sources */,
-				39F4B9F51D164A1E003E2D04 /* BookCell.swift in Sources */,
+				397DD57B1E0DDF95004ECD3B /* AutherListViewController.swift in Sources */,
+				397DD56B1E0DDF4C004ECD3B /* TextFieldDelegate.swift in Sources */,
+				397DD5681E0DDF2F004ECD3B /* AutherListExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
