@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         table.delegate = self
         table.dataSource = self
         table.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "bookCell")
@@ -46,11 +46,6 @@ class ViewController: UIViewController {
         if NCMBUser.current() == nil {
             self.performSegue(withIdentifier: "toSignupView", sender: nil)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func read() {

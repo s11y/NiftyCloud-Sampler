@@ -20,7 +20,6 @@ class AutherListViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         table.delegate = self
         table.dataSource = self
         table.register(UINib(nibName: "AutherCell", bundle: nil), forCellReuseIdentifier: "autherCell")
@@ -34,11 +33,6 @@ class AutherListViewController: UIViewController  {
         table.estimatedRowHeight = 30
         table.rowHeight = UITableViewAutomaticDimension
         table.tableFooterView = UIView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func read() {

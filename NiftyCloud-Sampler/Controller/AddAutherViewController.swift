@@ -23,7 +23,6 @@ class AddAutherViewController: UIViewController {
         
         firstTextField.delegate = self
         familyTextField.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,11 +30,6 @@ class AddAutherViewController: UIViewController {
         if mode == .Update {
             self.displayUpdateAuther()
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func didSelectSave() {

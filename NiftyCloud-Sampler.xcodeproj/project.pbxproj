@@ -61,25 +61,25 @@
 /* Begin PBXFileReference section */
 		1417E81DC3DA8217C8D1D2F5 /* Pods-NiftyCloud-SamplerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-SamplerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-SamplerTests/Pods-NiftyCloud-SamplerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CEDB2C78858578985D5359A /* Pods-NiftyCloud-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiftyCloud-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiftyCloud-Sampler/Pods-NiftyCloud-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
-		397DD5541E0DDE97004ECD3B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Extension/DateExtension.swift; sourceTree = "<group>"; };
-		397DD5561E0DDEBF004ECD3B /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extension/StringExtension.swift; sourceTree = "<group>"; };
-		397DD5571E0DDEBF004ECD3B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Extension/Utility.swift; sourceTree = "<group>"; };
+		397DD5541E0DDE97004ECD3B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		397DD5561E0DDEBF004ECD3B /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		397DD5571E0DDEBF004ECD3B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = Utility.swift; sourceTree = "<group>"; };
 		397DD55B1E0DDF01004ECD3B /* AutherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutherCell.swift; sourceTree = "<group>"; };
 		397DD55C1E0DDF01004ECD3B /* AutherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutherCell.xib; sourceTree = "<group>"; };
 		397DD55E1E0DDF01004ECD3B /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		397DD55F1E0DDF01004ECD3B /* BookCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
-		397DD5641E0DDF2F004ECD3B /* AddViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewExtension.swift; path = ViewExtensions/AddViewExtension.swift; sourceTree = "<group>"; };
-		397DD5651E0DDF2F004ECD3B /* AutherListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutherListExtension.swift; path = ViewExtensions/AutherListExtension.swift; sourceTree = "<group>"; };
-		397DD5661E0DDF2F004ECD3B /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = ViewExtensions/ViewExtension.swift; sourceTree = "<group>"; };
-		397DD56A1E0DDF4C004ECD3B /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldDelegate.swift; path = Delegate/TextFieldDelegate.swift; sourceTree = "<group>"; };
-		397DD56C1E0DDF5E004ECD3B /* Authers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authers.swift; path = Models/Authers.swift; sourceTree = "<group>"; };
-		397DD56D1E0DDF5E004ECD3B /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Books.swift; path = Models/Books.swift; sourceTree = "<group>"; };
-		397DD5701E0DDF95004ECD3B /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddAutherViewController.swift; path = Controller/AddAutherViewController.swift; sourceTree = "<group>"; };
-		397DD5711E0DDF95004ECD3B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = Controller/AddViewController.swift; sourceTree = "<group>"; };
+		397DD5641E0DDF2F004ECD3B /* AddViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewExtension.swift; path = AddViewExtension.swift; sourceTree = "<group>"; };
+		397DD5651E0DDF2F004ECD3B /* AutherListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutherListExtension.swift; path = AutherListExtension.swift; sourceTree = "<group>"; };
+		397DD5661E0DDF2F004ECD3B /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		397DD56A1E0DDF4C004ECD3B /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldDelegate.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		397DD56C1E0DDF5E004ECD3B /* Authers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authers.swift; path = Authers.swift; sourceTree = "<group>"; };
+		397DD56D1E0DDF5E004ECD3B /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Books.swift; path = Books.swift; sourceTree = "<group>"; };
+		397DD5701E0DDF95004ECD3B /* AddAutherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddAutherViewController.swift; path = AddAutherViewController.swift; sourceTree = "<group>"; };
+		397DD5711E0DDF95004ECD3B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		397DD5731E0DDF95004ECD3B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		397DD5741E0DDF95004ECD3B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		397DD5751E0DDF95004ECD3B /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutherListViewController.swift; path = Controller/AutherListViewController.swift; sourceTree = "<group>"; };
-		397DD5761E0DDF95004ECD3B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
+		397DD5751E0DDF95004ECD3B /* AutherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutherListViewController.swift; path = AutherListViewController.swift; sourceTree = "<group>"; };
+		397DD5761E0DDF95004ECD3B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3990BCEF1D0CD51900F6EBBA /* NiftyCloud-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NiftyCloud-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3990BCF71D0CD51900F6EBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,11 +140,12 @@
 		391D88EE1D246D79001A1DFD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				397DD5541E0DDE97004ECD3B /* DateExtension.swift */,
 				397DD5561E0DDEBF004ECD3B /* StringExtension.swift */,
 				397DD5571E0DDEBF004ECD3B /* Utility.swift */,
-				397DD5541E0DDE97004ECD3B /* DateExtension.swift */,
 			);
 			name = Extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		391D88EF1D246D83001A1DFD /* Delegate */ = {
@@ -153,6 +154,7 @@
 				397DD56A1E0DDF4C004ECD3B /* TextFieldDelegate.swift */,
 			);
 			name = Delegate;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		391D88F01D246D8B001A1DFD /* Models */ = {
@@ -162,6 +164,7 @@
 				397DD56D1E0DDF5E004ECD3B /* Books.swift */,
 			);
 			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		39550F291D1779A3000BA688 /* Cells */ = {
@@ -171,6 +174,7 @@
 				397DD55D1E0DDF01004ECD3B /* BookCell */,
 			);
 			name = Cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		397DD55A1E0DDF01004ECD3B /* AutherCell */ = {
@@ -180,7 +184,7 @@
 				397DD55C1E0DDF01004ECD3B /* AutherCell.xib */,
 			);
 			name = AutherCell;
-			path = Cells/AutherCell;
+			path = AutherCell;
 			sourceTree = "<group>";
 		};
 		397DD55D1E0DDF01004ECD3B /* BookCell */ = {
@@ -190,7 +194,7 @@
 				397DD55F1E0DDF01004ECD3B /* BookCell.xib */,
 			);
 			name = BookCell;
-			path = Cells/BookCell;
+			path = BookCell;
 			sourceTree = "<group>";
 		};
 		397DD5721E0DDF95004ECD3B /* Auth */ = {
@@ -200,7 +204,7 @@
 				397DD5741E0DDF95004ECD3B /* SignUpViewController.swift */,
 			);
 			name = Auth;
-			path = Controller/Auth;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		39872C531D28E94600F82D9A /* ViewExtensions */ = {
@@ -211,17 +215,18 @@
 				397DD5661E0DDF2F004ECD3B /* ViewExtension.swift */,
 			);
 			name = ViewExtensions;
+			path = ViewExtensions;
 			sourceTree = "<group>";
 		};
 		3990BCE61D0CD51900F6EBBA = {
 			isa = PBXGroup;
 			children = (
+				8D798141380CC7DFA6A0176C /* Frameworks */,
 				3990BCF11D0CD51900F6EBBA /* NiftyCloud-Sampler */,
 				3990BD061D0CD51900F6EBBA /* NiftyCloud-SamplerTests */,
 				3990BD111D0CD51900F6EBBA /* NiftyCloud-SamplerUITests */,
-				3990BCF01D0CD51900F6EBBA /* Products */,
 				A1E19FFEAB395F26A16A1CC1 /* Pods */,
-				8D798141380CC7DFA6A0176C /* Frameworks */,
+				3990BCF01D0CD51900F6EBBA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,18 +243,16 @@
 		3990BCF11D0CD51900F6EBBA /* NiftyCloud-Sampler */ = {
 			isa = PBXGroup;
 			children = (
-				3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */,
-				39F4B9FA1D16505A003E2D04 /* Controller */,
-				3990BCF61D0CD51900F6EBBA /* Main.storyboard */,
-				3990BCF91D0CD51900F6EBBA /* Assets.xcassets */,
-				3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */,
-				3990BCFE1D0CD51900F6EBBA /* Info.plist */,
-				3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */,
-				391D88EE1D246D79001A1DFD /* Extension */,
 				39550F291D1779A3000BA688 /* Cells */,
+				39F4B9FA1D16505A003E2D04 /* Controller */,
 				391D88EF1D246D83001A1DFD /* Delegate */,
+				391D88EE1D246D79001A1DFD /* Extension */,
 				391D88F01D246D8B001A1DFD /* Models */,
+				39C186FF1E140B5900B70042 /* Resources */,
 				39872C531D28E94600F82D9A /* ViewExtensions */,
+				3990BCF21D0CD51900F6EBBA /* AppDelegate.swift */,
+				3990BD201D0CEC5300F6EBBA /* GlobalVariable.swift */,
+				3990BCFE1D0CD51900F6EBBA /* Info.plist */,
 			);
 			path = "NiftyCloud-Sampler";
 			sourceTree = "<group>";
@@ -257,8 +260,8 @@
 		3990BD061D0CD51900F6EBBA /* NiftyCloud-SamplerTests */ = {
 			isa = PBXGroup;
 			children = (
-				3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */,
 				3990BD091D0CD51900F6EBBA /* Info.plist */,
+				3990BD071D0CD51900F6EBBA /* NiftyCloud_SamplerTests.swift */,
 			);
 			path = "NiftyCloud-SamplerTests";
 			sourceTree = "<group>";
@@ -266,10 +269,21 @@
 		3990BD111D0CD51900F6EBBA /* NiftyCloud-SamplerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */,
 				3990BD141D0CD51900F6EBBA /* Info.plist */,
+				3990BD121D0CD51900F6EBBA /* NiftyCloud_SamplerUITests.swift */,
 			);
 			path = "NiftyCloud-SamplerUITests";
+			sourceTree = "<group>";
+		};
+		39C186FF1E140B5900B70042 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3990BCF91D0CD51900F6EBBA /* Assets.xcassets */,
+				3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */,
+				3990BCF61D0CD51900F6EBBA /* Main.storyboard */,
+			);
+			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		39F4B9FA1D16505A003E2D04 /* Controller */ = {
@@ -282,6 +296,7 @@
 				397DD5761E0DDF95004ECD3B /* ViewController.swift */,
 			);
 			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8D798141380CC7DFA6A0176C /* Frameworks */ = {
@@ -653,6 +668,7 @@
 				3990BCF71D0CD51900F6EBBA /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		3990BCFB1D0CD51900F6EBBA /* LaunchScreen.storyboard */ = {
@@ -661,6 +677,7 @@
 				3990BCFC1D0CD51900F6EBBA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

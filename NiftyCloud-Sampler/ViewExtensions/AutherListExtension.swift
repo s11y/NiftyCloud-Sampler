@@ -26,6 +26,7 @@ extension AutherListViewController: UITableViewDelegate {
 }
 
 extension AutherListViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return autherArray.count
     }

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension ViewController: UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
     }
@@ -27,6 +28,7 @@ extension ViewController: UITableViewDataSource{
 }
 
 extension ViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .default, title: "Delete") { (action, index) in
             self.deleteObject(indexPath: index)
