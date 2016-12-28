@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension AddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return authers.count
     }
@@ -29,6 +30,7 @@ extension AddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 extension AddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.originalImage = image

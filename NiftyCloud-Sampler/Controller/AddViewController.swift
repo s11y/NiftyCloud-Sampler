@@ -53,7 +53,6 @@ class AddViewController: UIViewController {
 
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.selectImage))
         imageView.addGestureRecognizer(gesture)
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -61,11 +60,6 @@ class AddViewController: UIViewController {
         if mode == .Update {
             self.displayRawData()
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func displayRawData() {
