@@ -5,13 +5,13 @@ Swift2、Xcode7.3.1で作った、Nifty Cloud mobile backendのサンプラー�
 
 # データベース設計
 
-#モデルの作成方法
+# モデルの作成方法
 
 ## モデルクラスの書き方
 モデルクラスにおけるカラムの設定は、getter setterを使用します。
 また```@objc```の設定、```override init!(className: String!)```、```ncmbClassName```は必須です。
 
-```
+```swift
 import Foundation
 import NCMB // Nifty Cloud mobile backendをインポート
 
@@ -131,10 +131,10 @@ class Books: NCMBObject, NCMBSubclassing {
 
 ## AppDelegateへのモデルクラスの登録
 AppDelegate.swiftにおいて、以下のメソッド内でregisterSubclassを行うことで、モデルクラスを登録します
-```
+```swift
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch
-    Books.registerSubclass() //ModelClass.registerSubclass()でモデルクラスを登録
+    Books.registerSubclass() // ModelClass.registerSubclass()でモデルクラスを登録
     Authers.registerSubclass()
     NCMB.setApplicationKey("アプリケーションキー", clientKey: "クライアントキー")
     return true
