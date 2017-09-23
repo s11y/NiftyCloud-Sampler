@@ -83,7 +83,7 @@ class AddViewController: UIViewController {
 
     }
 
-    func selectImage() {
+    @objc func selectImage() {
         let alert = UIAlertController(title: "写真を選択", message: "どちらから写真を取得しますか？", preferredStyle: .actionSheet)
         let camera = UIAlertAction(title: "カメラ", style: .default) { (action) in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -126,7 +126,7 @@ class AddViewController: UIViewController {
         }
     }
 
-    func decideIsPublic(row: Int) {
+    @objc func decideIsPublic(row: Int) {
         self.isPublic = row
     }
 
@@ -151,7 +151,7 @@ class AddViewController: UIViewController {
         toolBar.addDoneBtn(target: self, textField: autherTextField, selector: #selector(self.resign))
     }
 
-    func resign() {
+    @objc func resign() {
         autherTextField.resignFirstResponder()
         dateTextField.resignFirstResponder()
     }
@@ -162,7 +162,7 @@ class AddViewController: UIViewController {
         toolBar.addDoneBtn(target: self, textField: dateTextField, selector: #selector(self.resign))
     }
 
-    func convertDateToDate() {
+    @objc func convertDateToDate() {
         dateTextField.text = datePicker.date.convert()
         self.publishedDate = datePicker.date
     }

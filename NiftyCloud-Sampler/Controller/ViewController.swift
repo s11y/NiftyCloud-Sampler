@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         let object = books[indexPath.row]
         object.deleteEventually { (error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             }
         }
     }

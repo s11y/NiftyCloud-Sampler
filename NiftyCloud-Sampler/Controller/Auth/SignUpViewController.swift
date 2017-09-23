@@ -67,7 +67,7 @@ class SignUpViewController: UIViewController{
         if user?.isNew == false {
             user?.signUpInBackground { (error) in
                 if error != nil {
-                    print(error?.localizedDescription)
+                    print(error?.localizedDescription ?? "")
                 }else {
                     self.requestAuthentication(email: mail)
                 }
@@ -81,7 +81,7 @@ class SignUpViewController: UIViewController{
     func requestAuthentication(email address: String) {
         NCMBUser.requestAuthenticationMail(inBackground: address, block: { (error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             }else {
                 self.transition()
             }

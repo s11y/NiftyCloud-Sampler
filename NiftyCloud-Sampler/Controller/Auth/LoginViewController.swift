@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
     func login(mail: String, password: String) {
         NCMBUser.logInWithMailAddress(inBackground: mail, password: password) { (user, error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             }else {
                 if user!.isAuthenticated() {
                     self.transition()
@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
     func requestResetPassword(email address: String) {
         NCMBUser.requestPasswordResetForEmail(inBackground: address) { (error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             }
         }
     }

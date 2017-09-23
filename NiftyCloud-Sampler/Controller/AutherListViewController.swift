@@ -46,7 +46,7 @@ class AutherListViewController: UIViewController  {
         let object = autherArray[indexPath.row]
         object.deleteEventually { (error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             }
         }
     }
