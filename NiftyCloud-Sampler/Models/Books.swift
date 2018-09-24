@@ -15,7 +15,7 @@ class Books: NCMBObject, NCMBSubclassing {
     // それぞれのカラムを指定
     var title: String! {
         get {
-            return object(forKey: "title") as! String
+            return object(forKey: "title") as? String
         }
         set {
             setObject(newValue, forKey: "title")
@@ -94,7 +94,7 @@ class Books: NCMBObject, NCMBSubclassing {
         // クエリに従ってすべてを取得
         query?.findObjectsInBackground { (objects, error) in
             if error != nil { // エラーがあるとき
-                print(error?.localizedDescription)
+                print(error.debugDescription)
             }else { // エラーがないとき
                 // 取得したデータをBooksクラスに変換
                 let obj = objects as! [Books]
@@ -110,7 +110,7 @@ class Books: NCMBObject, NCMBSubclassing {
     func saveWithEvent(callback: @escaping () -> Void) {
         self.saveEventually { (error) in
             if error != nil { // エラーがあるとき
-                print(error?.localizedDescription)
+                print(error.debugDescription)
             }else { // エラーがないとき
                 // 引数で受け取った処理を行う
                 callback()

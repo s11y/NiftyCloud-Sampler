@@ -8,7 +8,6 @@
 
 import UIKit
 import NCMB
-import ActionButton
 
 enum NCMBCreateType {
     case Create
@@ -21,8 +20,6 @@ class ViewController: UIViewController {
 
     var books: [Books] = []
 
-    var action: ActionButton!
-
     var updateBook: Books!
 
     override func viewDidLoad() {
@@ -31,7 +28,6 @@ class ViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         table.register(UINib(nibName: "BookCell", bundle: nil), forCellReuseIdentifier: "bookCell")
-        self.setActionButton()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -86,28 +82,7 @@ class ViewController: UIViewController {
         if segue.identifier == "toAddView" && sender != nil{
             let addView = segue.destination as! AddViewController
             addView.mode = .Update
-            addView.updateBook = sender as! Books
+            addView.updateBook = sender as? Books
         }
-    }
-
-    func setActionButton() {
-        let editBtn = ActionButtonItem(title: "Add", image: UIImage(named: "edit"))
-        let autherBtn = ActionButtonItem(title: "Auther", image: UIImage(named: "avatar"))
-        let addAutherBtn = ActionButtonItem(title: "Add Auther", image: UIImage(named: "avatar_edit"))
-        editBtn.action = { item in
-            self.transition()
-        }
-        autherBtn.action = { item in
-            self.toAutherList()
-        }
-        addAutherBtn.action = { item in
-            self.toAddAuther()
-        }
-        action = ActionButton(attachedToView: self.view, items: [editBtn, autherBtn, addAutherBtn   ])
-        action.action = { button in
-            button.toggleMenu()
-        }
-        action.setTitle("+", forState: .normal)
-        action.backgroundColor = UIColor(red: 238/255, green: 130/255, blue: 34/255, alpha: 1)
     }
 }
